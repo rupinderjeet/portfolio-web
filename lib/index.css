@@ -1,0 +1,38 @@
+body{
+	color: white;
+	background: #333333;
+	font-family: "Berlin Sans FB", sans-serif;
+}
+
+h1{
+	margin: 0px;
+	padding: 0px;
+}
+
+.normal-font{
+	font-weight: normal;
+}
+
+.bold-font{
+	font-weight: bold;
+}
+
+.berlin-font{
+	font-family: "Berlin Sans FB", sans-serif;
+}
+
+.font-size-15{
+	font-size: 15px;
+}
+
+.font-size-25{
+	font-size: 25px;
+}
+
+.web-div{
+	padding: 5px;
+	padding-left: 10px;
+	color: black;
+	background-color: white;
+	margin-bottom: 10px;
+}
