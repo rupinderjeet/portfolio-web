@@ -9,6 +9,32 @@ h1{
 	padding: 0px;
 }
 
+.margin-bottom{
+	margin-bottom: 5px;
+}
+
+.pic{
+	width: 100%;
+}
+
+.no-border{
+	border: none;
+}
+
+.display{
+	display: block;
+}
+.no-display{
+	display: none;
+}
+.no-margin{
+	margin: none;
+}
+
+.pointer{
+	cursor: pointer;
+}
+
 .normal-font{
 	font-weight: normal;
 }
