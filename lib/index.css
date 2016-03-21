@@ -9,6 +9,14 @@ h1{
 	padding: 0px;
 }
 
+.b-yellow{
+	background-color: yellow;
+}
+
+.big-font{
+	font-size: 3.5em !important;
+}
+
 .margin-bottom{
 	margin-bottom: 5px;
 }
@@ -28,11 +36,19 @@ h1{
 	display: none;
 }
 .no-margin{
-	margin: none;
+	margin: 0px;
 }
 
 .pointer{
 	cursor: pointer;
+}
+
+.pad-2px{
+	padding: 2px;
+}
+
+.margin-2px{
+	margin: 2px;
 }
 
 .normal-font{
