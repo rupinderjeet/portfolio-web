@@ -1,5 +1,4 @@
 body{
-	color: white;
 	background: #333333;
 	font-family: "Berlin Sans FB", sans-serif;
 }
@@ -11,6 +10,9 @@ h1{
 
 .b-yellow{
 	background-color: yellow;
+}
+.b-bbbbbb{
+	background-color: #bbbbbb;
 }
 
 .big-font{
@@ -35,8 +37,14 @@ h1{
 .no-display{
 	display: none;
 }
+.no-outline{
+	outline: none !important;
+}
 .no-margin{
-	margin: 0px;
+	margin: 0px !important;
+}
+.no-padding{
+	padding: 0px !important;
 }
 
 .pointer{
@@ -47,9 +55,15 @@ h1{
 	padding: 2px;
 }
 
+
+
 .margin-2px{
 	margin: 2px;
 }
+.margin-left-5{
+	margin-left: 5px;
+}
+
 
 .normal-font{
 	font-weight: normal;
@@ -77,4 +91,24 @@ h1{
 	color: black;
 	background-color: white;
 	margin-bottom: 10px;
+}
+
+
+.darker-well{
+	color: #f4f1f1 !important;
+	background-color: black !important;
+	border-color: black !important;
+}
+
+.dark-button{
+	color: #f4f1f1 !important;
+	background-color: #666666 !important;
+	border-color: #666666 !important;
+}
+
+
+.active-button{
+	color: black;
+	background-color: #bbbbbb;
+	border-color: #bbbbbb;
 }
