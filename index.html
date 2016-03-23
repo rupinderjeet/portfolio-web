@@ -24,10 +24,17 @@
 				<button class="TF5FD btn btn-default no-outline" data-target="#theSlider" data-slide-to="7" onclick="btnClick('bar', this)"> FEEDBACK </button> 
 				<button class="TF5FD btn btn-default no-outline" data-target="#theSlider" data-slide-to="8" onclick="btnClick('bar', this)"> STATISTICS </button> 
 				
-				<button class="btn btn-success pull-right no-outline margin-left-5" onclick=""> DONATE </button>
-				<button class="btn btn-primary pull-right no-outline" onclick="mailto:rupinderjeet47@gmail.com"> EMAIL </button>
+				<div class="pull-right form-inline">
+					<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+						<input type="hidden" name="cmd" value="_s-xclick">
+						<input type="hidden" name="hosted_button_id" value="RBSJUBQ58RNAU">
+						<input type="button" class="btn btn-primary no-outline" value="Email" onclick="mailto:rupinderjeet47@gmail.com"/>
+						<input type="submit" class="btn btn-success no-outline" name="submit" value="Donate with PayPal"/>
+					</form>
+				</div>
+				
 			</div>
-
+			
 			<div id="theSlider" class="carousel slide" data-ride="carousel" data-interval="false">
 				<div class="carousel-inner">
 
