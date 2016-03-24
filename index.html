@@ -1,19 +1,27 @@
+<!DOCTYPE html>
 <html>
 	<head>
-		
+		<meta name="keywords" content="rupinderjeet, rupinderjeet.com, rupinderjeet47, rupinderjeet47@gmail.com, ">
+		<meta name="description" content="a website showing information of its author">
+		<meta name="robots" content="all">
+		<meta name="author" content="Rupinderjeet Singh Hans, rupinderjeet47(at)gmail(dot)com">
+		<meta name="copyright" content="(c) 2015-2016 Rupinderjeet Singh Hans">
+		<link rel="shortcut icon" href="#" type="image/x-icon">
 		<title> Welcome </title>
 		<link type="text/css" rel="stylesheet" href="lib/bootstrap.min.css">
 		<link type="text/css" rel="stylesheet" href="lib/index.css">
 	</head>
 	<body style="margin-top: 5px;">
 
-		<div class="container berlin-font">
-			<div class="well well-sm text-center active-button">
-				<a class="pull-left" style="text-decoration: underline;">started Mar, 2016</a>
-				THIS PAGE IS UNDER DEVELOPMENT AND WILL BE UPDATED EVERY SUNDAY - MARCH TWENTY, TWO THOUSAND SIXTEEN
+		<div class="berlin-font">
+			<div class="container well well-sm text-center active-button">
+				<p class="pull-left no-margin" style="text-decoration: underline;">started Mar 13, 2016</p>
+				THIS PAGE IS UNDER DEVELOPMENT AND WILL BE UPDATED EVERY SUNDAY
+				<p class="pull-right no-margin">Last Update Mar 24, 2016</p>
 			</div>
 		
-			<div class="well well-sm no-padding hidden-md hidden-sm hidden-xs" style="background: transparent; border: none;"> 
+			<!-- Top Menu Bar ========================================================================= -->
+			<div class="container well well-sm no-padding hidden-md hidden-sm hidden-xs" style="background: transparent; border: none;"> 
 				<button class="TF5FD btn active-button no-outline" data-target="#theSlider" data-slide-to="0" onclick="btnClick('bar', this)"> HOME </button> 
 				<button class="TF5FD btn btn-default no-outline" data-target="#theSlider" data-slide-to="1" onclick="btnClick('bar', this)"> PORTFOLIO </button> 
 				<button class="TF5FD btn btn-default no-outline" data-target="#theSlider" data-slide-to="2" onclick="btnClick('bar', this)"> EDUCATION </button> 
@@ -24,22 +32,39 @@
 				<button class="TF5FD btn btn-default no-outline" data-target="#theSlider" data-slide-to="7" onclick="btnClick('bar', this)"> FEEDBACK </button> 
 				<button class="TF5FD btn btn-default no-outline" data-target="#theSlider" data-slide-to="8" onclick="btnClick('bar', this)"> STATISTICS </button> 
 				
-				<div class="pull-right form-inline">
-					<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+				<div class="dropdown pull-right margin-left-5">
+					<!-- PayPal Donate Form-->
+					<form id="paypal-donate-form" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 						<input type="hidden" name="cmd" value="_s-xclick">
 						<input type="hidden" name="hosted_button_id" value="RBSJUBQ58RNAU">
-						<input type="button" class="btn btn-primary no-outline" value="Email" onclick="mailto:rupinderjeet47@gmail.com"/>
-						<input type="submit" class="btn btn-success no-outline" name="submit" value="Donate with PayPal"/>
+						<input type="submit" name="submit" id="submit-form" class="hidden" value="Donate with PayPal"/>
 					</form>
+					
+					<button class="btn btn-success dropdown-toggle no-outline" id="donateMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+						Donate <span class="caret"></span>
+					</button>
+					<ul class="dropdown-menu" aria-labelledby="donateMenuItems">
+						<li class="pointer">
+							<a class="no-margin no-padding pointer">
+								<label for="submit-form" class="width-100-perc normal-font pointer no-margin pad-3-20"> PayPal </label>
+							</a>
+						</li>
+						
+						<li role="separator" class="divider no-margin"></li>
+						<li> <a> Help(coming soon!) </a> </li>
+					</ul>
 				</div>
+				
+				<a class="btn btn-primary pull-right margin-bottom no-outline" role="button" href="mailto:rupinderjeet47@gmail.com"> Email </a>
 			</div>
 			
+			<!-- Bootstrap Carousel -->
 			<div id="theSlider" class="carousel slide" data-ride="carousel" data-interval="false">
-				<div class="carousel-inner">
+				<div class="carousel-inner carousel-extra-height">
 
 					<!-- FIRST SLIDE ======================================================================= -->
 					<div class="item active">
-						<div class="well well-sm">
+						<div class="container well well-sm">
 							<h1 class="big-font"> NEED A WEBSITE, SOFTWARE OR BANNER? </h1>
 
 							<text class="b-bbbbbb font-size-15 pad-2px margin-2px"> &nbsp; FRIENDLY </text>
@@ -49,7 +74,7 @@
 
 							<br><br><br><br>
 
-							<p>THIS SECTION IS IN DEVELOPMENT>>
+							<p>THIS SECTION IS IN DEVELOPMENT
 							<br><br><br>
 							SOFTWARE, BANNER AND WEBSITE DESIGN, DEVELOPMENT AND MANAGEMENT</p>
 
@@ -61,7 +86,7 @@
 
 						</div>
 						
-						<div class="alert well-sm alert-success text-center bold-font"> 
+						<div class="container alert well-sm alert-success text-center bold-font"> 
 							HTML CSS JAVASCRIPT JQUERY BOOTSTRAP AJAX - JAVA ANDROID LIBGDX - JSP SERVLET XML JSON - SQL MYSQL 
 						</div>
 
@@ -69,28 +94,28 @@
 
 					<!-- SECOND SLIDE ======================================================================= -->
 					<div class="item">
-						<div id="portfolio" class="well well-sm">
+						<div id="portfolio" class="container well well-sm">
 							<h1>PORTFOLIO</h1>
 						</div>
 					</div> <!-- END OF SECOND SLIDE -->
 
 					<!-- THIRD SLIDE ======================================================================= -->
 					<div class="item">
-						<div id="education" class="well well-sm">
+						<div id="education" class="container well well-sm">
 							<h1>EDUCATIONAL QUALIFICATION</h1>
 						</div>
 					</div> <!-- END OF THIRD SLIDE -->
 
 					<!-- FOURTH SLIDE ======================================================================= -->
 					<div class="item">
-						<div id="blog" class="well well-sm">
+						<div id="blog" class="container well well-sm">
 							<h1>BLOG POSTS</h1>
 						</div>
 					</div> <!-- END OF FOURTH SLIDE -->
 
 					<!-- FIFTH SLIDE ======================================================================= -->
 					<div class="item">
-						<div id="about" class="well well-sm">
+						<div id="about" class="container well well-sm">
 							<div class="row">
 								<div id="profile-pic" class="col-md-3">
 									<div id="next-image">
@@ -150,28 +175,28 @@
 
 					<!-- SIXTH SLIDE ======================================================================= -->
 					<div class="item">
-						<div id="services" class="well well-sm">
+						<div id="services" class="container well well-sm">
 							<h1>SERVICES I OFFER</h1>
 						</div>
 					</div> <!-- END OF SIXTH SLIDE -->
 
 					<!-- SEVENTH SLIDE ======================================================================= -->
 					<div class="item">
-						<div id="contact" class="well well-sm">
+						<div id="contact" class="container well well-sm">
 							<h1>CONTACT ME</h1>
 						</div>
 					</div> <!-- END OF SEVENTH SLIDE -->
 
 					<!-- EIGHTH SLIDE ======================================================================= -->
 					<div class="item">
-						<div id="feedback" class="well well-sm">
+						<div id="feedback" class="container well well-sm">
 							<h1>FEEDBACK COMMENTS</h1>
 						</div>
 					</div> <!-- END OF EIGHTH SLIDE -->
 
 					<!-- NINETH SLIDE ======================================================================= -->
 					<div class="item">
-						<div id="statistics" class="well well-sm">
+						<div id="statistics" class="container well well-sm">
 							<h1>STATISTICS</h1>
 						</div>
 					</div> <!-- END OF NINETH SLIDE -->

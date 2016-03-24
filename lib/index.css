@@ -8,11 +8,22 @@ h1{
 	padding: 0px;
 }
 
-.b-yellow{
+.f-yellow{
+	color: yellow;
+}.b-yellow{
 	background-color: yellow;
 }
-.b-bbbbbb{
+
+.f-bbbbbb{
+	color: #bbbbbb;
+}.b-bbbbbb{
 	background-color: #bbbbbb;
+}
+
+.f-green{
+	color: green;
+}.b-green{
+	background-color: green;
 }
 
 .big-font{
@@ -23,8 +34,16 @@ h1{
 	margin-bottom: 5px;
 }
 
+.pad-3-20{
+	padding: 3px 20px !important;
+}
+
 .btn{
 	margin-bottom: 5px !important;
+}
+
+.width-100-perc{
+	width: 100% !important;
 }
 
 .pic{
@@ -115,4 +134,9 @@ h1{
 	color: black;
 	background-color: #bbbbbb;
 	border-color: #bbbbbb;
+}
+
+.carousel-extra-height{
+	overflow: visible;
+/*	height: 20px;*/
 }
