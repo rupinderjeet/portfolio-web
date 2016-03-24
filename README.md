@@ -1,9 +1,11 @@
-# rupinderjeet.com
+# [rupinderjeet.com](http://rupinderjeet.com)
 
 ##A website for describing its author
 
-**Copyrights(c) 2105-2016 upinderjeet Singh Hans**
-**Author : Rupinderjeet Singh Hans, [Email Me](mailto:rupinderjeet47@gmail.com)**
+**Copyright :** (c)2015-2016 Rupinderjeet Singh Hans
+
+**Author :** Rupinderjeet Singh Hans, [Email Me](mailto:rupinderjeet47@gmail.com)
+
 
 **Development started on Mar 13, 2016 (Sunday)**
 
