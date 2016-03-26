@@ -130,10 +130,10 @@ h1{
 }
 
 
-.active-button{
-	color: black;
-	background-color: #bbbbbb;
-	border-color: #bbbbbb;
+.btn-blue-focused{
+	color: white !important;
+	background-color: crimson;
+	border-color: #666666;
 }
 
 .carousel-extra-height{
