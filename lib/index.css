@@ -51,7 +51,7 @@ h1{
 }
 
 .no-border{
-	border: none;
+	border: none !important;
 }
 
 .display{
@@ -139,4 +139,12 @@ h1{
 .carousel-extra-height{
 	overflow: visible;
 /*	height: 20px;*/
+}
+
+.top-border-bar{
+	border-top: 10px solid crimson;
+}
+
+.height-320{
+	height: 320px !important;
 }
