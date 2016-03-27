@@ -3,9 +3,9 @@ body{
 	font-family: "Berlin Sans FB", sans-serif;
 }
 
-h1{
-	margin: 0px;
-	padding: 0px;
+h1, h2, h3, h4, h5, h6{
+	margin	: 0;
+	padding	: 0;
 }
 
 .f-yellow{
@@ -26,15 +26,11 @@ h1{
 	background-color: green;
 }
 
-.big-font{
-	font-size: 3.5em !important;
-}
-
 .margin-bottom{
 	margin-bottom: 5px;
 }
 
-.pad-3-20{
+.pad-3-20{ /* Donate Button : Dropdown Menu Item */
 	padding: 3px 20px !important;
 }
 
@@ -64,10 +60,10 @@ h1{
 	outline: none !important;
 }
 .no-margin{
-	margin: 0px !important;
+	margin: 0 !important;
 }
 .no-padding{
-	padding: 0px !important;
+	padding: 0 !important;
 }
 
 .pointer{
@@ -78,15 +74,12 @@ h1{
 	padding: 2px;
 }
 
-
-
 .margin-2px{
 	margin: 2px;
 }
 .margin-left-5{
 	margin-left: 5px;
 }
-
 
 .normal-font{
 	font-weight: normal;
@@ -108,43 +101,35 @@ h1{
 	font-size: 25px;
 }
 
-.web-div{
-	padding: 5px;
-	padding-left: 10px;
-	color: black;
-	background-color: white;
-	margin-bottom: 10px;
-}
-
-
 .darker-well{
-	color: #f4f1f1 !important;
-	background-color: black !important;
-	border-color: black !important;
+	background-color: black;
+	border-color: black;
+	color: #f4f1f1;
 }
 
 .dark-button{
-	color: #f4f1f1 !important;
-	background-color: #666666 !important;
-	border-color: #666666 !important;
+	background-color: #666666;
+	border-color: #666666;
+	color: #f4f1f1;
 }
 
 
-.btn-blue-focused{
-	color: white !important;
+.btn-focused{ /* Top Menu Bar - Buttons */
 	background-color: crimson;
 	border-color: #666666;
+	color: white !important;
 }
 
-.carousel-extra-height{
+.carousel-extra-height{ /* Carousel Slide Motion Glitch : Temporary Solution */
 	overflow: visible;
 /*	height: 20px;*/
 }
 
-.top-border-bar{
+.top-border-bar{ /* top crimson border of portfolio content */
 	border-top: 10px solid crimson;
 }
 
-.height-320{
-	height: 320px !important;
+.height-320{ /* height of portfolio items */
+	height: 320px;
+	max-height: 320px;
 }
