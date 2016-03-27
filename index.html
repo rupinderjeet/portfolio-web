@@ -12,78 +12,90 @@
 		<link type="text/css" rel="stylesheet" href="lib/index.css">
 	</head>
 	<body style="margin-top: 5px;">
-
-		<div class="berlin-font">
 			
-			<!-- Updation Bar ========================================================================= -->
-			<div class="container well well-sm text-center active-button">
-				<p class="pull-left no-margin" style="text-decoration: underline;">started Mar 13, 2016</p>
-				THIS PAGE IS UNDER DEVELOPMENT AND WILL BE UPDATED EVERY SUNDAY
-				<p class="pull-right no-margin">Last Update Mar 26, 2016</p>
-			</div>
-	
-			<!-- Top Menu Bar ========================================================================= -->
-			<div class="container well well-sm no-padding hidden-md hidden-sm hidden-xs" style="background: transparent; border: none;"> 
-				<button class="TF5FD btn btn-focused no-outline no-border" data-target="#theSlider" data-slide-to="0" onclick="btnClick('bar', this)"> HOME </button> 
-				<button class="TF5FD btn btn-default no-outline no-border" data-target="#theSlider" data-slide-to="1" onclick="btnClick('bar', this)"> PORTFOLIO </button> 
-				<button class="TF5FD btn btn-default no-outline no-border" data-target="#theSlider" data-slide-to="2" onclick="btnClick('bar', this)"> EDUCATION </button> 
-				<button class="TF5FD btn btn-default no-outline no-border" data-target="#theSlider" data-slide-to="3" onclick="btnClick('bar', this)"> BLOG </button> 
-				<button class="TF5FD btn btn-default no-outline no-border" data-target="#theSlider" data-slide-to="4" onclick="btnClick('bar', this)"> ABOUT </button> 
-				<button class="TF5FD btn btn-default no-outline no-border" data-target="#theSlider" data-slide-to="5" onclick="btnClick('bar', this)"> SERVICES </button> 
-				<button class="TF5FD btn btn-default no-outline no-border" data-target="#theSlider" data-slide-to="6" onclick="btnClick('bar', this)"> CONTACT </button> 
-				<button class="TF5FD btn btn-default no-outline no-border" data-target="#theSlider" data-slide-to="7" onclick="btnClick('bar', this)"> FEEDBACK </button> 
-				<button class="TF5FD btn btn-default no-outline no-border" data-target="#theSlider" data-slide-to="8" onclick="btnClick('bar', this)"> STATISTICS </button> 
-				
-				<div class="dropdown pull-right margin-left-5">
-					<!-- PayPal Donate Form-->
-					<form id="paypal-donate-form" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-						<input type="hidden" name="cmd" value="_s-xclick">
-						<input type="hidden" name="hosted_button_id" value="RBSJUBQ58RNAU">
-						<input type="submit" name="submit" id="submit-form" class="hidden" value="Donate with PayPal"/>
-					</form>
-					
-					<button class="btn btn-success dropdown-toggle no-outline no-border" id="donateMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-						Donate <span class="caret"></span>
-					</button>
-					<ul class="dropdown-menu" aria-labelledby="donateMenuItems">
-						<li class="pointer">
-							<a class="no-margin no-padding pointer">
-								<label for="submit-form" class="width-100-perc normal-font pointer no-margin pad-3-20"> PayPal </label>
-							</a>
-						</li>
-						
-						<li role="separator" class="divider no-margin"></li>
-						<li> <a> Help(coming soon!) </a> </li>
-					</ul>
-				</div>
-				
-				<a class="TF5FD btn btn-default pull-right margin-bottom no-outline no-border" role="button" href="mailto:rupinderjeet47@gmail.com"> Email </a>
-			</div>
-			
-			<!-- Bootstrap Carousel -->
-			<div id="theSlider" class="carousel slide" data-ride="carousel" data-interval="false">
-				<div class="carousel-inner carousel-extra-height">
+		<!-- Updation Bar ========================================================================= -->
+		<div class="container well well-sm text-center active-button">
+			<p class="pull-left no-margin" style="text-decoration: underline;">started Mar 13, 2016</p>
+			<kbd>UNDER DEVELOPMENT</kbd> & <kbd>UPDATES EVERY SUNDAY</kbd>
+			<p class="pull-right no-margin">Last Update Mar 27, 2016</p>
+		</div>
 
-					<!-- FIRST SLIDE ======================================================================= -->
-					<div class="item active">
-						<div class="container well well-sm">
+		<!-- Top Menu Bar ========================================================================= -->
+		<div class="container well well-sm no-padding" style="background: transparent; border: none;"> 
+			<div class="hidden-md hidden-sm hidden-xs pull-left">
+				<button class="TF5FD btn btn-focused no-outline no-border" onclick="btnClick('bar', this, '0')"> HOME </button> 
+				<button class="TF5FD btn btn-default no-outline no-border" onclick="btnClick('bar', this, '1')"> PORTFOLIO </button> 
+				<button class="TF5FD btn btn-default no-outline no-border" onclick="btnClick('bar', this, '2')"> EDUCATION </button> 
+				<button class="TF5FD btn btn-default no-outline no-border" onclick="btnClick('bar', this, '3')"> BLOG </button> 
+				<button class="TF5FD btn btn-default no-outline no-border" onclick="btnClick('bar', this, '4')"> ABOUT </button> 
+				<button class="TF5FD btn btn-default no-outline no-border" onclick="btnClick('bar', this, '5')"> SERVICES </button> 
+				<button class="TF5FD btn btn-default no-outline no-border" onclick="btnClick('bar', this, '6')"> CONTACT </button> 
+				<button class="TF5FD btn btn-default no-outline no-border" onclick="btnClick('bar', this, '7')"> FEEDBACK </button> 
+				<button class="TF5FD btn btn-default no-outline no-border" onclick="btnClick('bar', this, '8')"> STATISTICS </button> 
+			</div>
+
+			<div class="hidden-lg">
+				<select class="btn btn-default no-outline no-border pull-left" onchange="btnClick('mobile-bar', this);">
+					<option> Home </option>
+					<option> Portfolio </option>
+					<option> Education </option>
+					<option> Blog </option>
+					<option> About </option>
+					<option> Services </option>
+					<option> Contact </option>
+					<option> Feedback </option>		<!-- 7th Number is connected to JavaScript initFeedbackDisqus -->
+					<option> Statistics </option>
+				</select>
+			</div>
+
+			<div class="dropdown pull-right margin-left-5">
+				<!-- PayPal Donate Form-->
+				<form id="paypal-donate-form" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+					<input type="hidden" name="cmd" value="_s-xclick">
+					<input type="hidden" name="hosted_button_id" value="RBSJUBQ58RNAU">
+					<input type="submit" name="submit" id="submit-form" class="hidden" value="Donate with PayPal"/>
+				</form>
+
+				<button class="btn btn-success dropdown-toggle no-outline no-border" id="donateMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+					Donate <span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu" aria-labelledby="donateMenuItems">
+					<li class="pointer">
+						<a class="no-margin no-padding pointer">
+							<label for="submit-form" class="width-100-perc normal-font pointer no-margin pad-3-20"> PayPal </label>
+						</a>
+					</li>
+
+					<li role="separator" class="divider no-margin"></li>
+					<li> <a> Help(coming soon!) </a> </li>
+				</ul>
+			</div>
+		</div>
+
+		<!-- Bootstrap Carousel -->
+		<div id="theSlider" class="carousel slide" data-ride="carousel" data-interval="false">
+			<div class="carousel-inner carousel-extra-height">
+
+				<!-- FIRST SLIDE ======================================================================= -->
+				<div class="item active">
+					<div class="container well well-sm">
 <!--							<h1 class="big-font"> NEED A WEBSITE, SOFTWARE OR BANNER? </h1>-->
 
 <!--
-							<text class="b-bbbbbb font-size-15 pad-2px margin-2px"> &nbsp; FRIENDLY </text>
-							<text class="b-bbbbbb font-size-15 pad-2px margin-2px"> &nbsp; LOCAL </text>
-							<text class="b-bbbbbb font-size-15 pad-2px margin-2px"> &nbsp; PROFESSIONAL </text>
-							<text class="b-bbbbbb font-size-15 pad-2px margin-2px"> &nbsp; RESPONSIVE </text>
+						<text class="b-bbbbbb font-size-15 pad-2px margin-2px"> &nbsp; FRIENDLY </text>
+						<text class="b-bbbbbb font-size-15 pad-2px margin-2px"> &nbsp; LOCAL </text>
+						<text class="b-bbbbbb font-size-15 pad-2px margin-2px"> &nbsp; PROFESSIONAL </text>
+						<text class="b-bbbbbb font-size-15 pad-2px margin-2px"> &nbsp; RESPONSIVE </text>
 -->
 
-							<h3 class="no-margin">WEBSITE NEWS</h3><hr>
-							<p style="margin-left: 30px;">  1. Donate Button is working(paypal) </p>
-							<p style="margin-left: 30px;">  2. Feedback page is working. </p>
-							<p style="margin-left: 30px;">  3. Email Button is working. </p>
-							
-							<hr>
-							<h4>THIS SECTION IS UNDER DEVELOPMENT</h4>
-							
+						<h3 class="no-margin">WEBSITE NEWS</h3><hr>
+						<p style="margin-left: 30px;">  1. Donate Button is working(paypal) </p>
+						<p style="margin-left: 30px;">  2. Feedback page is working. </p>
+						<p style="margin-left: 30px;">  3. Email Button is working. </p>
+
+						<hr>
+						<h4>THIS SECTION IS UNDER DEVELOPMENT</h4>
+
 <!--							SOFTWARE, BANNER AND WEBSITE DESIGN, DEVELOPMENT AND MANAGEMENT</p>-->
 
 <!--								<p> Contact Rupinderjeet for more information: -->
@@ -92,172 +104,187 @@
 
 <!--								<p class="font-size-25"> T. 09914 717 294 </p>-->
 
-						</div>
-						
-						<div class="container alert well-sm alert-success text-center"> 
-							HTML CSS JAVASCRIPT JQUERY BOOTSTRAP AJAX - JAVA ANDROID LIBGDX - JSP SERVLET XML JSON - SQL MYSQL 
-						</div>
+					</div>
 
-					</div> <!-- END OF FIRST SLIDE -->
+					<div class="container alert well-sm alert-success text-center"> 
+						HTML CSS JAVASCRIPT JQUERY BOOTSTRAP AJAX - JAVA ANDROID LIBGDX - JSP SERVLET XML JSON - SQL MYSQL 
+					</div>
 
-					<!-- SECOND SLIDE ======================================================================= -->
-					<div class="item">
-						<div id="portfolio" class="container well well-sm">
-							<h1>PORTFOLIO</h1>
-							<p>Portfolio Information</p>
+				</div> <!-- END OF FIRST SLIDE -->
+
+				<!-- SECOND SLIDE ======================================================================= -->
+				<div class="item">
+					<div id="portfolio" class="container well well-sm">
+						<h1>PORTFOLIO</h1>
+						<p>Portfolio Information and I will post links soon, just getting started yet</p>
+					</div>
+
+					<div class="container">
+						<div class="row">
+							<div class="col-md-3"> <div class="well well-sm top-border-bar height-320">  <!-- #1000 -->
+								<h3> School Management System </h3>
+							</div> </div>
+
+							<div class="col-md-3"> <div class="well well-sm top-border-bar height-320">  <!-- #1001 -->
+								<h3 class="no-margin"> Image Edit & Redraw </h3>
+								<p>Start Date : Mar 23, 2016</p>
+								<p>End Date : Working Yet</p>
+								<p>Goal : From 100 x 100 pixels To 3000 x 3000 pixels</p>
+								<p>Source Image for Project : </p> <img width="100" height="100" src="#" alt="Source Image #1001" />
+							</div> </div>
+
+							<div class="col-md-3"> <div class="well well-sm top-border-bar height-320">  <!-- #1002 -->
+								<h3>rupinderjeet.com</h3>
+								<p>This website itself is a part of my portfolio too</p>
+							</div> </div>
+
+							<div class="col-md-3"> <div class="well well-sm top-border-bar height-320">  <!-- #1003 -->
+								<h3>Google Forms</h3>
+							</div> </div>
+
+							<div class="col-md-3"> <div class="well well-sm top-border-bar height-320">  <!-- #1004 -->
+								<h3>Pharmacy Stock Management System</h3>
+							</div> </div>
+
+							<div class="col-md-3"> <div class="well well-sm top-border-bar height-320">  <!-- #1005 -->
+								<h1>6</h1>
+							</div> </div>
+
+							<div class="col-md-3"> <div class="well well-sm top-border-bar height-320">  <!-- #1006 -->
+								<h1>7</h1>
+							</div> </div>
+
+							<div class="col-md-3"> <div class="well well-sm top-border-bar height-320">  <!-- #1007 -->
+								<h1>8</h1>
+							</div> </div>
 						</div>
-						
-						<div class="container">
-							<div class="row">
-								<div class="col-md-3"> <div class="well well-sm top-border-bar height-320">  <!-- #1000 -->
-									<h3> School Management System </h3>
-								</div> </div>
-								
-								<div class="col-md-3"> <div class="well well-sm top-border-bar height-320">  <!-- #1001 -->
-									<h3 class="no-margin"> Image Edit & Redraw </h3>
-									<p>Start Date : Mar 23, 2016</p>
-									<p>End Date : Working Yet</p>
-									<p>Goal : From 100 x 100 pixels To 3000 x 3000 pixels</p>
-									<p>Source Image for Project : </p> <img width="100" height="100" src="#" alt="Source Image #1001" />
-								</div> </div>
-								
-								<div class="col-md-3"> <div class="well well-sm top-border-bar height-320">  <!-- #1002 -->
-									<h3>rupinderjeet.com</h3>
-									<p>This website itself is a part of my portfolio too</p>
-								</div> </div>
-								
-								<div class="col-md-3"> <div class="well well-sm top-border-bar height-320">  <!-- #1003 -->
-									<h3>Google Forms</h3>
-								</div> </div>
-								
-								<div class="col-md-3"> <div class="well well-sm top-border-bar height-320">  <!-- #1004 -->
-									<h3>Pharmacy Stocks Management System</h3>
-								</div> </div>
-								
-								<div class="col-md-3"> <div class="well well-sm top-border-bar height-320">  <!-- #1005 -->
-									<h1>6</h1>
-								</div> </div>
-								
-								<div class="col-md-3"> <div class="well well-sm top-border-bar height-320">  <!-- #1006 -->
-									<h1>7</h1>
-								</div> </div>
-								
-								<div class="col-md-3"> <div class="well well-sm top-border-bar height-320">  <!-- #1007 -->
-									<h1>8</h1>
-								</div> </div>
-							</div>
-						</div>
-					</div> <!-- END OF SECOND SLIDE -->
+					</div>
+				</div> <!-- END OF SECOND SLIDE -->
 
-					<!-- THIRD SLIDE ======================================================================= -->
-					<div class="item">
-						<div id="education" class="container well well-sm">
-							<h1>EDUCATIONAL QUALIFICATION</h1>
-						</div>
-					</div> <!-- END OF THIRD SLIDE -->
+				<!-- THIRD SLIDE ======================================================================= -->
+				<div class="item">
+					<div id="education" class="container well well-sm">
+						<h1>EDUCATIONAL QUALIFICATION</h1>
+						<p>Education Information</p>
+					</div>
+				</div> <!-- END OF THIRD SLIDE -->
 
-					<!-- FOURTH SLIDE ======================================================================= -->
-					<div class="item">
-						<div id="blog" class="container well well-sm">
-							<h1>BLOG POSTS</h1>
-						</div>
-					</div> <!-- END OF FOURTH SLIDE -->
+				<!-- FOURTH SLIDE ======================================================================= -->
+				<div class="item">
+					<div id="blog" class="container well well-sm">
+						<h1>BLOG POSTS</h1>
+					</div>
+				</div> <!-- END OF FOURTH SLIDE -->
 
-					<!-- FIFTH SLIDE ======================================================================= -->
-					<div class="item">
-						<div id="about" class="container well well-sm">
-							<div class="row">
-								<div id="profile-pic" class="col-md-3">
-									<div id="next-image">
-										<img id="pic-1" class="img-rounded pointer margin-bottom    display" width="250" height="300" src="imgs/1.jpg" alt="pic-1" />
-										<img id="pic-2" class="img-rounded pointer margin-bottom no-display" width="250" height="300" src="imgs/2.jpg" alt="pic-2" />
-										<img id="pic-3" class="img-rounded pointer margin-bottom no-display" width="250" height="300" src="imgs/3.jpg" alt="pic-3" />
-										<img id="pic-4" class="img-rounded pointer margin-bottom no-display" width="250" height="300" src="imgs/4.jpg" alt="pic-4" />
-										<img id="pic-5" class="img-rounded pointer margin-bottom no-display" width="250" height="300" src="imgs/5.jpg" alt="pic-5" />
+				<!-- FIFTH SLIDE ======================================================================= -->
+				<div class="item">
+					<div id="about" class="container well well-sm">
+						<div class="row">
+							<div id="profile-pic" class="col-md-3">
+								<div id="next-image">
+									<img id="pic-1" class="img-rounded pointer margin-bottom    display" width="240" height="300" src="imgs/1.jpg" alt="pic-1" />
+									<img id="pic-2" class="img-rounded pointer margin-bottom no-display" width="240" height="300" src="imgs/2.jpg" alt="pic-2" />
+									<img id="pic-3" class="img-rounded pointer margin-bottom no-display" width="240" height="300" src="imgs/3.jpg" alt="pic-3" />
+									<img id="pic-4" class="img-rounded pointer margin-bottom no-display" width="240" height="300" src="imgs/4.jpg" alt="pic-4" />
+									<img id="pic-5" class="img-rounded pointer margin-bottom no-display" width="240" height="300" src="imgs/5.jpg" alt="pic-5" />
 
-										<button class="btn btn-default" onclick="showNextImage('backward', 'btnclick')"> previous </button>
-										<button id="slideshow-btn" class="btn btn-default" onclick="changeSlideShowState('pause', this)"> pause </button>
-										<button class="btn btn-default" onclick="showNextImage('forward', 'btnclick')"> next </button>
-									</div>
+									<button class="btn btn-default" onclick="showNextImage('backward', 'btnclick')"> previous </button>
+									<button id="slideshow-btn" class="btn btn-default" onclick="changeSlideShowState('pause', this)"> pause </button>
+									<button class="btn btn-default" onclick="showNextImage('forward', 'btnclick')"> next </button>
 								</div>
+							</div>
 
-								<div id="profile-info" class="col-md-9">
-									<h2> RUPINDERJEET SINGH HANS<small>Web Developer</small> </h2>
+							<div id="profile-info" class="col-md-9">
+								<h2> RUPINDERJEET SINGH HANS<small>Web Developer</small> </h2>
+
+								<br>
+								<p> Hello, I'm Rupinderjeet Singh. I was born in Punjab, India. I live with my mother and sister. 
+									My dad paid for my study very well, but unfortunately, we couldn't get along after studies. </p>
+
+								<br>
+								<p> When I was little, I loved drawing and computing very much. I could never get tired from both.
+									This shaped my interest in the Programming and 2D drawing eventually lead to my studies in Computer Science.
+									I acquired a Bachelor of Technology degree from a local university, known as PTU, in Computer Science Engineering. 
+									I was not so happy with theory-content alone, so i started learning how to program from any source i could get.
+									<a id="read-more-link" class="pointer" onclick="$('#read-more-info').slideDown('fast'); $(this).fadeOut('slow');"> read more.. </a>
+								</p>
+
+								<div id="read-more-info" class="no-display">
+									<br>
+									<p> In 2012, I got my first computer(Dual Core Pentium, 2.70Ghz, 2GB RAM, 320GB HDD). 
+										Ever since then, I was attached with Java programming language.
+										In 2014, I got my second computer(actually a Laptop, Dell Inspiron 3542, current PC).</p>
 
 									<br>
-									<p> Hello, I'm Rupinderjeet Singh. I was born in Punjab, India. I live with my mother and sister. 
-										My dad paid for my study very well, but unfortunately, we couldn't get along after studies. </p>
-
-									<br>
-									<p> When I was little, I loved drawing and computing very much. I could never get tired from both.
-										This shaped my interest in the Programming and 2D drawing eventually lead to my studies in Computer Science.
-										I acquired a Bachelor of Technology degree from a local university, known as PTU, in Computer Science Engineering. 
-										I was not so happy with theory-content alone, so i started learning how to program from any source i could get.
-										<a id="read-more-link" class="pointer" onclick="$('#read-more-info').slideDown('fast'); $(this).fadeOut('slow');"> read more.. </a>
+									<p> I developed my programming and designing skills randomly(whenever i got extra time) while working as a Back Office Computer Operator(Data Entry) in Dada Motors(Tata Motors Dealer), Locally.
+										In my spare time, I enjoy taking photographs so that I can reinterpret nature's beauty using my point of view. 
+										I also enjoy listening improvised music that cannot be put in words. 
+										It is my belief that this world can be portrayed in a hundred different ways – the things that we see, the places we go, and the people that we meet. 
 									</p>
 
-									<div id="read-more-info" class="no-display">
-										<br>
-										<p> In 2012, I got my first computer(Dual Core Pentium, 2.70Ghz, 2GB RAM, 320GB HDD). 
-											Ever since then, I was attached with Java programming language.
-											In 2014, I got my second computer(actually a Laptop, Dell Inspiron 3542, current PC).</p>
+									<br>
+									<p> This site is merely a glimpse of information of what I have experienced so far (I will add a lot of Information soon, expected 2020).
+										I hope you enjoy visiting my site, and don’t forget to check out my portfolio(if there's any). Thank you for visiting.
+										For any feedback, please email me at:
+										rupinderjeet47@gmail.com </p>
 
-										<br>
-										<p> I developed my programming and designing skills randomly(whenever i got extra time) while working as a Back Office Computer Operator(Data Entry) in Dada Motors(Tata Motors Dealer), Locally.
-											In my spare time, I enjoy taking photographs so that I can reinterpret nature's beauty using my point of view. 
-											I also enjoy listening improvised music that cannot be put in words. 
-											It is my belief that this world can be portrayed in a hundred different ways – the things that we see, the places we go, and the people that we meet. 
-										</p>
-
-										<br>
-										<p> This site is merely a glimpse of information of what I have experienced so far (I will add a lot of Information soon, expected 2020).
-											I hope you enjoy visiting my site, and don’t forget to check out my portfolio(if there's any). Thank you for visiting.
-											For any feedback, please email me at:
-											rupinderjeet47@gmail.com </p>
-
-										<b>I know that all of information is not arranged properly, but i will do it someday when i thought that i should give myself a thought too.</b>
-										<a class="pointer" onclick="$('#read-more-info').slideUp('fast'); $('#read-more-link').fadeIn('slow');"> read less.. </a>
-									</div>
+									<b>I know that all of information is not arranged properly, but i will do it someday when i thought that i should give myself a thought too.</b>
+									<a class="pointer" onclick="$('#read-more-info').slideUp('fast'); $('#read-more-link').fadeIn('slow');"> read less.. </a>
 								</div>
-							</div>				
-						</div>
-					</div> <!-- END OF FIFTH SLIDE -->
-
-					<!-- SIXTH SLIDE ======================================================================= -->
-					<div class="item">
-						<div id="services" class="container well well-sm">
-							<h1>SERVICES I OFFER</h1>
-						</div>
-					</div> <!-- END OF SIXTH SLIDE -->
-
-					<!-- SEVENTH SLIDE ======================================================================= -->
-					<div class="item">
-						<div id="contact" class="container well well-sm">
-							<h1>CONTACT ME</h1>
-						</div>
-					</div> <!-- END OF SEVENTH SLIDE -->
-
-					<!-- EIGHTH SLIDE ======================================================================= -->
-					<div class="item">
-						<div id="feedback" class="container well well-sm">
-							<h1>FEEDBACK COMMENTS</h1>
-						</div>
-						
-						<div class="container well well-sm"> <!-- Feedback Comment Box -->
-							<div id="disqus_thread"> 
-								<div class="spinner"></div> Loading Comments, Please hold the rush! 
 							</div>
-							<noscript>Please enable JavaScript to view and post feedback comments on this website.</noscript>
-						</div>
-					</div> <!-- END OF EIGHTH SLIDE -->
+						</div>				
+					</div>
+				</div> <!-- END OF FIFTH SLIDE -->
 
-					<!-- NINTH SLIDE ======================================================================= -->
-					<div class="item">
-						<div id="statistics" class="container well well-sm">
-							<h1>STATISTICS</h1>
+				<!-- SIXTH SLIDE ======================================================================= -->
+				<div class="item">
+					<div id="services" class="container well well-sm">
+						<h1>SERVICES I OFFER</h1>
+					</div>
+				</div> <!-- END OF SIXTH SLIDE -->
+
+				<!-- SEVENTH SLIDE ======================================================================= -->
+				<div class="item">
+					<div id="contact" class="container well well-sm">
+						<h1>CONTACT ME</h1>
+					</div>
+					
+					
+					<div id="contact" class="container well well-sm">
+						<iframe src="https://www.google.com/maps/embed?pb=!1m21!1m12!1m3!1d23160.059908595667!2d75.33293862826831!3d30.742706563468065!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m6!3e2!4m3!3m2!1d30.7426754!2d75.33033!4m0!5e0!3m2!1sen!2sin!4v1459090076940" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+					</div>
+				</div> <!-- END OF SEVENTH SLIDE -->
+
+				<!-- EIGHTH SLIDE ======================================================================= -->
+				<div class="item">
+					<div id="feedback" class="container well well-sm">
+						<h1>FEEDBACK COMMENTS</h1> 
+						<p>
+							Please write your Review/Feedback/Suggestions/Queries in Comment box below and post it! Your support & suggestions are highly appreciated.
+							Thank you.
+						</p>
+					</div>
+
+					<div class="container well well-sm"> <!-- Feedback Comment Box -->
+						<div id="disqus_thread"> 
+							<div class="row">
+								<div class="col-sm-1"> <div class="spinner"></div> </div>
+								<div class="col-sm-11">  Loading Comments, Please hold the rush!  </div>
+							</div>
+							
+							
+						
 						</div>
-					</div> <!-- END OF NINTH SLIDE -->
-				</div>
+						<noscript>Please enable JavaScript to view and post feedback comments on this website.</noscript>
+					</div>
+				</div> <!-- END OF EIGHTH SLIDE -->
+
+				<!-- NINTH SLIDE ======================================================================= -->
+				<div class="item">
+					<div id="statistics" class="container well well-sm">
+						<h1>STATISTICS</h1>
+					</div>
+				</div> <!-- END OF NINTH SLIDE -->
 			</div>
 		</div>
 	
