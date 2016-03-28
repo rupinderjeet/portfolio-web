@@ -78,6 +78,11 @@ p{
 	padding: 2px;
 }
 
+.pad-20-20{
+	padding-left: 20px !important;
+	padding-right: 20px !important;
+}
+
 .margin-2px{
 	margin: 2px;
 }
