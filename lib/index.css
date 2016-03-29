@@ -18,6 +18,12 @@ p{
 	background-color: yellow;
 }
 
+.f-white{
+	color: white;
+}.b-white{
+	background-color: white;
+}
+
 .f-bbbbbb{
 	color: #bbbbbb;
 }.b-bbbbbb{
@@ -78,9 +84,15 @@ p{
 	padding: 2px;
 }
 
-.pad-20-20{
+.pad-5-20{
+	padding-top: 5px !important;
+	padding-bottom: 5px !important;
 	padding-left: 20px !important;
 	padding-right: 20px !important;
+}
+
+.border-e6e4e4{
+	border: 1px solid #e6e4e4;
 }
 
 .margin-2px{
@@ -145,6 +157,12 @@ p{
 .height-320{ /* height of portfolio items */
 	height: 320px;
 	max-height: 320px;
+}
+
+.center-div{
+	margin: auto !important;
+	width: 30px !important;
+	height: 30px !important;
 }
 
 .spinner{
