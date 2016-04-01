@@ -41,6 +41,18 @@ p{
 }.b-green{
 	background-color: green;
 }
+.f-crimson{
+	color: crimson;
+}.b-crimson{
+	background-color: crimson;
+}
+
+.border-black, .border-black th, .border-black tr, .border-black tr td{
+	 border: 1px solid black;
+}
+.border-crimson, .border-crimson th, .border-crimson tr, .border-crimson tr td{
+	 border: 1px solid crimson;
+}
 
 .margin-bottom{
 	margin-bottom: 5px;
