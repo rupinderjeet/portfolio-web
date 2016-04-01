@@ -20,20 +20,20 @@
 		<div class="col-lg-7 col-md-6 col-sm-4 col-xs-12">
 			<!-- Hidden Handy Contact Form -->
 			<div id="handy-contact-form" class="well well-sm no-display">
-				<form id="contact-form" method="POST">
-					<input name="user-name" class="form-control input-sm margin-bottom" placeholder="Your Name" />
-					<input name="user-email" class="form-control input-sm margin-bottom" placeholder="Your Email" />
-					<input name="user-twitter" class="form-control input-sm margin-bottom" placeholder="Your Twitter (Optional)" />
-					<input name="user-whatsapp" class="form-control input-sm margin-bottom" placeholder="Your Whatsapp (Optional)" />
-					<textarea name="user-message" class="form-control input-sm margin-bottom" placeholder="Your Long Message" rows="4"></textarea>
-					<input type="hidden" name="_subject" value="Website Enquiry" />
-					<input type="text" name="_gotcha" class="no-display" />
+<!--				<form id="contact-form" method="POST">-->
+					<input id="user-name" class="form-control input-sm margin-bottom" placeholder="Your Name" />
+					<input id="user-email" class="form-control input-sm margin-bottom" placeholder="Your Email" />
+					<input id="user-twitter" class="form-control input-sm margin-bottom" placeholder="Your Twitter (Optional)" />
+					<input id="user-whatsapp" class="form-control input-sm margin-bottom" placeholder="Your Whatsapp (Optional)" />
+					<textarea id="user-message" class="form-control input-sm margin-bottom" placeholder="Your Long Message" rows="4"></textarea>
+					<input id="enq-type" type="hidden" name="_subject" value="Website Enquiry" />
+					<input id="anti-spam-value" type="text" name="_gotcha" class="no-display" />
 					
 					<button class="btn btn-sm btn-danger" onclick="sendContactEmail()"> Submit </button>
 					<button type="button" class="btn btn-sm btn-default" onclick="$('#handy-contact-form').slideToggle('fast'); toggleString(document.getElementById('handy-form-btn'), 'Use Handy Contact Form', 'Hide Contact Form');"> 
 						Cancel 
 					</button>
-				</form>
+<!--				</form>-->
 			</div>
 			
 			<div id="handy-contact-form-thanks" class="well well-sm no-display">
