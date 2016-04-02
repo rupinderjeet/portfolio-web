@@ -15,8 +15,14 @@ p{
 .f-yellow{
 	color: yellow;
 }.b-yellow{
-	background-color: yellow;
-}
+	 background-color: yellow;
+ }
+
+.f-black{
+	color: black;
+}.b-black{
+	 background-color: black;
+ }
 
 .f-blue{
 	color: blue;
