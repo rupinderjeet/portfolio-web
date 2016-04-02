@@ -166,10 +166,65 @@
 				&nbsp;&nbsp;2. The service this page is using might be a Third Party Service. Due to some reasons, The service provider may experiance some technical issues. <br>
 			</p>
 		</div>
-		
+
+		<!-- Modal : Report an Issue : to be called from different pages =========================================== -->
+		<div class="modal fade" id="report-issue-modal" tabindex="-1" role="dialog" aria-labelledby="reportAnIssue">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span> </button>
+						<h4 class="modal-title" id="report-issue-modal-title">Report an Issue</h4>
+					</div>
+
+					<div class="modal-body">
+						<div id="report-issue-error" class="alert well-sm alert-danger no-display">
+							1. Your name must be of 2 or more characters. <br>
+							2. Your email must be a valid email address. <br>
+							3. Issue Title must be of 5 or more characters. <br>
+							4. Issue Details must be of 20 or more characters.
+						</div>
+
+						<div id="report-issue-server-error" class="alert well-sm alert-danger no-display">
+							An error occurred due to some of the following reasons: <br>
+							1. You are not connected to Internet anymore. <br>
+							2. The server you are trying to access is Offline. <br>
+							3. This third party service used to report issues is unreachable. <br>
+							4. Some kind of abnormal/illegal activity.
+							<br> <br>
+							<a href="index.html" class="f-crimson underline"> I want to refresh this page! </a>
+						</div>
+
+						<div id="report-issue-thanks" class="alert well-sm alert-info no-display">
+							Thank you for reporting this issue. I will, definitely, look into this matter as soon as possible.
+							Please be active on your email, I may contact you to get more details about this issue. <br> <br>
+
+							You will be able to report only one issue for now.
+							But, if you <a href="index.html" class="f-blue underline"> reload this page now </a>,
+							you will be able to report another issue too. <br> <br>
+
+							Thank you again! Keep visiting!
+						</div>
+
+						<div id="report-issue-input">
+							<input id="reporter-name" class="form-control input-sm margin-bottom" placeholder="Your Name" />
+							<input id="reporter-email" class="form-control input-sm margin-bottom" placeholder="Your Email" />
+							<br>
+							<input id="report-issue-title" class="form-control input-sm margin-bottom" placeholder="Issue Title" />
+							<textarea id="report-issue-description" class="form-control input-sm margin-bottom" placeholder="Issue Details" rows="5"></textarea>
+						</div>
+					</div>
+
+					<div class="modal-footer">
+						<button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Close</button>
+						<button type="button" class="btn btn-sm btn-primary" onclick="reportIssue(this)">Submit</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
 		<script type="text/javascript" src="lib/jquery.min.js"></script>
 		<script type="text/javascript" src="lib/bootstrap.min.js"></script>
 		<script type="text/javascript" src="lib/index.js"></script>
-		<script id="dsq-count-scr" src="//rupinderjeet.disqus.com/count.js" async></script> <!--javascript for disqus-->
+		<script id="dsq-count-scr" src="//rupinderjeet.disqus.com/count.js" async></script> <!--javascript for disqus feedback-->
 	</body>
 </html>
