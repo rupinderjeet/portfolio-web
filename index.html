@@ -5,75 +5,97 @@
 		<meta name="description" content="a website showing information of its author">
 		<meta name="robots" content="all">
 		<meta name="author" content="Rupinderjeet Singh Hans, rupinderjeet47(at)gmail(dot)com">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 		<meta name="copyright" content="(c) 2015-2016 Rupinderjeet Singh Hans">
 		<link rel="shortcut icon" href="#" type="image/x-icon">
 		<title> Welcome </title>
 		<link type="text/css" rel="stylesheet" href="lib/bootstrap.min.css">
 		<link type="text/css" rel="stylesheet" href="lib/index.css">
+
+		<!--[if lt IE 9]>
+			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
 	</head>
-	<body>
-			
-		<!-- Updation Bar ========================================================================= -->
-		<div class="container well well-sm text-center active-button">
-			<p class="pull-left no-margin" style="text-decoration: underline;">started Mar 13, 2016</p>
-			<kbd>UNDER DEVELOPMENT</kbd> & <kbd>UPDATES EVERY SUNDAY</kbd>
-			<p class="pull-right no-margin">Last Mass Update Apr 01, 2016</p>
-		</div>
+	<body style="margin-top: 70px;">
 
-		<!-- Languages Bar -->
-		<div class="container alert well-sm alert-success text-center"> 
-			HTML CSS JAVASCRIPT JQUERY BOOTSTRAP AJAX - JAVA ANDROID LIBGDX - JSP SERVLET XML JSON - SQL MYSQL 
-		</div>
-		
-		<!-- Top Menu Bar ========================================================================= -->
-		<div class="container well well-sm no-padding" style="background: transparent; border: none;"> 
-			<div class="hidden-md hidden-sm hidden-xs pull-left">
-				<button class="TF5FD btn btn-focused no-outline no-border" onclick="btnClick('bar', this, '0')"> HOME </button> 
-				<button class="TF5FD btn btn-default no-outline no-border" onclick="btnClick('bar', this, '1')"> PORTFOLIO </button> 
-				<button class="TF5FD btn btn-default no-outline no-border" onclick="btnClick('bar', this, '2')"> EDUCATION </button> 
-				<button class="TF5FD btn btn-default no-outline no-border" onclick="btnClick('bar', this, '3')"> BLOG </button> 
-				<button class="TF5FD btn btn-default no-outline no-border" onclick="btnClick('bar', this, '4')"> ABOUT </button> 
-				<button class="TF5FD btn btn-default no-outline no-border" onclick="btnClick('bar', this, '5')"> SERVICES </button> 
-				<button class="TF5FD btn btn-default no-outline no-border" onclick="btnClick('bar', this, '6')"> CONTACT </button> 
-				<button class="TF5FD btn btn-default no-outline no-border" onclick="btnClick('bar', this, '7')"> FEEDBACK </button> 
-				<button class="TF5FD btn btn-default no-outline no-border" onclick="btnClick('bar', this, '8')"> STATISTICS </button> 
-			</div>
+		<!-- PayPal Donate Form-->
+		<form id="paypal-donate-form" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+			<input type="hidden" name="cmd" value="_s-xclick">
+			<input type="hidden" name="hosted_button_id" value="RBSJUBQ58RNAU">
+			<input type="submit" name="submit" id="submit-form" class="hidden" value="Donate with PayPal"/>
+		</form>
 
-			<div class="hidden-lg">
-				<select class="btn btn-default no-outline no-border pull-left" onchange="btnClick('mobile-bar', this);">
-					<option> Home </option>
-					<option> Portfolio </option>
-					<option> Education </option>
-					<option> Blog </option>
-					<option> About </option>
-					<option> Services </option>
-					<option> Contact </option>
-					<option> Feedback </option>		<!-- 7th Number is connected to JavaScript initFeedbackDisqus -->
-					<option> Statistics </option>
-				</select>
-			</div>
+		<!-- Under Development Bar ========================================================================= -->
+		<div class="container navbar-fixed-top">
+			<div id="links" class="well well-sm no-display" style="height:50px; margin-bottom:0px; border-top-left-radius: 0; border-bottom-right-radius: 0; border-top-right-radius: 0;">
 
-			<div class="dropdown pull-right margin-left-5">
-				<!-- PayPal Donate Form-->
-				<form id="paypal-donate-form" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-					<input type="hidden" name="cmd" value="_s-xclick">
-					<input type="hidden" name="hosted_button_id" value="RBSJUBQ58RNAU">
-					<input type="submit" name="submit" id="submit-form" class="hidden" value="Donate with PayPal"/>
-				</form>
+				<div class="dropdown pull-right margin-left-5">
+					<button class="btn btn-sm btn-success dropdown-toggle no-outline no-border" id="donateMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+						Donate <span class="caret"></span>
+					</button>
+					<ul class="dropdown-menu" aria-labelledby="donateMenuItems">
+						<li class="pointer">
+							<a class="no-margin no-padding pointer">
+								<label for="submit-form" class="width-100-perc normal-font pointer no-margin pad-3-20"> PayPal </label>
+							</a>
+						</li>
 
-				<button class="btn btn-success dropdown-toggle no-outline no-border" id="donateMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-					Donate <span class="caret"></span>
+						<li role="separator" class="divider no-margin"></li>
+						<li> <a> Help(coming soon!) </a> </li>
+					</ul>
+				</div>
+
+				<button id="report-issue-btn" class="btn btn-sm btn-default no-border pull-right" type="button" data-toggle="modal" data-target="#report-issue-modal">
+					Report an Issue?
 				</button>
-				<ul class="dropdown-menu" aria-labelledby="donateMenuItems">
-					<li class="pointer">
-						<a class="no-margin no-padding pointer">
-							<label for="submit-form" class="width-100-perc normal-font pointer no-margin pad-3-20"> PayPal </label>
-						</a>
-					</li>
 
-					<li role="separator" class="divider no-margin"></li>
-					<li> <a> Help(coming soon!) </a> </li>
-				</ul>
+			</div>
+
+			<kbd>UNDER DEVELOPMENT</kbd>
+
+			<button class="pull-right btn btn-sm no-outline no-border pad-5-20"
+					style="height: auto; border-top-left-radius: 0; border-top-right-radius: 0;"
+					onclick="$('#links').slideToggle('fast');
+							  toggleString(this, '&laquo;', '&raquo;');"
+					>&laquo;</button>
+
+			<!--<span class="glyphicon glyphicon-chevron-down"></span>-->
+		</div>
+
+		<!-- SMALL MENU BAR : MOBILE FRIENDLY ========================================================================= -->
+		<div id="menu-bar-small" class="container center-menu">
+			<div id="menu-1">
+				<button class="btn-bar btn btn-sm btn-focused no-outline no-border" onclick="btnClick('bar', this, '0')"> HOME </button>
+				<button class="btn-bar btn btn-sm btn-default no-outline no-border" onclick="btnClick('bar', this, '1')"> PORTFOLIO </button>
+				<button class="btn-bar btn btn-sm btn-default no-outline no-border" onclick="btnClick('bar', this, '2')"> EDUCATION </button>
+				<button class="btn btn-sm btn-default no-outline no-border" onclick="
+					$('#menu-1').hide('fast');
+					$('#menu-2').show('fast');
+				"> <span class="glyphicon glyphicon-chevron-right"></span> </button>
+			</div>
+
+			<div id="menu-2" class="no-display">
+				<button class="btn btn-sm btn-default no-outline no-border" onclick="
+					$('#menu-1').show('fast');
+					$('#menu-2').hide('fast');
+				"> <span class="glyphicon glyphicon-chevron-left"></span> </button>
+				<button class="btn-bar btn btn-sm btn-default no-outline no-border" onclick="btnClick('bar', this, '3')"> BLOG </button>
+				<button class="btn-bar btn btn-sm btn-default no-outline no-border" onclick="btnClick('bar', this, '4')"> ABOUT </button>
+				<button class="btn-bar btn btn-sm btn-default no-outline no-border" onclick="btnClick('bar', this, '5')"> SERVICES  </button>
+				<button class="btn-bar btn btn-sm btn-default no-outline no-border" onclick="
+					$('#menu-2').hide('fast');
+					$('#menu-3').show('fast');
+				"> <span class="glyphicon glyphicon-chevron-right"></span> </button>
+			</div>
+
+			<div id="menu-3" class="no-display">
+				<button class="btn btn-sm btn-default no-outline no-border" onclick="
+					$('#menu-2').show('fast');
+					$('#menu-3').hide('fast');
+				"> <span class="glyphicon glyphicon-chevron-left"></span> </button>
+				<button class="btn-bar btn btn-sm btn-default no-outline no-border" onclick="btnClick('bar', this, '6')"> CONTACT </button>
+				<button class="btn-bar btn btn-sm btn-default no-outline no-border" onclick="btnClick('bar', this, '7')"> FEEDBACK </button>
+				<button class="btn-bar btn btn-sm btn-default no-outline no-border" onclick="btnClick('bar', this, '8')"> STATISTICS </button>
 			</div>
 		</div>
 
@@ -83,77 +105,79 @@
 
 				<!-- FIRST SLIDE ======================================================================= -->
 				<div id="home-slide" class="item active">
-					<div class="container well well-lg">
-						<div class="spinner center-div"></div>
-					</div>
+					<div class="container"> <div class="well well-lg">
+						<div class="spinner center-spinner"></div>
+					</div> </div>
 				</div> <!-- END OF FIRST SLIDE -->
 
 				<!-- SECOND SLIDE ======================================================================= -->
 				<div id="portfolio-slide" class="item">
-					<div class="container well well-lg">
-						<div class="spinner center-div"></div>
-					</div>
+					<div class="container"> <div class="well well-lg">
+						<div class="spinner center-spinner"></div>
+					</div> </div>
 				</div> <!-- END OF SECOND SLIDE -->
 
 				<!-- THIRD SLIDE ======================================================================= -->
 				<div id="education-slide" class="item">
-					<div class="container well well-lg">
-						<div class="spinner center-div"></div>
-					</div>
+					<div class="container"> <div class="well well-lg">
+						<div class="spinner center-spinner"></div>
+					</div> </div>
 				</div> <!-- END OF THIRD SLIDE -->
 
 				<!-- FOURTH SLIDE ======================================================================= -->
 				<div id="blog-slide" class="item">
-					<div class="container well well-lg">
-						<div class="spinner center-div"></div>
-					</div>
+					<div class="container"> <div class="well well-lg">
+						<div class="spinner center-spinner"></div>
+					</div> </div>
 				</div> <!-- END OF FOURTH SLIDE -->
 
 				<!-- FIFTH SLIDE ======================================================================= -->
 				<div id="about-slide" class="item">
-					<div class="container well well-lg">
-						<div class="spinner center-div"></div>
-					</div>
+					<div class="container"> <div class="well well-lg">
+						<div class="spinner center-spinner"></div>
+					</div> </div>
 				</div> <!-- END OF FIFTH SLIDE -->
 
 				<!-- SIXTH SLIDE ======================================================================= -->
 				<div id="services-slide" class="item">
-					<div class="container well well-lg">
-						<div class="spinner center-div"></div>
-					</div>
+					<div class="container"> <div class="well well-lg">
+						<div class="spinner center-spinner"></div>
+					</div> </div>
 				</div> <!-- END OF SIXTH SLIDE -->
 
 				<!-- SEVENTH SLIDE ======================================================================= -->
 				<div id="contact-slide" class="item">
-					<div class="container well well-lg">
-						<div class="spinner center-div"></div>
-					</div>
+					<div class="container"> <div class="well well-lg">
+						<div class="spinner center-spinner"></div>
+					</div> </div>
 				</div> <!-- END OF SEVENTH SLIDE -->
 
 				<!-- EIGHTH SLIDE ======================================================================= -->
 				<div class="item">
-					<div id="feedback" class="container well well-sm">
-						<h1>FEEDBACK COMMENTS</h1> 
-						<p>
-							Please write your Review/Feedback/Suggestions/Queries in Comment box below and post it! Your support & suggestions are highly appreciated.
-							Thank you.
-						</p>
-					</div>
-
-					<div class="container well well-sm"> <!-- Feedback Comment Box -->
-						<div id="disqus_thread"> 
-							<div class="spinner pull-left"></div>
-							<p id="feedback-waiting-timer" class="pull-right font-size-25"> Waiting Timer : 30 </p>
+					<div id="feedback" class="container">
+						<div class="well well-sm">
+							<h1>FEEDBACK COMMENTS</h1>
+							<p>
+								Please write your Review/Feedback/Suggestions/Queries in Comment box below and post it! Your support & suggestions are highly appreciated.
+								Thank you.
+							</p>
 						</div>
-						<noscript>Please enable JavaScript to view and post feedback comments on this website.</noscript>
+
+						<div class="container well well-sm"> <!-- Feedback Comment Box -->
+							<div id="disqus_thread">
+								<div class="spinner pull-left"></div>
+								<p id="feedback-waiting-timer" class="pull-right font-size-25"> Waiting Timer : 30 </p>
+							</div>
+							<noscript>Please enable JavaScript to view and post feedback comments on this website.</noscript>
+						</div>
 					</div>
 				</div> <!-- END OF EIGHTH SLIDE -->
 
 				<!-- NINTH SLIDE ======================================================================= -->
 				<div id="statistics-slide" class="item">
-					<div class="container well well-lg">
-						<div class="spinner center-div"></div>
-					</div>
+					<div class="container"> <div class="well well-lg">
+						<div class="spinner center-spinner"></div>
+					</div> </div>
 				</div> <!-- END OF NINTH SLIDE -->
 			</div>
 		</div>
