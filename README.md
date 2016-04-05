@@ -10,3 +10,5 @@
 **Development started on Mar 13, 2016 (Sunday)**
 
 [GitHub URL](https://github.com/rupinderjeet/portfolio)
+
+Website development paused due to no internet connection.
