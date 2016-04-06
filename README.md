@@ -11,4 +11,4 @@
 
 [GitHub URL](https://github.com/rupinderjeet/portfolio)
 
-Website development paused due to no internet connection.
+######Website development paused due to no internet connection.
