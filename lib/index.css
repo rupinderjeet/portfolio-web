@@ -8,8 +8,13 @@ h1, h2, h3, h4, h5, h6{
 	padding	: 0;
 }
 
-p{
-	font-size: 16px;
+/*p{*/
+	/*font-size: 16px;*/
+/*}*/
+
+.pad-news{
+	/*padding-left: 0px;*/
+	padding-right: 40px;
 }
 
 .f-yellow{
@@ -131,6 +136,10 @@ p{
 	padding: 5px !important;
 }
 
+.pad-10px{
+	padding: 10px !important;
+}
+
 .pad-5-20{
 	padding: 5px 20px !important;
 }
@@ -207,6 +216,10 @@ p{
 	margin: auto !important;
 	width: 30px !important;
 	height: 30px !important;
+}
+
+.border-bottom-bbb{
+	border-bottom:  1px solid #dddddd;
 }
 
 .bold-500{
