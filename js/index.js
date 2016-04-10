@@ -85,12 +85,7 @@ function startTimer(targetId) {
 
 function btnClick(source, btn, index) {
 	'use strict';
-	
-	var btnText = $(btn).html().trim().toLowerCase();
-	if (btnText !== "feedback") {
-		$("#" + btnText + "-slide").load("html/" + btnText + ".html", null, null);
-	}
-	
+
 	if (source === 'bar') {
 		/* 'btn-bar' is a special-empty-class used to target menu-bar-buttons only */
 		
@@ -101,21 +96,18 @@ function btnClick(source, btn, index) {
 		index = parseInt(index, 10);
 		
 		$("#theSlider").carousel(index);
-	} else if (source === "mobile-bar") {
-		/*
-		*  @btn is DOM's 'select' element here
-		*  @btn.selectedIndex is carousel's 'data-slide-to' value
-		*/
-		btn.blur();
-		index = parseInt(btn.selectedIndex, 10);
-		$("#theSlider").carousel(index);	// Slide to Selected Menu Item
 	}
-	
-	if (index === 7) {	//feedback button clicked
-		clearInterval(feedbackInterval); 								//In case, if it is already counting
-		feedbackInterval = setInterval(startTimer, 1000);
-		initFeedbackDisqus();
-	}
+
+    var btnText = $(btn).html().trim().toLowerCase();
+    $("#" + btnText + "-slide").load("html/" + btnText + ".html", function() {
+        if (index === 7) {	//feedback button clicked
+            clearInterval(feedbackInterval); 								//In case, if it is already counting
+            feedbackInterval = setInterval(startTimer, 1000);
+            initFeedbackDisqus();
+        }
+    });  //Loads html page according to button clicked
+
+
 }
 
 function expandItem(element) {
@@ -245,10 +237,11 @@ function reportIssue(submitBtn){
 	}
 }
 
-function arrowAnimation(){
+function arrowAnimation(element){
     $('#links').slideToggle('fast');
-    $('#arrow').toggleClass('glyphicon-chevron-down');
-    $('#arrow').toggleClass('glyphicon-chevron-up');
+    $('#arrow').attr('id', 'arrow-clicked');
+    $('#arrow-clicked').toggleClass('glyphicon-chevron-down');
+    $('#arrow-clicked').toggleClass('glyphicon-chevron-up');
 }
 
 window.onload = function () {

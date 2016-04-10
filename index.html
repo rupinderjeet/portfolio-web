@@ -9,8 +9,8 @@
 		<meta name="copyright" content="(c) 2015-2016 Rupinderjeet Singh Hans">
 		<link rel="shortcut icon" href="#" type="image/x-icon">
 		<title> Welcome Home </title>
-		<link type="text/css" rel="stylesheet" href="lib/bootstrap.min.css">
-		<link type="text/css" rel="stylesheet" href="lib/index.css">
+		<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
+		<link type="text/css" rel="stylesheet" href="css/index.css">
 
 		<!--[if lt IE 9]>
 			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -27,8 +27,7 @@
 
 		<!-- Under Development Bar ========================================================================= -->
 		<div class="container">
-			<div id="links" class="well well-sm"
-				 style="height:50px; margin-bottom:0px; border-top-left-radius: 0; border-bottom-right-radius: 0; border-top-right-radius: 0;">
+			<div id="links" class="well well-sm hidden-bar">
 
 				<div class="dropdown pull-right margin-left-5">
 					<button class="btn btn-sm btn-success dropdown-toggle no-outline no-border" id="donateMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
@@ -52,8 +51,8 @@
 
 			</div>
 
-            <div id="arrow-div" class="pull-right pointer margin-bottom-10 no-padding" onclick="arrowAnimation()">
-                <span id="arrow" class="pad-5-20 glyphicon glyphicon-chevron-up"></span>
+            <div id="arrow-div" class="pull-right" onclick="arrowAnimation(this)">
+                <span id="arrow" class="pad-5-20 glyphicon glyphicon-chevron-down"></span>
             </div>
 		</div>
 
@@ -150,26 +149,10 @@
 				</div> <!-- END OF SEVENTH SLIDE -->
 
 				<!-- EIGHTH SLIDE ======================================================================= -->
-				<div class="item">
-					<div id="feedback" class="container">
-						<div class="well well-sm">
-							<h1>FEEDBACK COMMENTS</h1>
-							<p>
-								Please write your Review/Feedback/Suggestions/Queries in Comment box below and post it! Your support & suggestions are highly appreciated.
-								Thank you.
-							</p>
-						</div>
-
-						<div class="container">
-							<div class="well well-sm"> <!-- Feedback Comment Box -->
-								<div id="disqus_thread">
-									<div class="spinner"></div>
-									<p id="feedback-waiting-timer" class="font-size-25"> Waiting Timer : 30 </p>
-								</div>
-								<noscript>Please enable JavaScript to view and post feedback comments on this website.</noscript>
-							</div>
-						</div>
-					</div>
+				<div id="feedback-slide" class="item">
+                    <div class="container"> <div class="well well-lg">
+                        <div class="spinner center-spinner"></div>
+                    </div> </div>
 				</div> <!-- END OF EIGHTH SLIDE -->
 
 				<!-- NINTH SLIDE ======================================================================= -->
@@ -245,9 +228,9 @@
 			</div>
 		</div>
 
-		<script type="text/javascript" src="lib/jquery.min.js"></script>
-		<script type="text/javascript" src="lib/bootstrap.min.js"></script>
-		<script type="text/javascript" src="lib/index.js"></script>
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/index.js"></script>
 		<script id="dsq-count-scr" src="//rupinderjeet.disqus.com/count.js" async></script> <!--javascript for disqus feedback-->
 	</body>
 </html>

@@ -140,6 +140,10 @@ h1, h2, h3, h4, h5, h6{
 	padding: 10px !important;
 }
 
+.pad-5-10{
+	padding: 5px 10px !important;
+}
+
 .pad-5-20{
 	padding: 5px 20px !important;
 }
@@ -305,52 +309,46 @@ h1, h2, h3, h4, h5, h6{
 }
 
 /* Arrow Animation */
-#arrow-div{
-	padding: 10px;
-	background-color: #e6e4e4;
-	border-bottom-left-radius: 4px;
-	border-bottom-right-radius: 4px;
+.hidden-bar {
+	display: none;
+	height: 50px;
+	margin-bottom: 0;
+	border-top-left-radius: 0;
+	border-bottom-right-radius: 0;
+	border-top-right-radius: 0;
 }
 
-@-webkit-keyframes animate-up {
-	0% {
-		opacity: 0;
-	}
-
-	100% {
-		opacity: 0.5;
-		-webkit-transform: translateY(-7px);
-		-moz-transform: translateY(-7px);
-		-o-transform: translateY(-7px);
-		transform: translateY(-7px);
-	}
+#arrow-div{
+	background-color: #f4f1f1;
+	border-bottom-left-radius: 4px;
+	border-bottom-right-radius: 4px;
+	cursor: pointer;
+	margin-bottom: 10px;
 }
 
 @-webkit-keyframes animate-down {
-	0% {
-		opacity: 0;
+	50% {
+		-webkit-transform: translateY(3px);
+		-moz-transform: translateY(3px);
+		-o-transform: translateY(3px);
+		transform: translateY(3px);
 	}
 
 	100% {
-		opacity: 0.5;
-		-webkit-transform: translateY(7px);
-		-moz-transform: translateY(7px);
-		-o-transform: translateY(7px);
-		transform: translateY(7px);
+		 -webkit-transform: translateY(-3px);
+		 -moz-transform: translateY(-3px);
+		 -o-transform: translateY(-3px);
+		 transform: translateY(-3px);
 	}
 }
 
-/*#arrow-up{*/
-	/*-webkit-animation: animate-up 1.2s infinite;  /!* Safari 4+ *!/*/
-	/*-moz-animation: animate-up 1.2s infinite;     /!* Fx 5+ *!/*/
-	/*-o-animation: animate-up 1.2s infinite;       /!* Opera 12+ *!/*/
-	/*animation: animate-up 1.2s infinite;          /!* IE 10+, Fx 29+ *!/*/
-/*}*/
+#arrow {
+	margin-top: 3px;
+	margin-bottom: 3px;
 
-/*#arrow-down{*/
-	/*-webkit-animation: animate-down 1.2s infinite;  /!* Safari 4+ *!/*/
-	/*-moz-animation: animate-down 1.2s infinite;     /!* Fx 5+ *!/*/
-	/*-o-animation: animate-down 1.2s infinite;       /!* Opera 12+ *!/*/
-	/*animation: animate-down 1.2s infinite;          /!* IE 10+, Fx 29+ *!/*/
-/*}*/
+	-webkit-animation: animate-down 1.5s infinite;  /* Safari 4+ */
+	-moz-animation: animate-down 1.5s infinite;     /* Fx 5+ */
+	-o-animation: animate-down 1.5s infinite;       /* Opera 12+ */
+	animation: animate-down 1.5s infinite;          /* IE 10+, Fx 29+ */
+}
 /* Arrow Animation End */
