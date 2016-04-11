@@ -85,6 +85,7 @@ function startTimer(targetId) {
 
 function btnClick(source, btn, index) {
 	'use strict';
+    var text;
 
 	if (source === 'bar') {
 		/* 'btn-bar' is a special-empty-class used to target menu-bar-buttons only */
@@ -96,16 +97,21 @@ function btnClick(source, btn, index) {
 		index = parseInt(index, 10);
 		
 		$("#theSlider").carousel(index);
+
+        var btnText = $(btn).html().trim().toLowerCase();
+        $("#" + btnText + "-slide").load("html/" + btnText + ".html", function() {
+            if (index === 7) {	//feedback button clicked
+                clearInterval(feedbackInterval); 								//In case, if it is already counting
+                feedbackInterval = setInterval(startTimer, 1000);
+                initFeedbackDisqus();
+            }
+        });  //Loads html page according to button clicked
 	}
 
-    var btnText = $(btn).html().trim().toLowerCase();
-    $("#" + btnText + "-slide").load("html/" + btnText + ".html", function() {
-        if (index === 7) {	//feedback button clicked
-            clearInterval(feedbackInterval); 								//In case, if it is already counting
-            feedbackInterval = setInterval(startTimer, 1000);
-            initFeedbackDisqus();
-        }
-    });  //Loads html page according to button clicked
+    if (source === "btn") {
+        text = index;
+        $("#" + text + "-slide").load("html/" + text + ".html", null, null);
+    }
 
 
 }
@@ -117,6 +123,17 @@ function expandItem(element) {
 	
 	$(element).removeClass('col-md-3');
 	$(element).addClass('col-md-12');
+}
+
+function showPortfolioItem(element) {
+    $('.portfolio-item').not($(element)).parent().hide('fast');
+    $(element).parent().addClass('container');
+    $(element).parent().removeClass('col-md-3');
+    $(element).removeClass('scale-103');
+    $(element).removeClass('top-border-bar');
+
+    $('#show-all-portfolio').show('fast');
+    //$(element).removeClass('height-320');
 }
 
 function initFeedbackDisqus() {

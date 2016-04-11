@@ -153,10 +153,13 @@ h1, h2, h3, h4, h5, h6{
 }
 
 .margin-2px{
-	margin: 2px;
+	margin: 2px !important;
 }
 .margin-left-5{
 	margin-left: 5px;
+}
+.margin-top-15px{
+	margin-top: 15px;
 }
 
 .margin-bottom-10{
@@ -185,6 +188,10 @@ h1, h2, h3, h4, h5, h6{
 
 .font-size-25{
 	font-size: 25px;
+}
+
+.font-size-35{
+	font-size: 35px;
 }
 
 .darker-well{
