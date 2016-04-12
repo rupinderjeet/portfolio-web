@@ -152,6 +152,10 @@ h1, h2, h3, h4, h5, h6{
 	border: 1px solid #e6e4e4;
 }
 
+.opacity-07{
+	opacity: 0.7;
+}
+
 .margin-2px{
 	margin: 2px !important;
 }
