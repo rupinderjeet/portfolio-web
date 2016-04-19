@@ -106,13 +106,25 @@ function btnClick(source, btn, index) {
                 initFeedbackDisqus();
             }
         });  //Loads html page according to button clicked
-	}
-
-    if (source === "btn") {
+	} else if (source === "btn") {
         text = index;
         $("#" + text + "-slide").load("html/" + text + ".html", null, null);
-    }
+    } else if (source === 'load-images') {
+        //For this to work button must be enclosed in a div element.
+        //@TODO : btn gets loading animation, source + index gets loaded data
+        var btnText = $(btn).html().trim();
 
+        //Button Animation Code
+
+        var targetContainer = $(btn).parent();
+        $(targetContainer).hide();
+        $(targetContainer).addClass('text-center');
+
+        $(targetContainer).load('snippets/loadImages.html #set-' + index, function () {
+            //on complete
+            $(targetContainer).slideDown('fast');
+        });
+    }
 
 }
 
