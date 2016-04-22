@@ -6,35 +6,90 @@ function getElement(id){
 	return document.getElementById(id);
 }
 
+//FOR ABOUT PAGE ONLY
 function showNextImage(type, clicktype) {
-	'use strict';
-	//@type = forward, backword
-	var i = 0, display = false;
-	
-	if (type === undefined) {
-		type = "forward";
-	}
-	
-	for (i = 1; i < 6; i += 1) {
-		display = document.getElementById('pic-' + i).getAttribute('class').indexOf('no-display') === -1;		//tells that this image is displaying right now
-		if (display) {
-			document.getElementById('pic-' + i).setAttribute('class', document.getElementById('pic-' + i).getAttribute('class').replace('display', 'no-display'));
-			
-			if (type === 'forward') {
-				if (i === 5) { i = 0; }
-				document.getElementById('pic-' + (parseInt(i, 10) + 1)).setAttribute('class', document.getElementById('pic-' + (parseInt(i, 10) + 1)).getAttribute('class').replace('no-display', 'display'));
-			} else if (type === 'backward') {
-				if (i === 1) { i = 6; }
-				document.getElementById('pic-' + (parseInt(i, 10) - 1)).setAttribute('class', document.getElementById('pic-' + (parseInt(i, 10) - 1)).getAttribute('class').replace('no-display', 'display'));
-			}
-			
-			if (clicktype !== undefined && clicktype === "btnclick") {
-				changeSlideShowState('pause', document.getElementById('slideshow-btn'));
-			}
-			
-			break;
-		}
-	}
+    'use strict';
+    //@type = forward, backword
+    var i = 0, display = false;
+
+    if (type === undefined) {
+        type = "forward";
+    }
+
+    for (i = 1; i < 6; i += 1) {
+        display = document.getElementById('pic-' + i).getAttribute('class').indexOf('no-display') === -1;		//tells that this image is displaying right now
+        if (display) {
+            document.getElementById('pic-' + i).setAttribute('class', document.getElementById('pic-' + i).getAttribute('class').replace('display', 'no-display'));
+
+            if (type === 'forward') {
+                if (i === 5) { i = 0; }
+                document.getElementById('pic-' + (parseInt(i, 10) + 1)).setAttribute('class', document.getElementById('pic-' + (parseInt(i, 10) + 1)).getAttribute('class').replace('no-display', 'display'));
+            } else if (type === 'backward') {
+                if (i === 1) { i = 6; }
+                document.getElementById('pic-' + (parseInt(i, 10) - 1)).setAttribute('class', document.getElementById('pic-' + (parseInt(i, 10) - 1)).getAttribute('class').replace('no-display', 'display'));
+            }
+
+            if (clicktype !== undefined && clicktype === "btnclick") {
+                changeSlideShowState('pause', document.getElementById('slideshow-btn'));
+            }
+
+            break;
+        }
+    }
+}
+//FOR SLIDE SHOWS
+function imageContainer(movement, target) {
+    'use strict';
+    //@movement = next, previous
+    //@target = container 'div' element for images
+
+    var i = 0;
+    var prev_control = 'prev-' + target;
+    var next_control = 'next-' + target;
+
+    if (movement === undefined) { movement = "next"; }
+
+    var images = $("#" + target).children("img");
+    var imageCount = images.length;
+    var current_image, prev_image, next_image, new_index;
+
+    for(var i=0; i <= imageCount; i++){
+        current_image = images[i];
+        prev_image = images[parseInt(i, 10) - 1];
+        next_image = images[parseInt(i, 10) + 1];
+
+        if ($(current_image).hasClass("display")) {
+
+            $(current_image).addClass('no-display');
+            $(current_image).removeClass('display');
+
+            if (movement === "next") {
+                $(next_image).addClass('display');
+                $(next_image).removeClass('no-display');
+
+                new_index = (parseInt(i, 10) + 1);
+            } else if (movement === "prev") {
+                $(prev_image).addClass('display');
+                $(prev_image).removeClass('no-display');
+
+                new_index = (parseInt(i, 10) - 1);
+            }
+
+            if( new_index >= (parseInt(imageCount, 10) - 1) ){      //new_index >= (n-1)
+                $("#" + next_control).hide('fast');
+            } else {
+                $("#" + next_control).show('fast');
+            }
+
+            if( new_index <= 0 ){
+                $("#" + prev_control).hide('fast');
+            } else {
+                $("#" + prev_control).show('fast');
+            }
+
+            break;
+        }
+    }
 }
 
 function changeSlideShowState(type, element) {
