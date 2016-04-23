@@ -1,9 +1,21 @@
 <!-- PORTFOLIO SLIDE -->
 <div id="portfolio" class="container">
 	<div class="well well-sm">
-		<h1>
-            PORTFOLIO
-        </h1>
+		<!--<h1>-->
+            <!--PORTFOLIO-->
+
+        <!--</h1>-->
+
+        <div class="row">
+            <div class="col-md-8"> <h1> PORTFOLIO </h1> </div>
+            <div class="col-md-4">
+                <button class="btn btn-default no-outline pull-right" onclick="comingSoon()">
+                    <span class="glyphicon glyphicon-filter"></span>
+                </button>
+            </div>
+        </div>
+
+
 		<p>Portfolio Information and I will post links soon, just getting started yet</p>
 	</div>
 
@@ -21,8 +33,8 @@
             </div>
 
             <div class="col-md-3">
-                <button class="btn btn-sm btn-default"> Like </button>
-                <button class="btn btn-sm btn-default"> Print </button>
+                <button class="btn btn-sm btn-default" onclick="performLike('task', 'task-000');"> Like </button>
+                <button class="btn btn-sm btn-default" onclick="showPrintDialog('task-000');"> Print </button>
                 <button class="btn btn-sm btn-default no-outline" onclick="$('#task-000-full').slideToggle('fast'); toggleString(this, 'Expand', 'Collapse');"> Expand </button>
             </div>
         </div>
@@ -68,7 +80,7 @@
 
             <a class="btn btn-sm btn-default no-outline" href="https://www.freelancer.com/jobs/project-8246811/" target="_blank"> Project Link </a>
             <a class="btn btn-sm btn-default no-outline" href="https://www.freelancer.com/u/zyszy86.html" target="_blank"> Client Link </a>
-            <a class="btn btn-sm btn-default no-outline" href="" target="_blank"> Form Demo (coming soon!) </a>
+            <!--<a class="btn btn-sm btn-default no-outline" href="#" target="_blank"> Form Demo (coming soon!) </a>-->
         </div>
     </div>
 
@@ -92,8 +104,8 @@
             </div>
 
             <div class="col-md-3">
-                <button class="btn btn-sm btn-default"> Like </button>
-                <button class="btn btn-sm btn-default"> Print </button>
+                <button class="btn btn-sm btn-default" onclick="performLike('task', 'task-001');"> Like </button>
+                <button class="btn btn-sm btn-default" onclick="showPrintDialog('task-001');"> Print </button>
                 <button class="btn btn-sm btn-default no-outline" onclick="$('#task-001-full').slideToggle('fast'); toggleString(this, 'Expand', 'Collapse');"> Expand </button>
             </div>
         </div>
@@ -136,11 +148,9 @@
 
             <a class="btn btn-sm btn-default no-outline" href="https://www.freelancer.com/jobs/project-8209379/" target="_blank"> Project Link </a>
             <a class="btn btn-sm btn-default no-outline" href="https://www.freelancer.com/u/arvindasudan.html" target="_blank"> Client Link </a>
-            <a class="btn btn-sm btn-default no-outline" href="" target="_blank"> Project Demo </a> (donate me a web-hosting and you get a demo ^^)
+            <!--<a class="btn btn-sm btn-default no-outline" href="#" target="_blank"> Project Demo </a> (donate me a web-hosting and you get a dynamic demo ^^)-->
         </div>
     </div>
-
-
 
     <div class="well well-sm margin-top-15px margin-bottom"> Ongoing / Paused / Pending(have to write in here yet) Projects </div>
 

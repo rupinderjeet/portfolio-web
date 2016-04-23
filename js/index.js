@@ -6,6 +6,10 @@ function getElement(id){
 	return document.getElementById(id);
 }
 
+function comingSoon(){
+    alert('Coming Soon!');
+}
+
 //FOR ABOUT PAGE ONLY
 function showNextImage(type, clicktype) {
     'use strict';
@@ -38,7 +42,7 @@ function showNextImage(type, clicktype) {
     }
 }
 //FOR SLIDE SHOWS
-function imageContainer(movement, target) {
+function alterImageGallery(movement, target) {
     'use strict';
     //@movement = next, previous
     //@target = container 'div' element for images
@@ -49,6 +53,7 @@ function imageContainer(movement, target) {
 
     if (movement === undefined) { movement = "next"; }
 
+    var current_image_index = '#current-' + target;
     var images = $("#" + target).children("img");
     var imageCount = images.length;
     var current_image, prev_image, next_image, new_index;
@@ -68,11 +73,13 @@ function imageContainer(movement, target) {
                 $(next_image).removeClass('no-display');
 
                 new_index = (parseInt(i, 10) + 1);
+                $(current_image_index).html('Screens(' + (new_index+1) + '/' + imageCount + ')');
             } else if (movement === "prev") {
                 $(prev_image).addClass('display');
                 $(prev_image).removeClass('no-display');
 
                 new_index = (parseInt(i, 10) - 1);
+                $(current_image_index).html('Screens(' + (new_index+1) + '/' + imageCount + ')');
             }
 
             if( new_index >= (parseInt(imageCount, 10) - 1) ){      //new_index >= (n-1)
@@ -201,6 +208,14 @@ function showPortfolioItem(element) {
 
     $('#show-all-portfolio').show('fast');
     //$(element).removeClass('height-320');
+}
+
+function performLike(type, target){
+    comingSoon();
+}
+
+function showPrintDialog(target){
+    comingSoon();
 }
 
 function initFeedbackDisqus() {
