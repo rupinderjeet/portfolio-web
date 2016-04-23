@@ -231,7 +231,7 @@ function initFeedbackDisqus() {
 }
 
 /* Handy Contact Form */
-function sendContactEmail(){
+function submitContactForm(){
 	$('#handy-contact-form-error').slideUp('fast');
 
 	'use strict';
@@ -285,6 +285,9 @@ function sendContactEmail(){
 			}
 		});
 	}
+}
+function clearContactForm(){
+
 }
 
 /* Report An Issue */
