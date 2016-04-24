@@ -201,8 +201,14 @@ h1, h2, h3, h4, h5, h6{
 	margin: 5px;
 }
 
+.margin-bottom-5{
+	margin-bottom: 5px !important;
+}
 .margin-bottom-10{
 	margin-bottom: 10px !important;
+}
+.margin-bottom-30{
+	margin-bottom: 30px !important;
 }
 
 .normal-font{
@@ -274,6 +280,9 @@ h1, h2, h3, h4, h5, h6{
 .height-320{ /* height of portfolio items */
 	height: 320px;
 	max-height: 320px;
+}
+.height-100{ /* height of resume projects */
+	height: 100px !important;
 }
 
 .center-spinner{
