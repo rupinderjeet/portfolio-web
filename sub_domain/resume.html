@@ -10,8 +10,76 @@
         <link rel="shortcut icon" href="#" type="image/x-icon">
         <title> Welcome to my Resume </title>
         <link type="text/css" rel="stylesheet" href="../css/bootstrap.min.css">
-        <link type="text/css" rel="stylesheet" href="../css/index.css">
-        <link type="text/css" rel="stylesheet" href="../css/animations.css">
+
+        <style>
+            body {
+                font-family: 'Calibri';
+                font-size: 10px;
+                padding: 1%;
+            }
+
+            p{
+                margin: 0;
+            }
+
+            .anchor-000, .anchor-000:hover, .anchor-000:focus{
+                color: black;
+            }
+
+            .bold{
+                font-weight: bold;
+            } .bold-500{
+                font-weight: 500;
+            }
+
+
+            .font-12{
+                font-size: 12px;
+            }
+            .font-14{
+                font-size: 14px;
+            }
+            .font-16{
+                font-size: 16px;
+            }
+
+            .margin-0{
+                margin: 0;
+            }
+
+            .margin-1px{
+                margin: 1px;
+            }
+
+            .padding-0{
+                padding: 0;
+            }
+
+            .b-f4f1f1{
+                background-color: #f4f1f1;
+            }
+
+            .underline{
+                text-decoration: underline;
+            }
+
+            .projects-table{
+                width: 100%;
+            }.projects-table th{
+                border-top: 1px solid #e6e4e4;
+                border-bottom: 1px solid #e6e4e4;
+            }.projects-table tr{
+                border-bottom: 1px solid #e6e4e4;
+            }.projects-table tr td{
+                /*padding-right: 15px;*/
+            }
+
+            @media print {
+                a[href]:after {
+                    content: none !important;
+                }
+            }
+        </style>
 
         <!--[if lt IE 9]>
         <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -19,24 +87,202 @@
     </head>
 
     <body>
-        <div class="container b-white" style="margin-top: 30px; padding: 3%; border: 1px solid white;">
-            <h1 class="text-center no-margin" style="font-weight: 400;"> Rupinderjeet Singh Hans </h1>
-            <p class="font-size-20 text-center no-margin"> rupinderjeet47@gmail.com | http://rupinderjeet.com </p>
-            <p class="font-size-20 text-center no-margin"> (+91) 9914-717294 </p>
-
-            <hr>
-
-            <p class="font-size-25 no-margin underline"> Education Details: </p>
-            <hr>
+        <!-- Print Warning -->
+        <div class="text-center visible-print">
+            <p style="font-size: 35px; font-weight: 500;"> DO NOT PRINT </p>
+            <p style="font-size: 20px;"> Please use 'Download' link on top-left of the page to download and print this resume. </p>
         </div>
 
-        Coming Soon!
+        <div class="hidden-print">
+
+            <!-- Resume Options and Social Links -->
+            <div style="padding-left: 20px; padding-right: 20px; margin-bottom: 10px;">
+                <text style="margin-left: 7px; margin-right: 7px;"> In Development </text>
+                <a href="" style="margin-right: 7px;"> Like </a>
+                <a href="" style="margin-right: 7px;"> Download </a>
+
+                <a href="" class="pull-right" style="margin-right: 7px;"> Email </a>
+                <a href="" class="pull-right" style="margin-right: 7px;"> Twitter </a>
+                <a href="" class="pull-right" style="margin-right: 7px;"> Facebook </a>
+                <hr class="margin-1px">
+            </div>
+
+            <!-- Front View : Contact Methods -->
+            <div style="padding-left: 20px; padding-right: 20px;">
+                <h1 class="font-16 bold margin-0"> Rupinderjeet Singh Hans </h1>
+
+                <p>
+                    <a class="anchor-000" href="mailto:rupinderjeet47@gmail.com">rupinderjeet47@gmail.com</a> |
+                    <a class="anchor-000" href="http://www.rupinderjeet.com">http://www.rupinderjeet.com</a>
+                </p>
+                <p> (+91) 9914-717294 </p>
+                <br>
+                <p> From Daudhar, District Moga, </p>
+                <p> Punjab, India. 142053 </p>
+
+                <hr>
+            </div>
+
+            <!-- Content -->
+            <div style="padding-left: 20px; padding-right: 20px;">
+
+                <div class="row">
+
+                    <!-- Skill Set, Education, Training, Personal Details -->
+                    <div class="col-md-3 col-sm-4 col-xs-4" style=" margin-bottom: 30px;">
+                        <h1 class="font-16 bold margin-0"> Skill Set </h1>
+
+                        <p> Front End : HTML, CSS, JavaScript, AJAX, BootStrap, JQuery </p>
+                        <p> Back End : Java, JSP, Servlet, SQL </p>
+                        <p> DBMS : Oracle SQL* Plus, SQL Server, MySQL, Access 2013 </p>
+                        <p> Servers : Apache Tomcat & Glassfish </p>
+                        <p> IDE : Netbeans, Eclipse, IntelliJ, Android Studio </p>
+
+                        <br><br>
+
+                        <h1 class="font-16 bold margin-0"> Education </h1>
+
+                        <p> 2011-2015 : B.Tech. CSE, Punjab Technical University, 78%  </p>
+                        <p> 2010-2011 : 12th (SSE), Punjab School Education Board, 66% </p>
+                        <p> 2008-2009 : 10th (ME), Punjab School Education Board, 72% </p>
+
+                        <br><br>
+
+                        <h1 class="font-16 bold margin-0"> Training </h1>
+
+                        <p> 2015 : JSP & Servlets, 6 Month, InfoWiz Solutions  </p>
+                        <p> 2014 : PHP & JUnit Basics, 8 Weeks, Tutorials </p>
+                        <p> 2013 : Core Java, 6 Weeks, Netmax Technologies Ltd. </p>
+                        <p> 2012 : C++ Console, 6 Weeks, Ludhiana Group of Colleges </p>
+
+                        <br><br>
+
+                        <h1 class="font-16 bold margin-0"> Personal Details </h1>
+
+                        <p> Birth Date : Friday, 24 December, 1993 </p>
+                        <p> Profile : Accurate, Reliable, Hard-Working, Quick Learner </p>
+                        <p> Language : English, Punjabi & Hindi  </p>
+                        <p> Likes : Coding, Reading, Travelling, Anime/Manga, Drawing </p>
+                    </div>
+
+                    <!-- Projects and Experience -->
+                    <div class="col-md-9 col-sm-8 col-xs-8">
+                        <h1 class="font-16 bold margin-0"> Projects </h1>
+                        <hr class="margin-1px" style="margin-bottom: 5px;">
+
+                        <!-- First Projects Row -->
+                        <div class="row" style="height: 100px; background-color: yellow">
+
+                            <div class="col-md-4">
+                                <h1 class="font-12 bold margin-0"> Pharmacy Stock Management System </h1>
+
+                                <p> Languages Used : Java, JSP, Servlet, SQL, CSS, JavaScript, Ajax </p>
+                                <p> Environment Used : Netbeans IDE, Glassfish Server 4.0 </p>
+                                <p> Database Used : MySQL 5.6 Database Management System </p>
+                                <p> Platform : Browser Dependent </p>
+                                <p> Status : Sold on <a class="anchor-000" href="https://www.freelancer.com/jobs/project-8209379/" target="_blank"> freelancer.com </a> </p>
+                            </div>
+
+                            <div class="col-md-4">
+                                <h1 class="font-12 bold margin-0"> Tempo-Team Outsourcing Contact Form </h1>
+
+                                <p> Languages Used : Google Form UI, Google Script </p>
+                                <p> Environment Used : Google Chrome, Google Forms </p>
+                                <p> Database Used : Google Spreadsheets, Gmail </p>
+                                <p> Platform : Browser Dependent </p>
+                                <p> Status : Sold on <a class="anchor-000" href="https://www.freelancer.com/jobs/project-8246811/" target="_blank"> freelancer.com </a> </p>
+                            </div>
+
+                            <div class="col-md-4">
+                                <h1 class="font-12 bold margin-0"> Management System for Teachers </h1>
+
+                                <p> Languages Used : Java, Swing GUI, Java.IO, Google Drive API </p>
+                                <p> Environment Used : Netbeans IDE, JRE </p>
+                                <p> Storage Used : Google Drive </p>
+                                <p> Platform : JRE & Browser Dependent </p>
+                                <p> Status : Submitted in college as Training Project </p>
+                            </div>
+                        </div>
+
+                        <!-- Second Projects Row -->
+                        <div class="row" style="height: 100px; background-color: yellowgreen">
+
+                            <div class="col-md-4">
+                                <h1 class="font-12 bold margin-0"> Pharmacy Stock Management System </h1>
+
+                                <p> Languages Used : Java, JSP, Servlet, SQL, CSS, JavaScript, Ajax </p>
+                                <p> Environment Used : Netbeans IDE, Glassfish Server 4.0 </p>
+                                <p> Database Used : MySQL 5.6 Database Management System </p>
+                                <p> Platform : Browser Dependent </p>
+                                <p> Status : Sold on <a class="anchor-000" href="https://www.freelancer.com/jobs/project-8209379/" target="_blank"> freelancer.com </a> </p>
+                            </div>
+
+                            <div class="col-md-4">
+                                <h1 class="font-12 bold margin-0"> Tempo-Team Outsourcing Contact Form </h1>
+
+                                <p> Languages Used : Google Form UI, Google Script </p>
+                                <p> Environment Used : Google Chrome, Google Forms </p>
+                                <p> Database Used : Google Spreadsheets, Gmail </p>
+                                <p> Platform : Browser Dependent </p>
+                                <p> Status : Sold on <a class="anchor-000" href="https://www.freelancer.com/jobs/project-8246811/" target="_blank"> freelancer.com </a> </p>
+                            </div>
+
+                            <div class="col-md-4">
+                                <h1 class="font-12 bold margin-0"> Management System for Teachers </h1>
+
+                                <p> Languages Used : Java, Swing GUI, Java.IO, Google Drive API </p>
+                                <p> Environment Used : Netbeans IDE, JRE </p>
+                                <p> Storage Used : Google Drive </p>
+                                <p> Platform : JRE & Browser Dependent </p>
+                                <p> Status : Submitted in college as Training Project </p>
+                            </div>
+                        </div>
+
+                        <h1 class="font-16 bold margin-0" style="margin-top: 50px;"> Experience </h1>
+                        <hr class="margin-1px" style="margin-bottom: 5px;">
+
+                        <!-- First Projects Row -->
+                        <div class="row" style="height: 100px; background-color: yellow">
+
+                            <div class="col-md-4">
+                                <h1 class="font-12 bold margin-0"> Pharmacy Stock Management System </h1>
+
+                                <p> Languages Used : Java, JSP, Servlet, SQL, CSS, JavaScript, Ajax </p>
+                                <p> Environment Used : Netbeans IDE, Glassfish Server 4.0 </p>
+                                <p> Database Used : MySQL 5.6 Database Management System </p>
+                                <p> Platform : Browser Dependent </p>
+                                <p> Status : Sold on <a class="anchor-000" href="https://www.freelancer.com/jobs/project-8209379/" target="_blank"> freelancer.com </a> </p>
+                            </div>
+
+                            <div class="col-md-4">
+                                <h1 class="font-12 bold margin-0"> Tempo-Team Outsourcing Contact Form </h1>
+
+                                <p> Languages Used : Google Form UI, Google Script </p>
+                                <p> Environment Used : Google Chrome, Google Forms </p>
+                                <p> Database Used : Google Spreadsheets, Gmail </p>
+                                <p> Platform : Browser Dependent </p>
+                                <p> Status : Sold on <a class="anchor-000" href="https://www.freelancer.com/jobs/project-8246811/" target="_blank"> freelancer.com </a> </p>
+                            </div>
+
+                            <div class="col-md-4">
+                                <h1 class="font-12 bold margin-0"> Management System for Teachers </h1>
+
+                                <p> Languages Used : Java, Swing GUI, Java.IO, Google Drive API </p>
+                                <p> Environment Used : Netbeans IDE, JRE </p>
+                                <p> Storage Used : Google Drive </p>
+                                <p> Platform : JRE & Browser Dependent </p>
+                                <p> Status : Submitted in college as Training Project </p>
+                            </div>
+                        </div>
 
 
+                    </div>
 
+                </div>
+            </div>
+        </div>
 
         <script type="text/javascript" src="../js/jquery.min.js"></script>
         <script type="text/javascript" src="../js/bootstrap.min.js"></script>
-        <script type="text/javascript" src="../js/index.js"></script>
     </body>
 </html>

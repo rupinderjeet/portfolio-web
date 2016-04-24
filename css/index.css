@@ -8,6 +8,12 @@ h1, h2, h3, h4, h5, h6{
 	padding	: 0;
 }
 
+.anchor-000{
+	color: black !important;
+}.anchor-000:hover, .anchor-000:focus{
+	color: black !important;
+ }
+
 /*p{*/
 	/*font-size: 16px;*/
 /*}*/
