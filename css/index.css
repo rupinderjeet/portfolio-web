@@ -284,6 +284,9 @@ h1, h2, h3, h4, h5, h6{
 .height-100{ /* height of resume projects */
 	height: 100px !important;
 }
+.height-50{ /* height of resume projects */
+	height: 50px !important;
+}
 
 .center-spinner{
 	margin: auto !important;
