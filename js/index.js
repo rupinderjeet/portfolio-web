@@ -342,10 +342,6 @@ function arrowAnimation(element){
 window.onload = function () {
 	'use strict';
 	$("#home-slide").load("html/home.html", null, null);
-
-    $('[data-toggle="tooltip"]').tooltip();
-
-
 };
 
 //GLOBAL VARIABLES

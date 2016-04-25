@@ -46,30 +46,10 @@ function performAction(caller, type, target){
     });
 }
 
-
 window.onload = function () {
     'use strict';
+
+    //$('[data-toggle="tooltip"]').tooltip();
+
     readFirebaseDatabase('resume');
 };
-
-//function countGuests(id){
-//
-//    myDataRef.once("value", function(snapshot) {
-//        var data = snapshot.val();
-//        var guestCount = parseInt(data.guests, 10) + 1;
-//        myDataRef.set({guests: guestCount});
-//
-//        $(id).html(guestCount);
-//    }, function (errorObject) {
-//        $(id).html("The read failed: " + errorObject.code);
-//    });
-//}
-
-//    myDataRef.on('child_added', function(snapshot) {
-//        var message = snapshot.val();
-//        displayChatMessage(message.name, message.text);
-//    });
-//    function displayChatMessage(name, text) {
-//        $('<div/>').text(text).prepend($('<em/>').text(name+': ')).appendTo($('#messagesDiv'));
-//        $('#messagesDiv')[0].scrollTop = $('#messagesDiv')[0].scrollHeight;
-//    };

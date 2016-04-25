@@ -288,10 +288,14 @@ h1, h2, h3, h4, h5, h6{
 	height: 50px !important;
 }
 
-.center-spinner{
+.center-spinner, .center-spinner-xs{
 	margin: auto !important;
 	width: 30px !important;
 	height: 30px !important;
+}
+.center-spinner-xs{
+	width: 6px !important;
+	height: 6px !important;
 }
 
 .border-bottom-bbb{
@@ -336,7 +340,7 @@ h1, h2, h3, h4, h5, h6{
 	/*width: 350px !important;*/
 /*}*/
 
-.spinner{
+.spinner, .spinner-xs{
     width: 30px;
     height: 30px;
     background-color: transparent;
@@ -362,6 +366,16 @@ h1, h2, h3, h4, h5, h6{
     animation-duration: 500ms;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
+}
+
+.spinner-xs{
+	width: 8px;
+	height: 8px;
+	background-color: transparent;
+	border-radius: 50%;
+	border: 1px solid black;
+	border-top: 1px solid transparent;
+	margin-bottom: 1px;
 }
 
 @-ms-keyframes spin {
