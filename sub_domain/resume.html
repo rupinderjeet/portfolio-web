@@ -14,12 +14,20 @@
 
         <style> p{ margin: 0; } </style>
 
+        <!-- Back End -->
+        <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+        <!--<script type="text/javascript" src="../resume/subdomain.js"></script>-->
+
         <!--[if lt IE 9]>
         <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
     </head>
 
     <body id="resume-body">
+        <script>
+            var myDataRef = new Firebase('https://zihw4gbuk8d.firebaseio-demo.com/');
+        </script>
+
         <!-- Print Warning -->
         <div class="text-center visible-print">
             <p class="font-size-35 bold-500"> DO NOT PRINT </p>
@@ -31,14 +39,15 @@
             <!-- Resume Options and Social Links -->
             <div class="padding-left-20 padding-right-20 margin-bottom-10">
 
-                <a class="anchor-000 pointer margin-left-7 margin-right-7" data-toggle="tooltip" data-placement="right" title="It will take a lot of time :)"> In Development </a>
-
-                <a class="margin-right-7" href=""> Like </a>
-                <a class="margin-right-7" href="http://dl.pdf.resume.rupinderjeet.com" target="_blank"> Download </a>
+                <a class="anchor-000 pointer margin-left-7 margin-right-7" data-toggle="tooltip" data-placement="right" title="A resume is always in development :)"> In Development </a>
+                <a id="resume-likes" class="anchor-000 pointer margin-left-7 margin-right-7" data-toggle="tooltip" data-placement="right" title="Use the Like button on top-right to mark your presence">  </a>
+                <a id="resume-downloads" class="anchor-000 pointer margin-left-7 margin-right-7" data-toggle="tooltip" data-placement="right" title="Use the Like button on top-right to mark your presence">  </a>
 
                 <a href="mailto:rupinderjeet47@gmail.com" class="pull-right margin-right-7"> Email </a>
                 <a href="http://www.twitter.com/rupinderjeet47" class="pull-right margin-right-7"> Twitter </a>
                 <a href="http://www.facebook.com/hansdinosourlove" class="pull-right margin-right-7"> Facebook </a>
+                <a class="margin-right-7 pull-right pointer" onclick="performAction(this, 'download', 'resume-downloads')"> Download </a>
+                <a class="anchor-000 margin-right-7 pull-right pointer" onclick="performAction(this, 'like', 'resume-likes')"> Like </a>
                 <hr class="margin-1px">
             </div>
 
@@ -282,5 +291,6 @@
         <script type="text/javascript" src="../js/tether.min.js"></script>
         <script type="text/javascript" src="../js/bootstrap.min.js"></script>
         <script type="text/javascript" src="../js/index.js"></script>
+        <script type="text/javascript" src="../js/subdomain.js"></script>
     </body>
 </html>

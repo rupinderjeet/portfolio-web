@@ -2,6 +2,7 @@
 var feedbackInterval;
 var mail;
 
+
 function getElement(id){
 	return document.getElementById(id);
 }
@@ -210,14 +211,6 @@ function showPortfolioItem(element) {
     //$(element).removeClass('height-320');
 }
 
-function performLike(type, target){
-    comingSoon();
-}
-
-function showPrintDialog(target){
-    comingSoon();
-}
-
 function initFeedbackDisqus() {
 	'use strict';
 	(function () {
@@ -351,6 +344,8 @@ window.onload = function () {
 	$("#home-slide").load("html/home.html", null, null);
 
     $('[data-toggle="tooltip"]').tooltip();
+
+
 };
 
 //GLOBAL VARIABLES
