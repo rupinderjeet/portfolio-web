@@ -167,6 +167,8 @@ function btnClick(source, btn, index) {
                 clearInterval(feedbackInterval); 								//In case, if it is already counting
                 feedbackInterval = setInterval(startTimer, 1000);
                 initFeedbackDisqus();
+            } else if (index === 8) {	//statistics button clicked
+                read('total-reach');
             }
         });  //Loads html page according to button clicked
 	} else if (source === "btn") {
@@ -225,61 +227,119 @@ function initFeedbackDisqus() {
 
 /* Handy Contact Form */
 function submitContactForm(){
-	$('#handy-contact-form-error').slideUp('fast');
+    $('#handy-contact-form-error').slideUp('fast');
 
-	'use strict';
-	var userName = $('#user-name').val();
-	var userEmail = $('#user-email').val();
-	var userTwitter = $('#user-twitter').val();
-	var userWhatsapp = $('#user-whatsapp').val();
-	var userMessage = $('#user-message').val();
-	var enquiryType = $('#enq-type').val();
-	var gotcha = $('#gotcha').val();
+    'use strict';
+    var userName = $('#user-name').val();
+    var userEmail = $('#user-email').val();
+    var userTwitter = $('#user-twitter').val();
+    var userWhatsapp = $('#user-whatsapp').val();
+    var userMessage = $('#user-message').val();
+    var enquiryType = $('#enq-type').val();
+    var gotcha = $('#gotcha').val();
 
-	if(userTwitter === ""){
-		userTwitter = "Not Provided";
-	}
+    if(userTwitter === ""){
+        userTwitter = "Not Provided";
+    }
 
-	if(userWhatsapp === ""){
-		userWhatsapp = "Not Provided";
-	}
+    if(userWhatsapp === ""){
+        userWhatsapp = "Not Provided";
+    }
 
-	var error = (userName.trim().length < 2 || userEmail.trim().length < 4 || userEmail.trim().indexOf("@") === (-1)
-	|| userEmail.trim().indexOf(".") === (-1) || userMessage.trim().length < 10);
+    var error = (userName.trim().length < 2 || userEmail.trim().length < 4 || userEmail.trim().indexOf("@") === (-1)
+    || userEmail.trim().indexOf(".") === (-1) || userMessage.trim().length < 10);
 
-	if(error){
-		$('#handy-contact-form-error').slideDown('fast');
-	} else {
-		$.ajax({
-			url: "https://formspree.io/rupinderjeet47@gmail.com",
-			method: "POST",
-			data: {
-				gotcha: gotcha,
-				userName: userName,
-				userEmail: userEmail,
-				userTwitter: userTwitter,
-				userWhatsapp: userWhatsapp,
-				userMessage: userMessage,
-				enquiryType: enquiryType
-			},
-			dataType: "json",
-			error: function () {
-				$('#handy-contact-form').remove();
-				$('#handy-contact-form-thanks').remove();
-				$('#handy-form-btn').html("Error! Try again Later");
-			},
-			success: function (data) {
-				$('#handy-contact-form').remove();
-				$('#handy-contact-form-thanks').slideDown('fast');
-				$('#handy-form-btn').html("Contacted Successfully!");
-				$('#handy-form-btn').addClass("btn-success");
-				$('#handy-form-btn').removeClass("btn-danger");
-				$('#handy-form-btn').prop("onclick", null);
-			}
-		});
-	}
+    if(error){
+        $('#handy-contact-form-error').slideDown('fast');
+    } else {
+        $.ajax({
+            url: "https://formspree.io/rupinderjeet47@gmail.com",
+            method: "POST",
+            data: {
+                gotcha: gotcha,
+                userName: userName,
+                userEmail: userEmail,
+                userTwitter: userTwitter,
+                userWhatsapp: userWhatsapp,
+                userMessage: userMessage,
+                enquiryType: enquiryType
+            },
+            dataType: "json",
+            error: function () {
+                $('#handy-contact-form').remove();
+                $('#handy-contact-form-thanks').remove();
+                $('#handy-form-btn').html("Error! Try again Later");
+            },
+            success: function (data) {
+                $('#handy-contact-form').remove();
+                $('#handy-contact-form-thanks').slideDown('fast');
+                $('#handy-form-btn').html("Contacted Successfully!");
+                $('#handy-form-btn').addClass("btn-success");
+                $('#handy-form-btn').removeClass("btn-danger");
+                $('#handy-form-btn').prop("onclick", null);
+            }
+        });
+    }
 }
 function clearContactForm(){
+
+}
+
+/* Attendance Form */
+function submitAttendanceForm(){
+    $('#attendance-form-error').slideUp('fast');
+
+    'use strict';
+    var visitorName = $('#visitor-name').val();
+    var visitorEmail = $('#visitor-email').val();
+    var visitorTwitter = $('#visitor-twitter').val();
+    var visitorWhatsapp = $('#visitor-whatsapp').val();
+    var visitorType = $('#visitor-type').val();
+    var gotcha = $('#gotcha-attendance').val();
+
+    if(visitorTwitter === ""){
+        visitorTwitter = "Not Provided";
+    }
+
+    if(visitorWhatsapp === ""){
+        visitorWhatsapp = "Not Provided";
+    }
+
+    var error = (visitorName.trim().length < 2 || visitorEmail.trim().length < 4 || visitorEmail.trim().indexOf("@") === (-1)
+    || visitorEmail.trim().indexOf(".") === (-1) || visitorType.indexOf('Select') === (-1));
+
+    if(error){
+        $('#attendance-error').slideDown('fast');
+    } else {
+        $.ajax({
+            url: "https://formspree.io/rupinderjeet47@gmail.com",
+            method: "POST",
+            data: {
+                gotcha: gotcha,
+                visitorName: visitorName,
+                visitorEmail: visitorEmail,
+                visitorTwitter: visitorTwitter,
+                visitorWhatsapp: visitorWhatsapp,
+                visitorType: visitorType
+            },
+            dataType: "json",
+            error: function () {
+                $('#attendance-form').remove();
+                $('#attendance-form-thanks').remove();
+                $('#attendance-form-btn').html("Error! Try again later");
+            },
+            success: function (data) {
+                $('#attendance-form').remove();
+                $('#attendance-form-thanks').slideDown('fast');
+                $('#attendance-form-btn').html("Attended Successfully!");
+                $('#attendance-form-btn').addClass("btn-success");
+                $('#attendance-form-btn').removeClass("btn-danger");
+                $('#attendance-form-btn').prop("onclick", null);
+            }
+        });
+    }
+}
+function clearAttendanceForm(){
 
 }
 
@@ -337,6 +397,10 @@ function arrowAnimation(element){
     $('#arrow').attr('id', 'arrow-clicked');
     $('#arrow-clicked').toggleClass('glyphicon-chevron-down');
     $('#arrow-clicked').toggleClass('glyphicon-chevron-up');
+}
+
+function totalReach(){
+
 }
 
 window.onload = function () {

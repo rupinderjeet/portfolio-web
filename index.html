@@ -30,8 +30,6 @@
 		<div class="container">
 			<div id="links" class="well well-sm hidden-bar">
 
-                21 guests & 4 recruiters visited, <a> are you a guest or recruiter? </a>
-
 				<div class="dropdown pull-right margin-left-5">
 					<button class="btn btn-sm btn-success dropdown-toggle no-outline no-border" id="donateMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
 						Donate <span class="caret"></span>
@@ -273,6 +271,53 @@
             </div>
         </div>
 
+        <!-- Modal : Attendance Form : to be called from statistics page =========================================== -->
+        <div class="modal fade" id="attendance-form-modal" tabindex="-1" role="dialog" aria-labelledby="attendanceForm">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="clearAttendanceForm()"> <span aria-hidden="true">&times;</span> </button>
+                        <p class="modal-title font-size-25" id="attendance-form-modal-title"> Mark Your Attendance </p>
+                    </div>
+
+                    <div class="modal-body">
+                        <!-- Hidden Attendance Form Error -->
+                        <div id="attendance-form-error" class="alert well-sm alert-danger no-display">
+                            <p class="f-crimson"> 1. You must type your name(must be more than one character). </p>
+                            <p class="f-crimson"> 2. You must type your email correctly. </p>
+                            <p class="f-crimson"> 3. You message must be of 10 or more characters, excluding spaces. </p>
+                        </div>
+
+                        <!-- Attendance Form -->
+                        <div id="attendance-form">
+                            <select id="visitor-type" class="form-control input-sm margin-bottom">
+                                <option> Select One </option>
+                                <option> Friend </option>
+                                <option> Guest </option>
+                                <option> Recruiter </option>
+                            </select>
+                            <input id="visitor-name" class="form-control input-sm margin-bottom" placeholder="Your Name" />
+                            <input id="visitor-email" class="form-control input-sm margin-bottom" placeholder="Your Email" />
+                            <input id="visitor-twitter" class="form-control input-sm margin-bottom" placeholder="Your Twitter (Optional)" />
+                            <input id="visitor-whatsapp" class="form-control input-sm margin-bottom" placeholder="Your Whatsapp (Optional)" />
+                            <input id="gotcha-attendance" type="text" name="_gotcha" class="no-display" />
+                        </div>
+
+                        <!-- Attendance Form Thanks -->
+                        <div id="attendance-form-thanks" class="alert well-sm alert-success no-display">
+                            <h4 class="f-green normal-font"> Thank you for marking your attendance, I will remember you C: </h4>
+                        </div>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-sm btn-danger" onclick="submitAttendanceForm()"> Submit </button>
+                        <button type="button" class="btn btn-sm btn-default" data-dismiss="modal" onclick="clearAttendanceForm()"> Close </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
         <div class="well well-sm text-center b-yellow no-margin no-display" style=" border: 0; padding: 30px 1%; padding-bottom: 5px;">
             <a href="http://www.rupinderjeet.com" style="margin: 0 1%;"> @this </a>
             <a href="http://pics.rupinderjeet.com" style="margin: 0 1%;"> pics </a>
@@ -288,8 +333,10 @@
             <p class="font-16"> Copyright&copy; Rupinderjeet Singh Hans, rupinderjeet.com </p>
         </div>
 
+        <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
 		<script type="text/javascript" src="js/jquery.min.js"></script>
 		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/backend.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
 		<script id="dsq-count-scr" src="//rupinderjeet.disqus.com/count.js" async></script> <!--javascript for disqus feedback-->
 	</body>

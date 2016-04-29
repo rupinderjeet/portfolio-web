@@ -1,18 +1,41 @@
 <!-- STATISTICS SLIDE -->
 <div id="statistics" class="container">
-	<div class="well well-sm">
-		<h1>STATISTICS</h1>
-	</div>
+    <div class="well well-sm margin-bottom">
+        <div class="row">
+            <div class="col-md-6"> <p class="font-size-25"> Total Reach</p> </div>
+            <div class="col-md-6">
+                <button class="btn btn-sm btn-default pull-right margin-left-5" onclick="read('total-reach');"> Refresh </button>
+                <button id="attendance-form-btn" class="btn btn-sm btn-default pull-right" data-toggle="modal" data-target="#attendance-form-modal"> Mark Your Attendance </button>
+            </div>
+        </div>
 
-    <blockquote class="f-white margin-bottom">
+
+        <div class="row">
+            <div class="col-md-1 col-md-offset-5"> Friends </div>
+            <div id="friend-count" class="col-md-1"> : 0 <text id="new-friend" class="f-green no-display"> +1 </text> </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-1 col-md-offset-5"> Guests </div>
+            <div id="guest-count" class="col-md-1"> : 0 <text id="new-guest" class="f-green no-display"> +1 </text> </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-1 col-md-offset-5"> Recruiters </div>
+            <div id="recruiter-count" class="col-md-1"> : 0 <text id="new-recruiter" class="f-green no-display"> +1 </text> </div>
+        </div>
+
+    </div>
+
+    <div class="well-sm alert alert-info margin-bottom">
         Development slowed from Apr 06, 2016
-    </blockquote>
+    </div>
 
-    <blockquote class="f-white margin-bottom">
+    <div class="well-sm alert alert-info margin-bottom">
         Last Mass Update on Apr 03, 2016
-    </blockquote>
+    </div>
 
-    <blockquote class="f-white margin-bottom">
+    <div class="well-sm alert alert-info margin-bottom">
         Started development on Mar 13, 2016
-    </blockquote>
+    </div>
 </div>
