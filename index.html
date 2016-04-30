@@ -285,7 +285,7 @@
                         <div id="attendance-form-error" class="alert well-sm alert-danger no-display">
                             <p class="f-crimson"> 1. You must type your name(must be more than one character). </p>
                             <p class="f-crimson"> 2. You must type your email correctly. </p>
-                            <p class="f-crimson"> 3. You message must be of 10 or more characters, excluding spaces. </p>
+                            <p class="f-crimson"> 3. You must choose a visitor type. </p>
                         </div>
 
                         <!-- Attendance Form -->
@@ -295,6 +295,9 @@
                                 <option> Friend </option>
                                 <option> Guest </option>
                                 <option> Recruiter </option>
+                                <option> Enemy </option>
+                                <option> Rival </option>
+                                <option> Stalker </option>
                             </select>
                             <input id="visitor-name" class="form-control input-sm margin-bottom" placeholder="Your Name" />
                             <input id="visitor-email" class="form-control input-sm margin-bottom" placeholder="Your Email" />
@@ -310,7 +313,7 @@
                     </div>
 
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-sm btn-danger" onclick="submitAttendanceForm()"> Submit </button>
+                        <button type="button" class="btn btn-sm btn-danger" onclick="submitAttendanceForm(this)"> Submit </button>
                         <button type="button" class="btn btn-sm btn-default" data-dismiss="modal" onclick="clearAttendanceForm()"> Close </button>
                     </div>
                 </div>

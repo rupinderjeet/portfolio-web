@@ -2,6 +2,11 @@
 var feedbackInterval;
 var mail;
 
+function checkInternet(){
+    var availability = false;
+
+    return availability;
+}
 
 function getElement(id){
 	return document.getElementById(id);
@@ -286,10 +291,11 @@ function clearContactForm(){
 }
 
 /* Attendance Form */
-function submitAttendanceForm(){
+function submitAttendanceForm(element){
+    'use strict';
+
     $('#attendance-form-error').slideUp('fast');
 
-    'use strict';
     var visitorName = $('#visitor-name').val();
     var visitorEmail = $('#visitor-email').val();
     var visitorTwitter = $('#visitor-twitter').val();
@@ -305,11 +311,17 @@ function submitAttendanceForm(){
         visitorWhatsapp = "Not Provided";
     }
 
+    console.log("Value Name : " + visitorName);
+    console.log("Value Email : " + visitorEmail);
+    console.log("Value Twitter : " + visitorTwitter);
+    console.log("Value WhatsApp : " + visitorWhatsapp);
+    console.log("Value Type : " + visitorType);
+
     var error = (visitorName.trim().length < 2 || visitorEmail.trim().length < 4 || visitorEmail.trim().indexOf("@") === (-1)
-    || visitorEmail.trim().indexOf(".") === (-1) || visitorType.indexOf('Select') === (-1));
+    || visitorEmail.trim().indexOf(".") === (-1) || visitorType.trim() === "Select One");
 
     if(error){
-        $('#attendance-error').slideDown('fast');
+        $('#attendance-form-error').slideDown('fast');
     } else {
         $.ajax({
             url: "https://formspree.io/rupinderjeet47@gmail.com",
@@ -324,17 +336,28 @@ function submitAttendanceForm(){
             },
             dataType: "json",
             error: function () {
+                $('#attendance-form-modal').hide();
                 $('#attendance-form').remove();
                 $('#attendance-form-thanks').remove();
                 $('#attendance-form-btn').html("Error! Try again later");
             },
             success: function (data) {
+                if(visitorType === "Friend" || visitorType === "Guest" || visitorType === "Recruiter" || visitorType === "Enemy" || visitorType === "Rival" || visitorType === "Stalker"){
+                    performAction($('#attendance-form-btn'), 'reach-' + visitorType.toLowerCase(), visitorType.toLowerCase() + '-count');
+                }
+
+                $(element).hide();
                 $('#attendance-form').remove();
+                $('#attendance-form-error').remove();
                 $('#attendance-form-thanks').slideDown('fast');
                 $('#attendance-form-btn').html("Attended Successfully!");
                 $('#attendance-form-btn').addClass("btn-success");
                 $('#attendance-form-btn').removeClass("btn-danger");
-                $('#attendance-form-btn').prop("onclick", null);
+
+                $(element).prop("onclick", null);
+                $('#attendance-form-btn').prop("data-toggle", null);
+                $('#attendance-form-btn').prop("data-target", null);
+                //read('total-reach');
             }
         });
     }
