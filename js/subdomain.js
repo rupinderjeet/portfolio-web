@@ -17,22 +17,6 @@ function readFirebaseDatabase(type){
         }, function (error_object) {
             console.log("The read failed: " + error_object.code);
         });
-    } else if(type === "total-reach"){                  //Visitor Count
-        var data_object, friend_count, guest_count, recruiter_count;
-
-        resumeRef.once("value", function (snapshot) {
-            data_object = snapshot.val();
-            if (data_object !== null) {
-                friend_count = parseInt(data_object.likes, 10);
-                guest_count = parseInt(data_object.downloads, 10);
-                guest_count = parseInt(data_object.downloads, 10);
-                $('#friend-count').html(friend_count);
-                $('#guest-count').html(guest_count);
-                $('#recruiter-count').html(recruiter_count);
-            }
-        }, function (error_object) {
-            console.log("The read failed: " + error_object.code);
-        });
     }
 }
 
