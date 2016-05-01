@@ -1,45 +1,67 @@
 <!-- STATISTICS SLIDE -->
 <div id="statistics" class="container">
     <div class="well well-sm margin-bottom">
+        <p class="font-size-25"> Total Reach (<text id="reach-count">loading</text>)
+        </p>
+
         <div class="row">
-            <div class="col-md-6"> <p class="font-size-25"> Total Reach</p> </div>
-            <div class="col-md-6">
-                <button class="btn btn-sm btn-default pull-right margin-left-5" onclick="read('total-reach');"> Refresh </button>
-                <button id="attendance-form-btn" class="btn btn-sm btn-default pull-right" data-toggle="modal" data-target="#attendance-form-modal"> Mark Your Attendance </button>
+            <div class="col-md-3 margin-top-15px">
+                <div class="row">
+                    <div class="col-xs-4 col-xs-offset-2"> Friends </div>
+                    <div class="col-xs-1"> : </div>
+                    <div id="friend-count" class="col-xs-4"> loading </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-4 col-xs-offset-2"> Guests </div>
+                    <div class="col-xs-1"> : </div>
+                    <div id="guest-count" class="col-xs-4"> loading </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-4 col-xs-offset-2"> Recruiters </div>
+                    <div class="col-xs-1"> : </div>
+                    <div id="recruiter-count" class="col-xs-4"> loading </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-4 col-xs-offset-2"> Enemies </div>
+                    <div class="col-xs-1"> : </div>
+                    <div id="enemy-count" class="col-xs-4"> loading </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-4 col-xs-offset-2"> Rivals </div>
+                    <div class="col-xs-1"> : </div>
+                    <div id="rival-count" class="col-xs-4"> loading </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-4 col-xs-offset-2"> Stalkers </div>
+                    <div class="col-xs-1"> : </div>
+                    <div id="stalker-count" class="col-xs-4"> loading </div>
+                </div>
             </div>
+
+            <blockquote class="col-md-9">
+                <p class="font-size-20"> Why is Total Reach more than Total number of visitors? </p>
+                <p class="font-size-15 text-justify padding-left-20 padding-right-20">
+                    Total Reach is incremented whenever a user lands on this website.
+                    But, Visitor count is incremented whenever a visitor marks his attendance on this page.
+                    Out of all the people browsing this website, only 30% of them come to this page without getting bored.
+                    These special people leave their foot trails by marking their attendance.
+                    Also, during development, this page is refreshed hundreds of times daily.
+                </p>
+            </blockquote>
         </div>
 
+        <hr>
 
-        <div class="row">
-            <div class="col-md-1 col-md-offset-5"> Friends </div>
-            <div id="friend-count" class="col-md-1"> : 0 <text id="new-friend" class="f-green no-display"> +1 </text> </div>
+        <div class="text-center">
+            <button class="btn btn-sm btn-default" onclick="read('visitors'); read('reach');"> Refresh </button>
+            <button id="attendance-form-btn" class="btn btn-sm btn-default" data-toggle="modal" data-target="#attendance-form-modal"> Mark Your Attendance </button>
+            <text id="attendance-form-btn-response" class="f-crimson pad-5-20 no-display">  </text>
         </div>
-
-        <div class="row">
-            <div class="col-md-1 col-md-offset-5"> Guests </div>
-            <div id="guest-count" class="col-md-1"> : 0 <text id="new-guest" class="f-green no-display"> +1 </text> </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-1 col-md-offset-5"> Recruiters </div>
-            <div id="recruiter-count" class="col-md-1"> : 0 <text id="new-recruiter" class="f-green no-display"> +1 </text> </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-1 col-md-offset-5"> Enemies </div>
-            <div id="enemy-count" class="col-md-1"> : 0 <text id="new-recruiter" class="f-green no-display"> +1 </text> </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-1 col-md-offset-5"> Rivals </div>
-            <div id="rival-count" class="col-md-1"> : 0 <text id="new-recruiter" class="f-green no-display"> +1 </text> </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-1 col-md-offset-5"> Stalkers </div>
-            <div id="stalker-count" class="col-md-1"> : 0 <text id="new-recruiter" class="f-green no-display"> +1 </text> </div>
-        </div>
-
     </div>
 
     <div class="well-sm alert alert-info margin-bottom">

@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+    <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+    <!--<link rel='stylesheet' type='text/css' href='/resources/tutorial/css/example.css'>-->
+</head>
+<body>
+<div id='messagesDiv'></div>
+<input type='text' id='nameInput' placeholder='Name'>
+<input type='text' id='messageInput' placeholder='Message'>
+
+<br> <br> <br> Guests : <text id="count"> 0 </text> <br>
+
+<button onclick="countGuests('#count')"> Increase Count </button>
+
+<script>
+    var myDataRef = new Firebase('https://popping-heat-6484.firebaseio.com/web/data/guests');
+    $('#messageInput').keypress(function (e) {
+        if (e.keyCode == 13) {
+            var name = $('#nameInput').val();
+            var text = $('#messageInput').val();
+
+//            myDataRef.push({name: name, text: text});
+
+//            myDataRef.set({
+//                title: "Hello World!",
+//                author: "Firebase",
+//                location: {
+//                    city: "San Francisco",
+//                    state: "California",
+//                    zip: 94103
+//                }
+//            });
+
+            myDataRef.set({guests : 0});
+
+            $('#messageInput').val('');
+        }
+    });
+
+    function countGuests(id){
+
+        myDataRef.once("value", function(snapshot) {
+            var data = snapshot.val();
+            var guestCount = parseInt(data.guests, 10) + 1;
+            myDataRef.set({guests: guestCount});
+
+            $(id).html(guestCount);
+        }, function (errorObject) {
+            $(id).html("The read failed: " + errorObject.code);
+        });
+    }
+
+//    myDataRef.on('child_added', function(snapshot) {
+//        var message = snapshot.val();
+//        displayChatMessage(message.name, message.text);
+//    });
+//    function displayChatMessage(name, text) {
+//        $('<div/>').text(text).prepend($('<em/>').text(name+': ')).appendTo($('#messagesDiv'));
+//        $('#messagesDiv')[0].scrollTop = $('#messagesDiv')[0].scrollHeight;
+//    };
+</script>
+</body>
+</html>

@@ -8,7 +8,7 @@ function checkInternet(){
 }
 
 // declare database reference variables
-var resumeRef, reachRef;
+var resumeRef, visitorRef, reachRef;
 
 // check if internet is alive & initiate database objects for reading/writing database
 if(checkInternet()){
@@ -16,7 +16,10 @@ if(checkInternet()){
     resumeRef = new Firebase('https://popping-heat-6484.firebaseio.com/web/data/resume');
 
     // data reference for visitors reference, -friend & -guest & -recruiter
-    reachRef = new Firebase('https://popping-heat-6484.firebaseio.com/web/data/visitors');
+    visitorRef = new Firebase('https://popping-heat-6484.firebaseio.com/web/data/visitors');
+
+    // data reference for reach data
+    reachRef = new Firebase('https://popping-heat-6484.firebaseio.com/web/data/reach');
 }
 
 /* Handy Contact Form */
@@ -86,13 +89,14 @@ function submitContactForm(){
         });
     }
 }
-function clearContactForm(){
-
-}
 
 /* Attendance Form */
 function submitAttendanceForm(element){
     'use strict';
+
+    // hide success/failure response of an attendance
+    $('#attendance-form-btn-response').hide('fast');
+    $('#attendance-form-btn-response').html('');
 
     // hide error box
     $('#attendance-form-error').slideUp('fast');
@@ -139,39 +143,38 @@ function submitAttendanceForm(element){
             dataType: "json",
             error: function () {
                 // AJAX request failed, handle error
-                $('#attendance-form-modal').hide();
-                $('#attendance-form').remove();
-                $('#attendance-form-thanks').remove();
-                $('#attendance-form-btn').html("Error! Try again later");
+                $('#attendance-form-modal').modal('hide');
+
+                // show response text
+                $('#attendance-form-btn-response').html("Error! Try again later");
+                $('#attendance-form-btn-response').addClass("f-crimson").removeClass("f-green").show('fast');
             },
             success: function (data) {
                 // AJAX request successful, show thanks box
 
                 // increase visitor count according to visitor type
                 if(visitorType === "Friend" || visitorType === "Guest" || visitorType === "Recruiter" || visitorType === "Enemy" || visitorType === "Rival" || visitorType === "Stalker"){
-                    performAction($('#attendance-form-btn'), 'reach-' + visitorType.toLowerCase(), visitorType.toLowerCase() + '-count');
+                    performAction($('#attendance-form-btn'), 'visitor-' + visitorType.toLowerCase(), visitorType.toLowerCase() + '-count');
                 }
 
                 $(element).hide();
-                $('#attendance-form').remove();
-                $('#attendance-form-error').remove();
+                $('#attendance-form').hide();
+                $('#attendance-form-error').hide();
                 $('#attendance-form-thanks').slideDown('fast');
-                $('#attendance-form-btn').html("Attended Successfully!");
-                $('#attendance-form-btn').addClass("btn-success");
-                $('#attendance-form-btn').removeClass("btn-danger");
+                $('#attendance-form-btn').hide('fast');
 
-                $(element).prop("onclick", null);
-                $('#attendance-form-btn').prop("data-toggle", null);
-                $('#attendance-form-btn').prop("data-target", null);
+                $('#attendance-form-btn-response').addClass("f-green").removeClass("f-crimson").html("Attended Successfully!").show('fast');
+
+                $(element).prop("onclick", '');
+
+                // add current user to 'this-visitor' div on index.html, preventing double attendance
+                $('#this-visitor').html($('#this-visitor').html() + ' attendance');
 
                 // refresh visitor count on DOM
-                read('total-reach');
+                read('visitors');
             }
         });
     }
-}
-function clearAttendanceForm(){
-
 }
 
 /* Report An Issue */
@@ -234,16 +237,16 @@ function reportIssue(submitBtn){
 
 // read values from database according to 'type' variable
 function read(type){
-    // @type: total-reach
+    // @type: visitors, reach
 
-    if(type === "total-reach"){
+    if(type === "visitors"){
         // declare database object and visitor type variables
         var data_object, friend_count, guest_count, recruiter_count, enemy_count, rival_count, stalker_count;
 
         // send 'one-time' read request to database
-        reachRef.once("value", function (snapshot) {
+        visitorRef.once("value", function (snapshot) {
 
-            // collected data according to 'reachRef' and stored in 'data_object'
+            // collected data according to 'visitorRef' and stored in 'data_object'
             data_object = snapshot.val();
 
             // check if retrieved database object is empty/null
@@ -268,26 +271,48 @@ function read(type){
             // read failed, week connection or no internet
             console.log("The read failed: " + error_object.code);
         });
+    } else if(type === "reach"){
+        // declare database object and reach counter variables
+        var data_object, reach_count;
+
+        // send 'one-time' read request to database
+        reachRef.once("value", function (snapshot) {
+
+            // collected data according to 'reachRef' and stored in 'data_object'
+            data_object = snapshot.val();
+
+            // check if retrieved database object is empty/null
+            if (data_object !== null) {
+                // read values from data_object and store in respective variables
+                reach_count = parseInt(data_object.rupinderjeet_com, 10);
+
+                // show retrieved values in DOM
+                $('#reach-count').html(reach_count);
+            }
+        }, function (error_object) {
+            // read failed, week connection or no internet
+            console.log("The read failed: " + error_object.code);
+        });
     }
 }
 
 // perform an update action to the database
 function performAction(caller, type, target){
-    // @type : reach(-friend, -guest, -recruiter)
+    // @type : visitor(-friend, -guest, -recruiter) & update-reach
     // @caller : button/anchor that performed this action
     // @target : the element where returned/updated data needs to be refreshed
 
     var dataObject, count;
 
     // identify action type
-    if(type.indexOf('reach') !== (-1)){
+    if(type.indexOf('visitor') !== (-1)){
 
         // identify sub-action type (if-any)
         var visitor_type = type.split('-');
         type = visitor_type[1];
 
         // send 'one-time' read request to database
-        reachRef.once("value", function(snapshot){
+        visitorRef.once("value", function(snapshot){
 
             // store received information
             dataObject = snapshot.val();
@@ -303,37 +328,59 @@ function performAction(caller, type, target){
                 switch(type){
                     case 'friend':
                         count = parseInt(dataObject.friends, 10) + 1;
-                        reachRef.update({friends: count});
+                        visitorRef.update({friends: count});
                         break;
                     case 'guest':
                         count = parseInt(dataObject.guests, 10) + 1;
-                        reachRef.update({guests: count});
+                        visitorRef.update({guests: count});
                         break;
                     case 'recruiter':
                         count = parseInt(dataObject.recruiters, 10) + 1;
-                        reachRef.update({recruiters: count});
+                        visitorRef.update({recruiters: count});
                         break;
                     case 'enemy':
                         count = parseInt(dataObject.enemies, 10) + 1;
-                        reachRef.update({enemies: count});
+                        visitorRef.update({enemies: count});
                         break;
                     case 'rival':
                         count = parseInt(dataObject.rivals, 10) + 1;
-                        reachRef.update({rivals: count});
+                        visitorRef.update({rivals: count});
                         break;
                     case 'stalker':
                         count = parseInt(dataObject.stalkers, 10) + 1;
-                        reachRef.update({stalkers: count});
+                        visitorRef.update({stalkers: count});
                         break;
                     default:
                         console.log('Visitor type is not identified');
                 }
 
                 // refresh the target element's html (if any)
-                $('#' + target).html(count + ' (updated)');
+                $('#' + target).html(count + '*');
 
                 // remove the button that called for this action, less chance of duplicate data
                 $(caller).remove;
+            }
+        }, function(errorObject){
+            // database read request failed
+            console.log("The read failed: " + errorObject.code);
+        });
+    } else if(type === 'update-reach'){
+
+        // send 'one-time' read request to database
+        reachRef.once("value", function(snapshot){
+
+            // store received information
+            dataObject = snapshot.val();
+
+            // check if received information is empty/null
+            if(dataObject !== null){
+
+                /* perform action based on 'type' variable
+                 *  1. read the related value and increase it by 1, then update in database
+                 * */
+
+                count = parseInt(dataObject.rupinderjeet_com, 10) + 1;
+                reachRef.update({rupinderjeet_com: count});
             }
         }, function(errorObject){
             // database read request failed

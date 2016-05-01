@@ -1,6 +1,6 @@
 body{
 	background: #333333;
-	font-family: "Berlin Sans FB", sans-serif;
+	font-family: 'Berlin Sans FB', sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6{
@@ -166,6 +166,7 @@ h1, h2, h3, h4, h5, h6{
 .opacity-07{
 	opacity: 0.7;
 }
+
 
 .margin-1px{
 	margin: 1px !important;
