@@ -3,6 +3,7 @@ function checkInternet(){
     //@TODO: for now :D
     var availability = true;
 
+
     return availability;
 }
 

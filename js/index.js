@@ -2,6 +2,8 @@
 var feedbackInterval;
 var mail;
 
+//$('#attendance-modal-body').load('index.html #attendance-modal-body', null, null);
+
 function getElement(id){
 	return document.getElementById(id);
 }
@@ -9,6 +11,7 @@ function getElement(id){
 function comingSoon(){
     alert('Coming Soon!');
 }
+
 
 //FOR ABOUT PAGE ONLY
 function showNextImage(type, clicktype) {
@@ -231,10 +234,6 @@ function arrowAnimation(element){
     $('#arrow-clicked').toggleClass('glyphicon-chevron-up');
 }
 
-function totalReach(){
-
-}
-
 window.onload = function () {
 	'use strict';
 	$("#home-slide").load("html/home.html", null, null);
@@ -246,4 +245,17 @@ var slideShow;
 //SETTINGS
 function settings() {
 	'use strict';
+}
+
+// 'on-event' function methods
+if (checkInternet()) {
+    $('#report-issue-modal').on('hidden.bs.modal', function (e) {
+        $('#report-modal-body').load('index.html #report-modal-body', null, null);
+    });
+    $('#contact-form-modal').on('hidden.bs.modal', function (e) {
+        $('#contact-modal-body').load('index.html #contact-modal-body', null, null);
+    });
+    $('#attendance-form-modal').on('hidden.bs.modal', function (e) {
+        $('#attendance-modal-body').load('index.html #attendance-modal-body', null, null);
+    });
 }

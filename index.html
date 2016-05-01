@@ -175,7 +175,7 @@
 		</div>
 
 		<!-- Modal : Report an Issue : to be called from different pages =========================================== -->
-		<div class="modal fade" id="report-issue-modal" tabindex="-1" role="dialog" aria-labelledby="reportAnIssue">
+		<div id="report-issue-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="reportAnIssue">
 			<div class="modal-dialog" role="document">
 				<div class="modal-content">
 					<div class="modal-header">
@@ -183,7 +183,7 @@
 						<p class="modal-title font-size-25" id="report-issue-modal-title">Report an Issue</p>
 					</div>
 
-					<div class="modal-body">
+					<div id="report-modal-body" class="modal-body">
 						<div id="report-issue-error" class="alert well-sm alert-danger no-display">
 							1. Your name must be of 2 or more characters. <br>
 							2. Your email must be a valid email address. <br>
@@ -230,7 +230,7 @@
 		</div>
 
         <!-- Modal : Contact Form : to be called from contact page =========================================== -->
-        <div class="modal fade" id="contact-form-modal" tabindex="-1" role="dialog" aria-labelledby="contactForm">
+        <div id="contact-form-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="contactForm">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -238,7 +238,7 @@
                         <p class="modal-title font-size-25" id="contact-form-modal-title"> Contact Me </p>
                     </div>
 
-                    <div class="modal-body">
+                    <div id="contact-modal-body" class="modal-body">
                         <!-- Hidden Handy Contact Form Error -->
                         <div id="handy-contact-form-error" class="alert well-sm alert-danger no-display">
                             <p class="f-crimson"> 1. You must type your name(must be more than one character). </p>
@@ -265,22 +265,22 @@
 
                     <div class="modal-footer">
                         <button type="button" class="btn btn-sm btn-danger" onclick="submitContactForm()"> Submit </button>
-                        <button type="button" class="btn btn-sm btn-default" data-dismiss="modal" onclick="clearContactForm()"> Close </button>
+                        <button type="button" class="btn btn-sm btn-default" data-dismiss="modal"> Close </button>
                     </div>
                 </div>
             </div>
         </div>
 
         <!-- Modal : Attendance Form : to be called from statistics page =========================================== -->
-        <div class="modal fade" id="attendance-form-modal" tabindex="-1" role="dialog" aria-labelledby="attendanceForm">
+        <div id="attendance-form-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="attendanceForm">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="clearAttendanceForm()"> <span aria-hidden="true">&times;</span> </button>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span> </button>
                         <p class="modal-title font-size-25" id="attendance-form-modal-title"> Mark Your Attendance </p>
                     </div>
 
-                    <div class="modal-body">
+                    <div id="attendance-modal-body" class="modal-body">
                         <!-- Hidden Attendance Form Error -->
                         <div id="attendance-form-error" class="alert well-sm alert-danger no-display">
                             <p class="f-crimson"> 1. You must type your name(must be more than one character). </p>
@@ -314,7 +314,7 @@
 
                     <div class="modal-footer">
                         <button type="button" class="btn btn-sm btn-danger" onclick="submitAttendanceForm(this)"> Submit </button>
-                        <button type="button" class="btn btn-sm btn-default" data-dismiss="modal" onclick="clearAttendanceForm()"> Close </button>
+                        <button type="button" class="btn btn-sm btn-default" data-dismiss="modal"> Close </button>
                     </div>
                 </div>
             </div>
@@ -335,6 +335,7 @@
 
             <p class="font-16"> Copyright&copy; Rupinderjeet Singh Hans, rupinderjeet.com </p>
         </div>
+
 
         <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
 		<script type="text/javascript" src="js/jquery.min.js"></script>
