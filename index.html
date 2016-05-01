@@ -91,8 +91,7 @@
 						$('#menu-3').hide('fast');
 					"> <span class="glyphicon glyphicon-chevron-left"></span> </button>
 					<button class="btn-bar btn btn-sm btn-default no-outline no-border" onclick="btnClick('bar', this, '6')"> CONTACT </button>
-					<button class="btn-bar btn btn-sm btn-default no-outline no-border" onclick="btnClick('bar', this, '7')"> FEEDBACK </button>
-					<button class="btn-bar btn btn-sm btn-default no-outline no-border" onclick="btnClick('bar', this, '8')"> STATISTICS </button>
+					<button class="btn-bar btn btn-sm btn-default no-outline no-border" onclick="btnClick('bar', this, '7')"> STATISTICS </button>
 				</div>
 			</center>
 		</div>
@@ -151,28 +150,12 @@
 				</div> <!-- END OF SEVENTH SLIDE -->
 
 				<!-- EIGHTH SLIDE ======================================================================= -->
-				<div id="feedback-slide" class="item">
-                    <div class="container"> <div class="well well-lg">
-                        <div class="spinner center-spinner"></div>
-                    </div> </div>
-				</div> <!-- END OF EIGHTH SLIDE -->
-
-				<!-- NINTH SLIDE ======================================================================= -->
 				<div id="statistics-slide" class="item">
 					<div class="container"> <div class="well well-lg">
 						<div class="spinner center-spinner"></div>
 					</div> </div>
-				</div> <!-- END OF NINTH SLIDE -->
+				</div> <!-- END OF EIGHTH SLIDE -->
 			</div>
-		</div>
-	
-		<div id="loading-issue" class="no-display"> <p>Please try refreshing this page. <a class="pointer" onclick="$('#detailed-loading-issue').slideToggle('fast'); toggleString(this, 'Find out more?', 'Find out less?');">Find out more?</a> </p>
-			<p id="detailed-loading-issue" class="no-display">
-				<br>
-				An error occured while loading this page. This may happen due to some of the following reasons: <br>
-				&nbsp;&nbsp;1. You aren't connected to an Internet connection any more. If you're using a limited connection, please check with your ISP for your connection errors or try troubleshooting connection errors from your device(although it doesn't always work). <br>
-				&nbsp;&nbsp;2. The service this page is using might be a Third Party Service. Due to some reasons, The service provider may experiance some technical issues. <br>
-			</p>
 		</div>
 
 		<!-- Modal : Report an Issue : to be called from different pages =========================================== -->
@@ -207,7 +190,7 @@
 							Please be active on your email, I may contact you to get more details about this issue. <br> <br>
 
 							You will be able to report only one issue for now.
-							But, if you <a href="index.html" class="f-blue underline"> reload this page now </a>,
+							But, if you <a href="index.html" class="f-blue underline"> reload this page now</a>,
 							you will be able to report another issue too. <br> <br>
 
 							Thank you again! Keep visiting!
@@ -240,15 +223,15 @@
                     </div>
 
                     <div id="contact-modal-body" class="modal-body">
-                        <!-- Hidden Handy Contact Form Error -->
-                        <div id="handy-contact-form-error" class="alert well-sm alert-danger no-display">
+                        <!-- Hidden Contact Form Error -->
+                        <div id="contact-form-error" class="alert well-sm alert-danger no-display">
                             <p class="f-crimson"> 1. You must type your name(must be more than one character). </p>
                             <p class="f-crimson"> 2. You must type your email correctly. </p>
                             <p class="f-crimson"> 3. You message must be of 10 or more characters, excluding spaces. </p>
                         </div>
 
-                        <!-- Hidden Handy Contact Form -->
-                        <div id="handy-contact-form">
+                        <!-- Hidden Contact Form -->
+                        <div id="contact-form">
                             <input id="user-name" class="form-control input-sm margin-bottom" placeholder="Your Name" />
                             <input id="user-email" class="form-control input-sm margin-bottom" placeholder="Your Email" />
                             <input id="user-twitter" class="form-control input-sm margin-bottom" placeholder="Your Twitter (Optional)" />
@@ -258,14 +241,14 @@
                             <input id="gotcha" type="text" name="_gotcha" class="no-display" />
                         </div>
 
-                        <!-- Hidden Handy Contact Form Thanks -->
-                        <div id="handy-contact-form-thanks" class="alert well-sm alert-success no-display">
+                        <!-- Hidden Contact Form Thanks -->
+                        <div id="contact-form-thanks" class="alert well-sm alert-success no-display">
                             <h4 class="f-green normal-font"> Thank you for your enquiry, I will get back to you as soon as possible. </h4>
                         </div>
                     </div>
 
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-sm btn-danger" onclick="submitContactForm()"> Submit </button>
+                        <button type="button" class="btn btn-sm btn-danger" onclick="submitContactForm(this)"> Submit </button>
                         <button type="button" class="btn btn-sm btn-default" data-dismiss="modal"> Close </button>
                     </div>
                 </div>

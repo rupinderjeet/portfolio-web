@@ -11,3 +11,48 @@
 	</form>
 </div>
 
+<!-- #2 ============================================================================================================ -->
+<script>
+    function startTimer(targetId) {
+        'use strict';
+        targetId = "feedback-waiting-timer";
+
+        if ($('#' + targetId).length) {
+            var alottedTime = parseInt($('#' + targetId).html().replace("Waiting Timer : ", ""), 10);
+            var newTime = alottedTime - 1;
+
+            if (parseInt(newTime, 10) < 0) {
+                document.getElementById(targetId).parentNode.innerHTML = document.getElementById('loading-issue').innerHTML;
+                clearInterval(feedbackInterval);
+            } else {
+                $('#' + targetId).html("Waiting Timer : " + newTime);
+            }
+        }
+    }
+</script>
+
+<!-- #3 ============================================================================================================ -->
+<div id="loading-issue" class="no-display"> <p>Please try refreshing this page. <a class="pointer" onclick="$('#detailed-loading-issue').slideToggle('fast'); toggleString(this, 'Find out more?', 'Find out less?');">Find out more?</a> </p>
+    <p id="detailed-loading-issue" class="no-display">
+        <br>
+        An error occured while loading this page. This may happen due to some of the following reasons: <br>
+        &nbsp;&nbsp;1. You aren't connected to an Internet connection any more. If you're using a limited connection, please check with your ISP for your connection errors or try troubleshooting connection errors from your device(although it doesn't always work). <br>
+        &nbsp;&nbsp;2. The service this page is using might be a Third Party Service. Due to some reasons, The service provider may experiance some technical issues. <br>
+    </p>
+</div>
+
+<!-- #4 ============================================================================================================ -->
+<div class="well well-sm"> <!-- Feedback Comment Box -->
+    <div id="disqus_thread">
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="spinner pull-left"></div>
+                <p id="feedback-waiting-timer" class="pull-right font-size-25"> Waiting Timer : 30 </p>
+            </div>
+        </div>
+
+    </div>
+    <noscript>Please enable JavaScript to view and post feedback comments on this website.</noscript>
+</div>
+

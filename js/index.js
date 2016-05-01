@@ -129,23 +129,6 @@ function toggleString(element, str1, str2) {
 	}
 }
 
-function startTimer(targetId) {
-	'use strict';
-	targetId = "feedback-waiting-timer";
-	
-	if ($('#' + targetId).length) {
-		var alottedTime = parseInt($('#' + targetId).html().replace("Waiting Timer : ", ""), 10);
-		var newTime = alottedTime - 1;
-
-		if (parseInt(newTime, 10) < 0) {
-			document.getElementById(targetId).parentNode.innerHTML = document.getElementById('loading-issue').innerHTML;
-			clearInterval(feedbackInterval);
-		} else {
-			$('#' + targetId).html("Waiting Timer : " + newTime);
-		}
-	}
-}
-
 function btnClick(source, btn, index) {
 	'use strict';
     var text;
@@ -163,11 +146,7 @@ function btnClick(source, btn, index) {
 
         var btnText = $(btn).html().trim().toLowerCase();
         $("#" + btnText + "-slide").load("html/" + btnText + ".html", function() {
-            if (index === 7) {	//feedback button clicked
-                clearInterval(feedbackInterval); 								//In case, if it is already counting
-                feedbackInterval = setInterval(startTimer, 1000);
-                initFeedbackDisqus();
-            } else if (index === 8) {	//statistics button clicked
+            if (index === 7) {	//statistics button clicked
                 if( $('#this-visitor').html().trim().indexOf('attendance') !== (-1)){
                     $('#attendance-form-btn').hide('fast');
                     $('#attendance-form-btn-response').html('Attended Successfully!').show('fast');
@@ -197,18 +176,6 @@ function btnClick(source, btn, index) {
         });
     }
 
-}
-
-function initFeedbackDisqus() {
-	'use strict';
-	(function () {
-		var d = document, s = d.createElement('script');
-
-		s.src = '//rupinderjeet.disqus.com/embed.js';
-
-		s.setAttribute('data-timestamp', +new Date());
-		(d.head || d.body).appendChild(s);
-	})();
 }
 
 function arrowAnimation(element){

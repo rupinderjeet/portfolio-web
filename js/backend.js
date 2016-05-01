@@ -22,12 +22,12 @@ if(checkInternet()){
     reachRef = new Firebase('https://popping-heat-6484.firebaseio.com/web/data/reach');
 }
 
-/* Handy Contact Form */
-function submitContactForm(){
+/* Contact Form */
+function submitContactForm(element){
     'use strict';
 
     // hide error box
-    $('#handy-contact-form-error').slideUp('fast');
+    $('#contact-form-error').slideUp('fast');
 
     // collect information from DOM
     var userName = $('#user-name').val();
@@ -55,7 +55,7 @@ function submitContactForm(){
     // check for errors
     if(error){
         // show error box
-        $('#handy-contact-form-error').slideDown('fast');
+        $('#contact-form-error').slideDown('fast');
     } else {
         // initiate AJAX request for storing data
         $.ajax({
@@ -73,18 +73,19 @@ function submitContactForm(){
             dataType: "json",
             error: function () {
                 // AJAX request failed, handle error
-                $('#handy-contact-form').remove();
-                $('#handy-contact-form-thanks').remove();
-                $('#handy-form-btn').html("Error! Try again Later");
+                $('#contact-form-modal').modal('hide');
+
+                $('#contact-form-btn').hide('fast');
+                $('#contact-form-btn-response').addClass('f-crimson').removeClass('f-green').html('Contact Error').show('hide');
             },
             success: function (data) {
                 // AJAX request is successful
-                $('#handy-contact-form').remove();
-                $('#handy-contact-form-thanks').slideDown('fast');
-                $('#handy-form-btn').html("Contacted Successfully!");
-                $('#handy-form-btn').addClass("btn-success");
-                $('#handy-form-btn').removeClass("btn-danger");
-                $('#handy-form-btn').prop("onclick", null);
+                $('#contact-form').remove();
+                $('#contact-form-thanks').slideDown('fast');
+
+                $(element).hide('fast');
+                $('#contact-form-btn').hide('fast');
+                $('#contact-form-btn-response').addClass("f-green").removeClass("f-crimson").html('Contacted').show('fast');
             }
         });
     }
@@ -225,11 +226,8 @@ function reportIssue(submitBtn){
                 $('#report-issue-input').remove();
                 $('#report-issue-thanks').slideDown('fast');
                 $(submitBtn).remove();
-                $('report-issue-btn').html("Issue Reported Successfully!");
-                $('report-issue-btn').addClass("btn-success");
-                $('report-issue-btn').removeClass("btn-default");
-                $('report-issue-btn').prop("data-toggle", null);
-                $('report-issue-btn').prop("data-target", null);
+
+                $('#report-issue-btn').hide('fast');
             }
         });
     }
