@@ -8,9 +8,10 @@
 
         <div class="row">
             <div class="col-md-8"> <h1> PORTFOLIO </h1> </div>
+
             <div class="col-md-4">
-                <button class="btn btn-default no-outline pull-right" onclick="comingSoon()">
-                    <span class="glyphicon glyphicon-filter"></span>
+                <button class="btn btn-default no-outline pull-right" data-toggle="modal" data-target="#educational-details-modal">
+                    Educational Details
                 </button>
             </div>
         </div>
@@ -21,7 +22,7 @@
 
     <!-- task-000 -->
     <div id="task-000" class="well well-sm top-border-bar" style="padding: 1% 10%;">
-        <p class="font-size-35 margin-bottom-10"> Tempo-Team Outsourcing Contact Form </p>
+        <p class="font-size-35 margin-bottom-10"> Tempo-Team Outsourcing Contact Form (<text id="task-000-likes">loading likes</text>)</p>
 
         <div class="row">
             <div class="col-md-9">
@@ -33,7 +34,7 @@
             </div>
 
             <div class="col-md-3">
-                <button class="btn btn-sm btn-default" onclick="performLike('task', 'task-000');"> Like </button>
+                <button class="btn btn-sm btn-default" onclick="performAction(this, 'task-000', 'task-000-likes')"> Like </button>
                 <button class="btn btn-sm btn-default" onclick="showPrintDialog('task-000');"> Print </button>
                 <button class="btn btn-sm btn-default no-outline" onclick="$('#task-000-full').slideToggle('fast'); toggleString(this, 'Expand', 'Collapse');"> Expand </button>
             </div>
@@ -88,7 +89,7 @@
     <div id="task-001" class="well well-sm top-border-bar" style="padding: 1% 10%;">
 
         <p class="font-size-35 margin-bottom-10">
-            Pharmacy Stock Management System
+            Pharmacy Stock Management System (<text id="task-001-likes">loading likes</text>)
         </p>
 
         <div class="row">
@@ -104,7 +105,7 @@
             </div>
 
             <div class="col-md-3">
-                <button class="btn btn-sm btn-default" onclick="performLike('task', 'task-001');"> Like </button>
+                <button class="btn btn-sm btn-default" onclick="performAction(this, 'task-001', 'task-001-likes')"> Like </button>
                 <button class="btn btn-sm btn-default" onclick="showPrintDialog('task-001');"> Print </button>
                 <button class="btn btn-sm btn-default no-outline" onclick="$('#task-001-full').slideToggle('fast'); toggleString(this, 'Expand', 'Collapse');"> Expand </button>
             </div>

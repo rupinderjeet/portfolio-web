@@ -145,8 +145,12 @@ function btnClick(source, btn, index) {
 		$("#theSlider").carousel(index);
 
         var btnText = $(btn).html().trim().toLowerCase();
+        console.log(btnText);
+
         $("#" + btnText + "-slide").load("html/" + btnText + ".html", function() {
-            if (index === 7) {	//statistics button clicked
+            if( btnText === 'portfolio') {
+                read('task-likes');
+            } else if (btnText === 'statistics') {
                 if( $('#this-visitor').html().trim().indexOf('attendance') !== (-1)){
                     $('#attendance-form-btn').hide('fast');
                     $('#attendance-form-btn-response').html('Attended Successfully!').show('fast');

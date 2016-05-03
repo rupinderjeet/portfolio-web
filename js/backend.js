@@ -8,7 +8,7 @@ function checkInternet(){
 }
 
 // declare database reference variables
-var resumeRef, visitorRef, reachRef;
+var resumeRef, visitorRef, reachRef, taskRef;
 
 // check if internet is alive & initiate database objects for reading/writing database
 if(checkInternet()){
@@ -20,6 +20,9 @@ if(checkInternet()){
 
     // data reference for reach data
     reachRef = new Firebase('https://popping-heat-6484.firebaseio.com/web/data/reach');
+
+    // data reference for data of all tasks
+    taskRef = new Firebase('https://popping-heat-6484.firebaseio.com/web/data/tasks');
 }
 
 /* Contact Form */
@@ -291,12 +294,32 @@ function read(type){
             // read failed, week connection or no internet
             console.log("The read failed: " + error_object.code);
         });
+    } else if(type === "task-likes"){
+        // declare database object and reach counter variables
+        var data_object, task_like_count;
+
+        // send 'one-time' read request to database
+        taskRef.once("value", function (snapshot) {
+
+            // collected data according to 'taskRef' and stored in 'data_object'
+            data_object = snapshot.val();
+
+            // check if retrieved database object is empty/null
+            if (data_object !== null) {
+                // read values from data_object and store in respective variables & show retrieved values in DOM
+                $('#task-000-likes').html(parseInt(data_object.task000, 10) + ' likes');
+                $('#task-001-likes').html(parseInt(data_object.task001, 10) + ' likes');
+            }
+        }, function (error_object) {
+            // read failed, week connection or no internet
+            console.log("The read failed: " + error_object.code);
+        });
     }
 }
 
 // perform an update action to the database
 function performAction(caller, type, target){
-    // @type : visitor(-friend, -guest, -recruiter) & update-reach
+    // @type : visitor(-friend, -guest, -recruiter) & update-reach & task-***
     // @caller : button/anchor that performed this action
     // @target : the element where returned/updated data needs to be refreshed
 
@@ -379,6 +402,46 @@ function performAction(caller, type, target){
 
                 count = parseInt(dataObject.rupinderjeet_com, 10) + 1;
                 reachRef.update({rupinderjeet_com: count});
+            }
+        }, function(errorObject){
+            // database read request failed
+            console.log("The read failed: " + errorObject.code);
+        });
+    } else if(type.indexOf('task') !== (-1)){
+
+        // identify sub-action type (if-any)
+        var task_data = type.split('-');
+        type = task_data[1];
+
+
+        // send 'one-time' read request to database
+        taskRef.once("value", function(snapshot){
+
+            // store received information
+            dataObject = snapshot.val();
+
+            // check if received information is empty/null
+            if(dataObject !== null){
+
+                /* perform action based on 'type' variable
+                 *  1. read the related value and increase it by 1, then update in database
+                 * */
+                switch(type){
+                    case '000':
+                        count = parseInt(dataObject.task000, 10) + 1;
+                        taskRef.update({task000: count});
+                        break;
+                    case '001':
+                        count = parseInt(dataObject.task001, 10) + 1;
+                        taskRef.update({task001: count});
+                        break;
+
+                    default: console.log('task number(not found) is : ' + type);
+                }
+
+
+                $(caller).html('Liked').addClass('btn-success').prop('onclick', '');
+                $('#' + target).html(count + " likes");
             }
         }, function(errorObject){
             // database read request failed
