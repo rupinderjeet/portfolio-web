@@ -31,26 +31,6 @@
 		<div class="container">
 			<div id="links" class="well well-sm hidden-bar">
 
-				<div class="dropdown pull-right margin-left-5">
-					<button class="btn btn-sm btn-success dropdown-toggle no-outline no-border" id="donateMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-						Donate <span class="caret"></span>
-					</button>
-					<ul class="dropdown-menu" aria-labelledby="donateMenuItems">
-						<li class="pointer">
-							<a class="no-margin no-padding pointer">
-								<label for="submit-form" class="width-100-perc normal-font pointer no-margin pad-3-20"> PayPal </label>
-							</a>
-						</li>
-
-						<li role="separator" class="divider no-margin"></li>
-						<li> <a> Help(coming soon!) </a> </li>
-					</ul>
-				</div>
-
-                <button id="report-issue-btn" class="btn btn-sm btn-danger no-border pull-right" type="button" data-toggle="modal" data-target="#report-issue-modal">
-                    Report an Issue?
-                </button>
-
                 <select id="change-fg-color" class="btn btn-sm btn-default" onchange="settings(this, 'color');">
                     <option> Change Foreground Color </option>
                     <option> Default </option>
@@ -72,6 +52,26 @@
                     <option> Pink </option>
                     <option> Yellow </option>
                 </select>
+
+                <button id="report-issue-btn" class="btn btn-sm btn-danger no-border" type="button" data-toggle="modal" data-target="#report-issue-modal">
+                    Report an Issue?
+                </button>
+
+                <div class="dropdown" style="float: left; margin-right: 5px;">
+                    <button class="btn btn-sm btn-success dropdown-toggle no-outline no-border" id="donateMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        Donate <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="donateMenuItems">
+                        <li class="pointer">
+                            <a class="no-margin no-padding pointer">
+                                <label for="submit-form" class="width-100-perc normal-font pointer no-margin pad-3-20"> PayPal </label>
+                            </a>
+                        </li>
+
+                        <li role="separator" class="divider no-margin"></li>
+                        <li> <a> Help(coming soon!) </a> </li>
+                    </ul>
+                </div>
 
 			</div>
 
