@@ -191,7 +191,7 @@ function arrowAnimation(element){
 
 window.onload = function () {
 	'use strict';
-	$("#home-slide").load("html/home.html", null, null);
+	$("#services-slide").load("html/services.html", null, null);
     performAction(null, 'update-reach', null);
 };
 

@@ -32,7 +32,7 @@
 			<div id="links" class="well well-sm hidden-bar">
 
                 <select id="change-fg-color" class="btn btn-sm btn-default" onchange="settings(this, 'color');">
-                    <option> Change Foreground Color </option>
+                    <option> Change Text Color </option>
                     <option> Default </option>
                     <option> Red </option>
                     <option> Blue </option>
@@ -43,7 +43,7 @@
                 </select>
 
                 <select id="change-bg-color" class="btn btn-sm btn-default" onchange="settings(this, 'bg-color');">
-                    <option> Change Background Color </option>
+                    <option> Change BG Color </option>
                     <option> Default </option>
                     <option> Red </option>
                     <option> Blue </option>
@@ -84,9 +84,7 @@
 		<div id="menu-bar-small" class="container margin-bottom-10">
 			<center> <!-- DEPRECATED HTML TAG USED -->
 				<div id="menu-1">
-					<button class="btn-bar btn btn-sm btn-focused no-outline no-border" onclick="btnClick('bar', this, '0')"> HOME </button>
-					<button class="btn-bar btn btn-sm btn-default no-outline no-border" onclick="btnClick('bar', this, '1')"> PORTFOLIO </button>
-					<button class="btn-bar btn btn-sm btn-default no-outline no-border" onclick="btnClick('bar', this, '2')"> EDUCATION </button>
+					<button class="btn-bar btn btn-sm btn-default no-outline no-border" onclick="btnClick('bar', this, '0')"> PORTFOLIO </button>
 					<button id="trigger-menu-1" class="btn btn-sm btn-default no-outline no-border" onclick="
 						$('#menu-1').hide('fast');
 						$('#menu-2').show('fast');
@@ -98,9 +96,9 @@
 						$('#menu-1').show('fast');
 						$('#menu-2').hide('fast');
 					"> <span class="glyphicon glyphicon-chevron-left"></span> </button>
-					<button class="btn-bar btn btn-sm btn-default no-outline no-border" onclick="btnClick('bar', this, '3')"> BLOG </button>
-					<button class="btn-bar btn btn-sm btn-default no-outline no-border" onclick="btnClick('bar', this, '4')"> ABOUT </button>
-					<button class="btn-bar btn btn-sm btn-default no-outline no-border" onclick="btnClick('bar', this, '5')"> SERVICES  </button>
+					<button class="btn-bar btn btn-sm btn-default no-outline no-border" onclick="btnClick('bar', this, '1')"> BLOG </button>
+					<button class="btn-bar btn btn-sm btn-default no-outline no-border" onclick="btnClick('bar', this, '2')"> ABOUT </button>
+					<button class="btn-bar btn btn-sm btn-focused no-outline no-border" onclick="btnClick('bar', this, '3')"> SERVICES  </button>
 					<button id="trigger-menu-3" class="btn-bar btn btn-sm btn-default no-outline no-border" onclick="
 						$('#menu-2').hide('fast');
 						$('#menu-3').show('fast');
@@ -112,8 +110,8 @@
 						$('#menu-2').show('fast');
 						$('#menu-3').hide('fast');
 					"> <span class="glyphicon glyphicon-chevron-left"></span> </button>
-					<button class="btn-bar btn btn-sm btn-default no-outline no-border" onclick="btnClick('bar', this, '6')"> CONTACT </button>
-					<button class="btn-bar btn btn-sm btn-default no-outline no-border" onclick="btnClick('bar', this, '7')"> STATISTICS </button>
+					<button class="btn-bar btn btn-sm btn-default no-outline no-border" onclick="btnClick('bar', this, '4')"> CONTACT </button>
+					<button class="btn-bar btn btn-sm btn-default no-outline no-border" onclick="btnClick('bar', this, '5')"> STATISTICS </button>
 				</div>
 			</center>
 		</div>
@@ -122,26 +120,12 @@
 		<div id="theSlider" class="carousel slide" data-ride="carousel" data-interval="false">
 			<div class="carousel-inner carousel-extra-height">
 
-				<!-- FIRST SLIDE ======================================================================= -->
-				<div id="home-slide" class="item active">
-					<div class="container"> <div class="well well-lg">
-						<div class="spinner center-spinner"></div>
-					</div> </div>
-				</div> <!-- END OF FIRST SLIDE -->
-
 				<!-- SECOND SLIDE ======================================================================= -->
 				<div id="portfolio-slide" class="item">
 					<div class="container"> <div class="well well-lg">
 						<div class="spinner center-spinner"></div>
 					</div> </div>
 				</div> <!-- END OF SECOND SLIDE -->
-
-				<!-- THIRD SLIDE ======================================================================= -->
-				<div id="education-slide" class="item">
-					<div class="container"> <div class="well well-lg">
-						<div class="spinner center-spinner"></div>
-					</div> </div>
-				</div> <!-- END OF THIRD SLIDE -->
 
 				<!-- FOURTH SLIDE ======================================================================= -->
 				<div id="blog-slide" class="item">
@@ -158,7 +142,7 @@
 				</div> <!-- END OF FIFTH SLIDE -->
 
 				<!-- SIXTH SLIDE ======================================================================= -->
-				<div id="services-slide" class="item">
+				<div id="services-slide" class="item active">
 					<div class="container"> <div class="well well-lg">
 						<div class="spinner center-spinner"></div>
 					</div> </div>
