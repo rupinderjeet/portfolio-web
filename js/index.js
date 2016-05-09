@@ -134,18 +134,17 @@ function btnClick(source, btn, index) {
     var text;
 
 	if (source === 'bar') {
-		/* 'btn-bar' is a special-empty-class used to target menu-bar-buttons only */
+		/* 'btn-bar' is a special-empty-class used to target menu-bar-buttons only
+		 * all the anchor-buttons are contained in a <li> element */
 		
 		$('.btn-bar').parent().removeClass('active');
 		$(btn).parent().addClass('active');
-
-		$("#theSlider").carousel(index);
 
         var btnText = $(btn).html().trim().toLowerCase();
         console.log(btnText);
 
         // loads html page according to button clicked
-        $("#" + btnText + "-slide").load("html/" + btnText + ".html", function() {
+        $("#menu-pages").load("html/" + btnText + ".html", function() {
             if( btnText === 'portfolio') {
                 read('task-likes');
             } else if (btnText === 'statistics') {
@@ -181,8 +180,8 @@ function btnClick(source, btn, index) {
 
 }
 
-function arrowAnimation(element){
-    $('#links').slideToggle('fast');
+function arrowAnimation(){
+    $('#options').slideToggle('fast');
     $('#arrow').attr('id', 'arrow-clicked');
     $('#arrow-clicked').toggleClass('glyphicon-chevron-down');
     $('#arrow-clicked').toggleClass('glyphicon-chevron-up');
@@ -190,7 +189,7 @@ function arrowAnimation(element){
 
 window.onload = function () {
 	'use strict';
-	$("#services-slide").load("html/services.html", null, null);
+	$("#menu-pages").load("html/services.html", null, null);
     performAction(null, 'update-reach', null);
 };
 

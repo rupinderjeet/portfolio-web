@@ -27,182 +27,88 @@
 			<input type="submit" name="submit" id="submit-form" class="hidden" value="Donate with PayPal"/>
 		</form>
 
-		<!-- Under Development Bar ========================================================================= -->
-		<div class="container">
-			<div id="links" class="well well-sm hidden-bar">
+        <!-- hidden bar ============================================================================================ -->
+        <div id="options" class="jumbotron no-border no-margin no-display">
 
-                <select id="change-fg-color" class="btn btn-sm btn-default" onchange="settings(this, 'color');">
-                    <option> Change Text Color </option>
-                    <option> Default </option>
-                    <option> Red </option>
-                    <option> Blue </option>
-                    <option> Black </option>
-                    <option> Green </option>
-                    <option> Pink </option>
-                    <option> Yellow </option>
-                </select>
+            <select id="change-fg-color" class="btn btn-sm btn-default" onchange="settings(this, 'color');">
+                <option> Change Text Color </option>
+                <option> Default </option>
+                <option> Red </option>
+                <option> Blue </option>
+                <option> Black </option>
+                <option> Green </option>
+                <option> Pink </option>
+                <option> Yellow </option>
+            </select>
 
-                <select id="change-bg-color" class="btn btn-sm btn-default" onchange="settings(this, 'bg-color');">
-                    <option> Change BG Color </option>
-                    <option> Default </option>
-                    <option> Red </option>
-                    <option> Blue </option>
-                    <option> Black </option>
-                    <option> Green </option>
-                    <option> Pink </option>
-                    <option> Yellow </option>
-                </select>
+            <select id="change-bg-color" class="btn btn-sm btn-default" onchange="settings(this, 'bg-color');">
+                <option> Change BG Color </option>
+                <option> Default </option>
+                <option> Red </option>
+                <option> Blue </option>
+                <option> Black </option>
+                <option> Green </option>
+                <option> Pink </option>
+                <option> Yellow </option>
+            </select>
 
-                <button id="report-issue-btn" class="btn btn-sm btn-danger no-border" type="button" data-toggle="modal" data-target="#report-issue-modal">
-                    Report an Issue?
+            <button id="report-issue-btn" class="btn btn-sm btn-danger no-border" type="button" data-toggle="modal" data-target="#report-issue-modal">
+                Report an Issue?
+            </button>
+
+            <div class="dropdown" style="float: left; margin-right: 5px;">
+                <button class="btn btn-sm btn-success dropdown-toggle no-outline no-border" id="donateMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    Donate <span class="caret"></span>
                 </button>
+                <ul class="dropdown-menu" aria-labelledby="donateMenuItems">
+                    <li class="pointer">
+                        <a class="no-margin no-padding pointer">
+                            <label for="submit-form" class="width-100-perc normal-font pointer no-margin pad-3-20"> PayPal </label>
+                        </a>
+                    </li>
 
-                <div class="dropdown" style="float: left; margin-right: 5px;">
-                    <button class="btn btn-sm btn-success dropdown-toggle no-outline no-border" id="donateMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                        Donate <span class="caret"></span>
+                    <li role="separator" class="divider no-margin"></li>
+                    <li> <a> Help(coming soon!) </a> </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- BOOTSTRAP MENU BAR : MOBILE FRIENDLY ===================================== -->
+        <nav id="menu-bar-small" class="navbar navbar-default no-border" style="-webkit-border-radius: 0;-moz-border-radius: 0;border-radius: 0;">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
                     </button>
-                    <ul class="dropdown-menu" aria-labelledby="donateMenuItems">
-                        <li class="pointer">
-                            <a class="no-margin no-padding pointer">
-                                <label for="submit-form" class="width-100-perc normal-font pointer no-margin pad-3-20"> PayPal </label>
-                            </a>
+                    <a class="navbar-brand" href="http://www.rupinderjeet.com">rupinderjeet.com</a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="active"> <a class="btn-bar pointer" onclick="btnClick('bar', this)">Services   </a> </li>
+                        <li>                <a class="btn-bar pointer" onclick="btnClick('bar', this)">Portfolio  </a> </li>
+                        <li>                <a class="btn-bar pointer" onclick="btnClick('bar', this)">Blog       </a> </li>
+                        <li>                <a class="btn-bar pointer" onclick="btnClick('bar', this)">About      </a> </li>
+                        <li>                <a class="btn-bar pointer" onclick="btnClick('bar', this)">Contact    </a> </li>
+                        <li>                <a class="btn-bar pointer" onclick="btnClick('bar', this)">Statistics </a> </li>
+                        <li>                <a id="arrow-div" class="btn-bar pointer" onclick="arrowAnimation()">
+                                                <span id="arrow" class="glyphicon glyphicon-chevron-down"></span>
+                                            </a>
                         </li>
-
-                        <li role="separator" class="divider no-margin"></li>
-                        <li> <a> Help(coming soon!) </a> </li>
                     </ul>
                 </div>
-
-			</div>
-
-            <div id="arrow-div" class="pull-right" onclick="arrowAnimation(this)">
-                <span id="arrow" class="pad-5-20 glyphicon glyphicon-chevron-down"></span>
             </div>
-		</div>
+        </nav>
 
-		<!-- SMALL MENU BAR : MOBILE FRIENDLY ===================================== -->
-		<div id="menu-bar-small" class="container margin-bottom-10">
-
-                <nav class="navbar navbar-default no-border">
-                    <div class="container-fluid">
-                        <div class="navbar-header">
-                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                                <span class="sr-only">Toggle navigation</span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                            </button>
-                            <a class="navbar-brand" href="#">rupinderjeet.com</a>
-                        </div>
-                        <div id="navbar" class="navbar-collapse collapse">
-                            <ul class="nav navbar-nav navbar-right">
-                                <li class="active">
-                                    <a href="#" class="btn-bar pad-top-70-hard" onclick="btnClick('bar', this, 0)">Services</a>
-                                </li>
-                                <li><a href="#" class="btn-bar pad-top-70-hard" onclick="btnClick('bar', this, 1)">Portfolio</a></li>
-                                <li><a href="#" class="btn-bar pad-top-70-hard" onclick="btnClick('bar', this, 2)">Blog</a></li>
-                                <li><a href="#" class="btn-bar pad-top-70-hard" onclick="btnClick('bar', this, 3)">About</a></li>
-                                <li><a href="#" class="btn-bar pad-top-70-hard" onclick="btnClick('bar', this, 4)">Contact</a></li>
-                                <li><a href="#" class="btn-bar pad-top-70-hard" onclick="btnClick('bar', this, 5)">Statistics</a></li>
-
-                                <!--<li class="dropdown">-->
-                                    <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>-->
-                                    <!--<ul class="dropdown-menu">-->
-                                        <!--<li><a href="#">Action</a></li>-->
-                                        <!--<li><a href="#">Another action</a></li>-->
-                                        <!--<li><a href="#">Something else here</a></li>-->
-                                        <!--<li role="separator" class="divider"></li>-->
-                                        <!--<li class="dropdown-header">Nav header</li>-->
-                                        <!--<li><a href="#">Separated link</a></li>-->
-                                        <!--<li><a href="#">One more separated link</a></li>-->
-                                    <!--</ul>-->
-                                <!--</li>-->
-
-                            </ul>
-                        </div><!--/.nav-collapse -->
-                    </div><!--/.container-fluid -->
-                </nav>
-
-                <!-- -->
-				<!--<div id="menu-1">-->
-					<!--<button class="btn-bar btn btn-sm btn-default no-outline no-border" onclick="btnClick('bar', this, '0')"> PORTFOLIO </button>-->
-					<!--<button id="trigger-menu-1" class="btn btn-sm btn-default no-outline no-border" onclick="-->
-						<!--$('#menu-1').hide('fast');-->
-						<!--$('#menu-2').show('fast');-->
-					<!--"> <span class="glyphicon glyphicon-chevron-right"></span> </button>-->
-				<!--</div>-->
-
-				<!--<div id="menu-2" class="no-display">-->
-					<!--<button id="trigger-menu-2" class="btn btn-sm btn-default no-outline no-border" onclick="-->
-						<!--$('#menu-1').show('fast');-->
-						<!--$('#menu-2').hide('fast');-->
-					<!--"> <span class="glyphicon glyphicon-chevron-left"></span> </button>-->
-					<!--<button class="btn-bar btn btn-sm btn-default no-outline no-border" onclick="btnClick('bar', this, '1')"> BLOG </button>-->
-					<!--<button class="btn-bar btn btn-sm btn-default no-outline no-border" onclick="btnClick('bar', this, '2')"> ABOUT </button>-->
-					<!--<button class="btn-bar btn btn-sm btn-focused no-outline no-border" onclick="btnClick('bar', this, '3')"> SERVICES  </button>-->
-					<!--<button id="trigger-menu-3" class="btn-bar btn btn-sm btn-default no-outline no-border" onclick="-->
-						<!--$('#menu-2').hide('fast');-->
-						<!--$('#menu-3').show('fast');-->
-					<!--"> <span class="glyphicon glyphicon-chevron-right"></span> </button>-->
-				<!--</div>-->
-
-				<!--<div id="menu-3" class="no-display">-->
-					<!--<button id="trigger-menu-4" class="btn btn-sm btn-default no-outline no-border" onclick="-->
-						<!--$('#menu-2').show('fast');-->
-						<!--$('#menu-3').hide('fast');-->
-					<!--"> <span class="glyphicon glyphicon-chevron-left"></span> </button>-->
-					<!--<button class="btn-bar btn btn-sm btn-default no-outline no-border" onclick="btnClick('bar', this, '4')"> CONTACT </button>-->
-					<!--<button class="btn-bar btn btn-sm btn-default no-outline no-border" onclick="btnClick('bar', this, '5')"> STATISTICS </button>-->
-				<!--</div>-->
-		</div>
-
-		<!-- Bootstrap Carousel -->
-		<div id="theSlider" class="carousel slide" data-ride="carousel" data-interval="false">
-			<div class="carousel-inner carousel-extra-height">
-
-                <!-- SIXTH SLIDE ======================================================================= -->
-                <div id="services-slide" class="item active">
-                    <div class="container"> <div class="well well-lg">
-                        <div class="spinner center-spinner"></div>
-                    </div> </div>
-                </div> <!-- END OF SIXTH SLIDE -->
-
-				<!-- SECOND SLIDE ======================================================================= -->
-				<div id="portfolio-slide" class="item">
-					<div class="container"> <div class="well well-lg">
-						<div class="spinner center-spinner"></div>
-					</div> </div>
-				</div> <!-- END OF SECOND SLIDE -->
-
-				<!-- FOURTH SLIDE ======================================================================= -->
-				<div id="blog-slide" class="item">
-					<div class="container"> <div class="well well-lg">
-						<div class="spinner center-spinner"></div>
-					</div> </div>
-				</div> <!-- END OF FOURTH SLIDE -->
-
-				<!-- FIFTH SLIDE ======================================================================= -->
-				<div id="about-slide" class="item">
-					<div class="container"> <div class="well well-lg">
-						<div class="spinner center-spinner"></div>
-					</div> </div>
-				</div> <!-- END OF FIFTH SLIDE -->
-
-				<!-- SEVENTH SLIDE ======================================================================= -->
-				<div id="contact-slide" class="item">
-					<div class="container"> <div class="well well-lg">
-						<div class="spinner center-spinner"></div>
-					</div> </div>
-				</div> <!-- END OF SEVENTH SLIDE -->
-
-				<!-- EIGHTH SLIDE ======================================================================= -->
-				<div id="statistics-slide" class="item">
-					<div class="container"> <div class="well well-lg">
-						<div class="spinner center-spinner"></div>
-					</div> </div>
-				</div> <!-- END OF EIGHTH SLIDE -->
-			</div>
-		</div>
+        <!-- all pages load in here =================================================================================== -->
+        <div id="menu-pages" class="container">
+            <div class="well well-lg">
+                <div class="spinner center-spinner"></div>
+            </div>
+        </div>
 
 		<!-- Modal : Report an Issue : to be called from different pages =========================================== -->
 		<div id="report-issue-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="reportAnIssue">
