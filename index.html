@@ -82,43 +82,90 @@
 
 		<!-- SMALL MENU BAR : MOBILE FRIENDLY ===================================== -->
 		<div id="menu-bar-small" class="container margin-bottom-10">
-			<center> <!-- DEPRECATED HTML TAG USED -->
-				<div id="menu-1">
-					<button class="btn-bar btn btn-sm btn-default no-outline no-border" onclick="btnClick('bar', this, '0')"> PORTFOLIO </button>
-					<button id="trigger-menu-1" class="btn btn-sm btn-default no-outline no-border" onclick="
-						$('#menu-1').hide('fast');
-						$('#menu-2').show('fast');
-					"> <span class="glyphicon glyphicon-chevron-right"></span> </button>
-				</div>
 
-				<div id="menu-2" class="no-display">
-					<button id="trigger-menu-2" class="btn btn-sm btn-default no-outline no-border" onclick="
-						$('#menu-1').show('fast');
-						$('#menu-2').hide('fast');
-					"> <span class="glyphicon glyphicon-chevron-left"></span> </button>
-					<button class="btn-bar btn btn-sm btn-default no-outline no-border" onclick="btnClick('bar', this, '1')"> BLOG </button>
-					<button class="btn-bar btn btn-sm btn-default no-outline no-border" onclick="btnClick('bar', this, '2')"> ABOUT </button>
-					<button class="btn-bar btn btn-sm btn-focused no-outline no-border" onclick="btnClick('bar', this, '3')"> SERVICES  </button>
-					<button id="trigger-menu-3" class="btn-bar btn btn-sm btn-default no-outline no-border" onclick="
-						$('#menu-2').hide('fast');
-						$('#menu-3').show('fast');
-					"> <span class="glyphicon glyphicon-chevron-right"></span> </button>
-				</div>
+                <nav class="navbar navbar-default no-border">
+                    <div class="container-fluid">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a class="navbar-brand" href="#">rupinderjeet.com</a>
+                        </div>
+                        <div id="navbar" class="navbar-collapse collapse">
+                            <ul class="nav navbar-nav navbar-right">
+                                <li class="active">
+                                    <a href="#" class="btn-bar pad-top-70-hard" onclick="btnClick('bar', this, 0)">Services</a>
+                                </li>
+                                <li><a href="#" class="btn-bar pad-top-70-hard" onclick="btnClick('bar', this, 1)">Portfolio</a></li>
+                                <li><a href="#" class="btn-bar pad-top-70-hard" onclick="btnClick('bar', this, 2)">Blog</a></li>
+                                <li><a href="#" class="btn-bar pad-top-70-hard" onclick="btnClick('bar', this, 3)">About</a></li>
+                                <li><a href="#" class="btn-bar pad-top-70-hard" onclick="btnClick('bar', this, 4)">Contact</a></li>
+                                <li><a href="#" class="btn-bar pad-top-70-hard" onclick="btnClick('bar', this, 5)">Statistics</a></li>
 
-				<div id="menu-3" class="no-display">
-					<button id="trigger-menu-4" class="btn btn-sm btn-default no-outline no-border" onclick="
-						$('#menu-2').show('fast');
-						$('#menu-3').hide('fast');
-					"> <span class="glyphicon glyphicon-chevron-left"></span> </button>
-					<button class="btn-bar btn btn-sm btn-default no-outline no-border" onclick="btnClick('bar', this, '4')"> CONTACT </button>
-					<button class="btn-bar btn btn-sm btn-default no-outline no-border" onclick="btnClick('bar', this, '5')"> STATISTICS </button>
-				</div>
-			</center>
+                                <!--<li class="dropdown">-->
+                                    <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>-->
+                                    <!--<ul class="dropdown-menu">-->
+                                        <!--<li><a href="#">Action</a></li>-->
+                                        <!--<li><a href="#">Another action</a></li>-->
+                                        <!--<li><a href="#">Something else here</a></li>-->
+                                        <!--<li role="separator" class="divider"></li>-->
+                                        <!--<li class="dropdown-header">Nav header</li>-->
+                                        <!--<li><a href="#">Separated link</a></li>-->
+                                        <!--<li><a href="#">One more separated link</a></li>-->
+                                    <!--</ul>-->
+                                <!--</li>-->
+
+                            </ul>
+                        </div><!--/.nav-collapse -->
+                    </div><!--/.container-fluid -->
+                </nav>
+
+                <!-- -->
+				<!--<div id="menu-1">-->
+					<!--<button class="btn-bar btn btn-sm btn-default no-outline no-border" onclick="btnClick('bar', this, '0')"> PORTFOLIO </button>-->
+					<!--<button id="trigger-menu-1" class="btn btn-sm btn-default no-outline no-border" onclick="-->
+						<!--$('#menu-1').hide('fast');-->
+						<!--$('#menu-2').show('fast');-->
+					<!--"> <span class="glyphicon glyphicon-chevron-right"></span> </button>-->
+				<!--</div>-->
+
+				<!--<div id="menu-2" class="no-display">-->
+					<!--<button id="trigger-menu-2" class="btn btn-sm btn-default no-outline no-border" onclick="-->
+						<!--$('#menu-1').show('fast');-->
+						<!--$('#menu-2').hide('fast');-->
+					<!--"> <span class="glyphicon glyphicon-chevron-left"></span> </button>-->
+					<!--<button class="btn-bar btn btn-sm btn-default no-outline no-border" onclick="btnClick('bar', this, '1')"> BLOG </button>-->
+					<!--<button class="btn-bar btn btn-sm btn-default no-outline no-border" onclick="btnClick('bar', this, '2')"> ABOUT </button>-->
+					<!--<button class="btn-bar btn btn-sm btn-focused no-outline no-border" onclick="btnClick('bar', this, '3')"> SERVICES  </button>-->
+					<!--<button id="trigger-menu-3" class="btn-bar btn btn-sm btn-default no-outline no-border" onclick="-->
+						<!--$('#menu-2').hide('fast');-->
+						<!--$('#menu-3').show('fast');-->
+					<!--"> <span class="glyphicon glyphicon-chevron-right"></span> </button>-->
+				<!--</div>-->
+
+				<!--<div id="menu-3" class="no-display">-->
+					<!--<button id="trigger-menu-4" class="btn btn-sm btn-default no-outline no-border" onclick="-->
+						<!--$('#menu-2').show('fast');-->
+						<!--$('#menu-3').hide('fast');-->
+					<!--"> <span class="glyphicon glyphicon-chevron-left"></span> </button>-->
+					<!--<button class="btn-bar btn btn-sm btn-default no-outline no-border" onclick="btnClick('bar', this, '4')"> CONTACT </button>-->
+					<!--<button class="btn-bar btn btn-sm btn-default no-outline no-border" onclick="btnClick('bar', this, '5')"> STATISTICS </button>-->
+				<!--</div>-->
 		</div>
 
 		<!-- Bootstrap Carousel -->
 		<div id="theSlider" class="carousel slide" data-ride="carousel" data-interval="false">
 			<div class="carousel-inner carousel-extra-height">
+
+                <!-- SIXTH SLIDE ======================================================================= -->
+                <div id="services-slide" class="item active">
+                    <div class="container"> <div class="well well-lg">
+                        <div class="spinner center-spinner"></div>
+                    </div> </div>
+                </div> <!-- END OF SIXTH SLIDE -->
 
 				<!-- SECOND SLIDE ======================================================================= -->
 				<div id="portfolio-slide" class="item">
@@ -140,13 +187,6 @@
 						<div class="spinner center-spinner"></div>
 					</div> </div>
 				</div> <!-- END OF FIFTH SLIDE -->
-
-				<!-- SIXTH SLIDE ======================================================================= -->
-				<div id="services-slide" class="item active">
-					<div class="container"> <div class="well well-lg">
-						<div class="spinner center-spinner"></div>
-					</div> </div>
-				</div> <!-- END OF SIXTH SLIDE -->
 
 				<!-- SEVENTH SLIDE ======================================================================= -->
 				<div id="contact-slide" class="item">

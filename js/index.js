@@ -136,17 +136,15 @@ function btnClick(source, btn, index) {
 	if (source === 'bar') {
 		/* 'btn-bar' is a special-empty-class used to target menu-bar-buttons only */
 		
-		$('.btn-bar').addClass('btn-default');
-		$('.btn-bar').removeClass('btn-focused');
-		$(btn).removeClass('btn-default');
-		$(btn).addClass('btn-focused');
-		index = parseInt(index, 10);
-		
+		$('.btn-bar').parent().removeClass('active');
+		$(btn).parent().addClass('active');
+
 		$("#theSlider").carousel(index);
 
         var btnText = $(btn).html().trim().toLowerCase();
         console.log(btnText);
 
+        // loads html page according to button clicked
         $("#" + btnText + "-slide").load("html/" + btnText + ".html", function() {
             if( btnText === 'portfolio') {
                 read('task-likes');
@@ -159,7 +157,8 @@ function btnClick(source, btn, index) {
                 read('visitors');
                 read('reach');
             }
-        });  //Loads html page according to button clicked
+        });
+
 	} else if (source === "btn") {
         text = index;
         $("#" + text + "-slide").load("html/" + text + ".html", null, null);

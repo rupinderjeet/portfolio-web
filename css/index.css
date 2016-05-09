@@ -28,6 +28,14 @@ h1, h2, h3, h4, h5, h6{
 	padding-right: 40px;
 }
 
+.width-100-hard{
+	width: 100px !important;
+}
+
+.pad-top-70-hard{
+	padding-top: 70px !important;
+}
+
 .f-yellow{
 	color: yellow;
 }.b-yellow{
