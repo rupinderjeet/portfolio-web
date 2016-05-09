@@ -136,15 +136,18 @@ function btnClick(source, btn, index) {
 	if (source === 'bar') {
 		/* 'btn-bar' is a special-empty-class used to target menu-bar-buttons only
 		 * all the anchor-buttons are contained in a <li> element */
-		
-		$('.btn-bar').parent().removeClass('active');
-		$(btn).parent().addClass('active');
 
         var btnText = $(btn).html().trim().toLowerCase();
-        console.log(btnText);
+        var barText = $('#navbar-brand').html().trim().toLowerCase();
+        $('#navbar-brand').html("<center><div class='spinner spinner-sm'></div></center>");
+
+		$('.btn-bar').parent().removeClass('active');
+        $(btn).parent().addClass('active');
+        //btn.parentNode.style.borderBottom = "4px solid crimson";
 
         // loads html page according to button clicked
         $("#menu-pages").load("html/" + btnText + ".html", function() {
+            $('#navbar-brand').html(barText);
             if( btnText === 'portfolio') {
                 read('task-likes');
             } else if (btnText === 'statistics') {
