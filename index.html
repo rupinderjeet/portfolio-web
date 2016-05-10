@@ -24,53 +24,76 @@
 		<form id="paypal-donate-form" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 			<input type="hidden" name="cmd" value="_s-xclick">
 			<input type="hidden" name="hosted_button_id" value="RBSJUBQ58RNAU">
-			<input type="submit" name="submit" id="submit-form" class="hidden" value="Donate with PayPal"/>
+			<input type="submit" name="submit" id="submit-paypal-form" class="hidden" value="Donate with PayPal"/>
 		</form>
 
-        <!-- hidden bar ============================================================================================ -->
-        <div id="options" class="jumbotron no-border no-margin no-display" style="padding: 20px;">
+        <!-- hidden footer(header) bar ============================================================================================ -->
+        <div id="options" class="jumbotron no-border no-margin" style="padding: 20px; background: greenyellow">
             <div class="container">
-                <select id="change-fg-color" class="btn btn-sm btn-default" onchange="settings(this, 'color');">
-                    <option> Change Text Color </option>
-                    <option> Default </option>
-                    <option> Red </option>
-                    <option> Blue </option>
-                    <option> Black </option>
-                    <option> Green </option>
-                    <option> Pink </option>
-                    <option> Yellow </option>
-                </select>
 
-                <select id="change-bg-color" class="btn btn-sm btn-default" onchange="settings(this, 'bg-color');">
-                    <option> Change BG Color </option>
-                    <option> Default </option>
-                    <option> Red </option>
-                    <option> Blue </option>
-                    <option> Black </option>
-                    <option> Green </option>
-                    <option> Pink </option>
-                    <option> Yellow </option>
-                </select>
+                <div class="row">
+                    <div class="col-sm-4" style="padding: 5%;">
+                        <p class="font-size-25 no-margin"> &lt; Options </p>
+                        <hr class="margin-2px">
 
-                <button id="report-issue-btn" class="btn btn-sm btn-danger no-border" type="button" data-toggle="modal" data-target="#report-issue-modal">
-                    Report an Issue?
-                </button>
+                        <div class="dropdown margin-left-7">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Change Foreground Color <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li> <a class="pointer" onclick="settings(this, 'color', 'default')">     Default      </a> </li>
+                                <li> <a class="pointer" onclick="settings(this, 'color', 'brown')">       Brown        </a> </li>
+                                <li> <a class="pointer" onclick="settings(this, 'color', 'greenyellow')"> Green-Yellow </a> </li>
+                                <li> <a class="pointer" onclick="settings(this, 'color', 'blue')">        Blue         </a> </li>
+                                <li> <a class="pointer" onclick="settings(this, 'color', 'crimson')">     Crimson      </a> </li>
+                                <li> <a class="pointer" onclick="settings(this, 'color', 'white')">       White        </a> </li>
+                            </ul>
+                        </div>
+                        <div class="dropdown margin-left-7">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Change Background Color <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li> <a class="pointer" onclick="settings(this, 'bg-color', 'default')">     Default      </a> </li>
+                                <li> <a class="pointer" onclick="settings(this, 'bg-color', 'brown')">       Brown        </a> </li>
+                                <li> <a class="pointer" onclick="settings(this, 'bg-color', 'greenyellow')"> Green-Yellow </a> </li>
+                                <li> <a class="pointer" onclick="settings(this, 'bg-color', 'blue')">        Blue         </a> </li>
+                                <li> <a class="pointer" onclick="settings(this, 'bg-color', 'crimson')">     Crimson      </a> </li>
+                            </ul>
+                        </div>
 
-                <div class="dropdown" style="float: left; margin-right: 5px;">
-                    <button class="btn btn-sm btn-success dropdown-toggle no-outline no-border" id="donateMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                        Donate <span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu" aria-labelledby="donateMenuItems">
-                        <li class="pointer">
-                            <a class="no-margin no-padding pointer">
-                                <label for="submit-form" class="width-100-perc normal-font pointer no-margin pad-3-20"> PayPal </label>
-                            </a>
-                        </li>
 
-                        <li role="separator" class="divider no-margin"></li>
-                        <li> <a> Help(coming soon!) </a> </li>
-                    </ul>
+                        <a id="report-issue-btn" class="pointer font-16 no-margin margin-left-7" data-toggle="modal" data-target="#report-issue-modal"> Report an Issue? </a>
+                        <p class="font-16 no-margin margin-left-7"> Sample </p>
+                    </div>
+
+                    <div class="col-sm-4" style="padding: 5%;">
+                        <p class="font-size-25 no-margin"> Sub Domains </p>
+                        <hr class="margin-2px">
+
+                    </div>
+                    <div class="col-sm-4" style="padding: 5%;">
+                        <p class="font-size-25 no-margin"> Donations </p>
+                        <hr class="margin-2px">
+
+                        <a> <label for="submit-paypal-form" class="normal-font font-16 pointer no-margin margin-left-7"> Donate with PayPal </label> </a>
+
+
+                    </div>
                 </div>
+
+
+                <div class="well well-sm text-center no-margin">
+                    <a href="http://www.rupinderjeet.com"> @this </a>
+                    <a href="http://pics.rupinderjeet.com"> pics </a>
+                    <a href="http://people.rupinderjeet.com"> people </a>
+                    <a href="http://music.rupinderjeet.com"> music </a>
+                    <a href="http://dpstorm.rupinderjeet.com"> dpstorm </a>
+                    <a href="http://life.rupinderjeet.com"> life </a>
+                    <a href="http://connect.rupinderjeet.com"> connect </a>
+                    <a href="http://resume.rupinderjeet.com"> resume </a>
+
+                    <br><br>
+
+                    <p> Copyright&copy; Rupinderjeet Singh Hans, rupinderjeet.com </p>
+                </div>
+
             </div>
         </div>
 
@@ -349,22 +372,6 @@
                     </div>
                 </div>
             </div>
-        </div>
-
-
-        <div class="well well-sm text-center b-yellow no-margin no-display" style=" border: 0; padding: 30px 1%; padding-bottom: 5px;">
-            <a href="http://www.rupinderjeet.com" style="margin: 0 1%;"> @this </a>
-            <a href="http://pics.rupinderjeet.com" style="margin: 0 1%;"> pics </a>
-            <a href="http://people.rupinderjeet.com" style="margin: 0 1%;"> people </a>
-            <a href="http://music.rupinderjeet.com" style="margin: 0 1%;"> music </a>
-            <a href="http://dpstorm.rupinderjeet.com" style="margin: 0 1%;"> dpstorm </a>
-            <a href="http://life.rupinderjeet.com" style="margin: 0 1%;"> life </a>
-            <a href="http://connect.rupinderjeet.com" style="margin: 0 1%;"> connect </a>
-            <a href="http://resume.rupinderjeet.com" style="margin: 0 1%;"> resume </a>
-
-            <br><br>
-
-            <p class="font-16"> Copyright&copy; Rupinderjeet Singh Hans, rupinderjeet.com </p>
         </div>
 
         <!-- this 'div' is helping to find if the same user is repeating his actions -->

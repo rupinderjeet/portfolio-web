@@ -236,29 +236,29 @@ h1, h2, h3, h4, h5, h6{
 }
 
 .font-12{
-	font-size: 12px;
+	font-size: 12px !important;
 }
 .font-14{
-	font-size: 14px;
+	font-size: 14px !important;
 }
 .font-16{
-	font-size: 16px;
+	font-size: 16px !important;
 }
 
 .font-size-15{
-	font-size: 15px;
+	font-size: 15px !important;
 }
 
 .font-size-20{
-	font-size: 20px;
+	font-size: 20px !important;
 }
 
 .font-size-25{
-	font-size: 25px;
+	font-size: 25px !important;
 }
 
 .font-size-35{
-	font-size: 35px;
+	font-size: 35px !important;
 }
 
 .darker-well{

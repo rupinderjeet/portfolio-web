@@ -199,21 +199,20 @@ window.onload = function () {
 //GLOBAL VARIABLES
 var slideShow;              // used by about page's 'play' button as an interval
 
-function settings(caller, type){
-    var color_name;
-
+function settings(caller, type, color){
     switch(type){
         case 'color':
-            color_name = $(caller).val().toLowerCase();
-            if(color_name === 'default'){
+            if(color === 'default'){
                 document.body.style.color = '#333333';
-            } else {  document.body.style.color = color_name;  }
+            } else {  document.body.style.color = color;  }
             break;
         case 'bg-color':
-            color_name = $(caller).val().toLowerCase();
-            if(color_name === 'default'){
+            if(color === 'default'){
                 document.body.style.backgroundColor = '#333333';
-            } else {  document.body.style.backgroundColor = color_name;  }
+            } else {
+                document.body.style.backgroundColor = color;
+                //caller.style.backgroundColor = color;
+            }
             break;
 
         default: console.log('bad settings');
