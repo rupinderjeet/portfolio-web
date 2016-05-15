@@ -456,25 +456,25 @@ h1, h2, h3, h4, h5, h6{
 
 @-webkit-keyframes animate-down {
 	50% {
-		-webkit-transform: translateY(8px);
-		-moz-transform: translateY(8px);
-		-o-transform: translateY(8px);
-		transform: translateY(8px);
+		-webkit-transform: translateY(3px);
+		-moz-transform: translateY(3px);
+		-o-transform: translateY(3px);
+		transform: translateY(3px);
 	}
 
 	100% {
-		 -webkit-transform: translateY(-4px);
-		 -moz-transform: translateY(-4px);
-		 -o-transform: translateY(-4px);
-		 transform: translateY(-4px);
+		 -webkit-transform: translateY(-3px);
+		 -moz-transform: translateY(-3px);
+		 -o-transform: translateY(-3px);
+		 transform: translateY(-3px);
 	}
 }
 
 #arrow {
-	-webkit-animation: animate-down 1.5s infinite;  /* Safari 4+ */
-	-moz-animation: animate-down 1.5s infinite;     /* Fx 5+ */
-	-o-animation: animate-down 1.5s infinite;       /* Opera 12+ */
-	animation: animate-down 1.5s infinite;          /* IE 10+, Fx 29+ */
+	-webkit-animation: animate-down 1.2s infinite;  /* Safari 4+ */
+	-moz-animation: animate-down 1.2s infinite;     /* Fx 5+ */
+	-o-animation: animate-down 1.2s infinite;       /* Opera 12+ */
+	animation: animate-down 1.2s infinite;          /* IE 10+, Fx 29+ */
 }
 /* Arrow Animation End */
 

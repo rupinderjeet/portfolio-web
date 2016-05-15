@@ -204,13 +204,23 @@ function settings(caller, type, color){
         case 'color':
             if(color === 'default'){
                 document.body.style.color = '#333333';
-            } else {  document.body.style.color = color;  }
+                $('a').css("color", '#333333');
+                $('.alert-success').css("color", '#333333');
+            } else {
+                document.body.style.color = color;
+                $('a').css("color", color);
+                $('.alert-success').css("color", color);
+            }
             break;
         case 'bg-color':
             if(color === 'default'){
                 document.body.style.backgroundColor = '#333333';
             } else {
                 document.body.style.backgroundColor = color;
+                //$('.well').css("background-color", color);
+                //$('.div').css("background-color", color);
+                //$('.jumbotron').css("background-color", color);
+                //$('nav').css("background-color", color);
                 //caller.style.backgroundColor = color;
             }
             break;
