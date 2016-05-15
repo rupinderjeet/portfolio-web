@@ -192,7 +192,7 @@ function arrowAnimation(){
 
 window.onload = function () {
 	'use strict';
-	$("#menu-pages").load("html/services.html", null, null);
+	$("#menu-pages").load("html/about.html", null, null);
     performAction(null, 'update-reach', null);
 };
 
