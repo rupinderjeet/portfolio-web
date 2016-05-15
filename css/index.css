@@ -1,5 +1,7 @@
 body{
-	background: #333333;
+	/*color: #f4f1f1;*/
+	background-color: #333333;
+	font-size: 16px;
 	font-family: 'Berlin Sans FB', sans-serif;
 }
 
@@ -76,6 +78,10 @@ h1, h2, h3, h4, h5, h6{
 }.b-crimson{
 	background-color: crimson;
 }
+
+ .whitesmoke{
+	 color: whitesmoke !important;
+ }
 
 .border-black, .border-black th, .border-black tr, .border-black tr td{
 	 border: 1px solid black;
@@ -315,7 +321,7 @@ h1, h2, h3, h4, h5, h6{
 }
 
 .bold-500{
-	font-weight: 500 !important;
+	font-weight: 400 !important;
 }
 
 .task-image{
