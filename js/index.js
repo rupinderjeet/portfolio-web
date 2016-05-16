@@ -141,8 +141,10 @@ function btnClick(source, btn, index) {
         var barText = $('#navbar-brand').html().trim().toLowerCase();
         $('#navbar-brand').html("<center><div class='spinner spinner-sm'></div></center>");
 
-		$('.btn-bar').parent().removeClass('active');
-        $(btn).parent().addClass('active');
+        $('.btn-bar').parent().removeClass('active-nav');
+        $('.btn-bar').parent().addClass('nav-item');
+        $(btn).parent().addClass('active-nav');
+        $(btn).parent().removeClass('nav-item');
         //btn.parentNode.style.borderBottom = "4px solid crimson";
 
         // loads html page according to button clicked
