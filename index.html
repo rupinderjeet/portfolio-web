@@ -26,7 +26,7 @@
 		</form>
 
         <!-- hidden footer(header) bar ============================================================================================ -->
-        <div id="options" class="jumbotron no-border no-margin no-display" style="padding-top: 0; padding-bottom: 0; background-color: whitesmoke;">
+        <div id="footer" class="jumbotron no-border no-margin no-display" style="padding-top: 0; padding-bottom: 0; background-color: whitesmoke;">
 
             <div class="container" style="padding: 20px;">
 
@@ -37,40 +37,15 @@
 
                         <div class="dropdown margin-left-7">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                                Change Theme Color <span class="caret"></span></a>
+                                Color Schemes <span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li> <a class="pointer" onclick="settings(this, 'theme', '', '')">     Default      </a> </li>
-                                <li> <a class="pointer" onclick="settings(this, 'theme', '', '')">       Brown        </a> </li>
-                                <li> <a class="pointer" onclick="settings(this, 'theme', '', '')"> Green-Yellow </a> </li>
-                                <li> <a class="pointer" onclick="settings(this, 'theme', '', '')">        Blue         </a> </li>
-                                <li> <a class="pointer" onclick="settings(this, 'theme', '', '')">     Crimson      </a> </li>
-                                <li> <a class="pointer" onclick="settings(this, 'theme', '', '')">       White        </a> </li>
+                                <li> <a class="pointer" onclick="settings(this, 'theme', 'yellow', 'blue')">    Yellow-Blue      </a> </li>
+                                <li> <a class="pointer" onclick="settings(this, 'theme', 'brown', 'skyblue')">  Brown-Skyblue        </a> </li>
+                                <li> <a class="pointer" onclick="settings(this, 'theme', 'black', 'green')">    Black-Green </a> </li>
+                                <li> <a class="pointer" onclick="settings(this, 'theme', 'white', 'crimson')">  White-Crimson         </a> </li>
+                                <li> <a class="pointer" onclick="settings(this, 'theme', 'orangered', 'pink')"> Blue-OrangeRed      </a> </li>
                             </ul>
                         </div>
-                        <div class="dropdown margin-left-7">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                                Change Foreground Color <span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li> <a class="pointer" onclick="settings(this, 'color', 'default')">     Default      </a> </li>
-                                <li> <a class="pointer" onclick="settings(this, 'color', 'brown')">       Brown        </a> </li>
-                                <li> <a class="pointer" onclick="settings(this, 'color', 'greenyellow')"> Green-Yellow </a> </li>
-                                <li> <a class="pointer" onclick="settings(this, 'color', 'blue')">        Blue         </a> </li>
-                                <li> <a class="pointer" onclick="settings(this, 'color', 'crimson')">     Crimson      </a> </li>
-                                <li> <a class="pointer" onclick="settings(this, 'color', 'white')">       White        </a> </li>
-                            </ul>
-                        </div>
-                        <div class="dropdown margin-left-7">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                                Change Background Color <span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li> <a class="pointer" onclick="settings(this, 'bg-color', 'default')">     Default      </a> </li>
-                                <li> <a class="pointer" onclick="settings(this, 'bg-color', 'brown')">       Brown        </a> </li>
-                                <li> <a class="pointer" onclick="settings(this, 'bg-color', 'greenyellow')"> Green-Yellow </a> </li>
-                                <li> <a class="pointer" onclick="settings(this, 'bg-color', 'blue')">        Blue         </a> </li>
-                                <li> <a class="pointer" onclick="settings(this, 'bg-color', 'crimson')">     Crimson      </a> </li>
-                            </ul>
-                        </div>
-
 
                         <a id="report-issue-btn" class="pointer font-16 no-margin margin-left-7" data-toggle="modal" data-target="#report-issue-modal">
                             Report an Issue? </a>
@@ -109,12 +84,13 @@
         <nav id="menu" class="navbar navbar-default no-border b-333" style="-webkit-border-radius: 0;-moz-border-radius: 0;border-radius: 0;">
             <div class="container">
                 <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <button type="button" class="nav-toggle-btn no-border navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                         <span class="sr-only">Toggle navigation</span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
+
                     <a id="navbar-brand" class="navbar-brand whitesmoke" href="http://www.rupinderjeet.com">rupinderjeet.com</a>
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">

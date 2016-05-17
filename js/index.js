@@ -141,15 +141,17 @@ function btnClick(source, btn, index) {
         var barText = $('#navbar-brand').html().trim().toLowerCase();
         $('#navbar-brand').html("<center><div class='spinner spinner-sm'></div></center>");
 
-        $('.btn-bar').parent().removeClass('active-nav');
-        $('.btn-bar').parent().addClass('nav-item');
-        $(btn).parent().addClass('active-nav');
-        $(btn).parent().removeClass('nav-item');
+        $('.btn-bar').parent().removeClass('active-nav')
+                              .addClass('nav-item');
+        $(btn).parent().addClass('active-nav')
+                       .removeClass('nav-item');
         //btn.parentNode.style.borderBottom = "4px solid crimson";
 
         // loads html page according to button clicked
         $("#menu-pages").load("html/" + btnText + ".html", function() {
             $('#navbar-brand').html(barText);
+            $('.navbar-collapse').collapse('hide');
+
             if( btnText === 'portfolio') {
                 read('task-likes');
             } else if (btnText === 'statistics') {
@@ -169,7 +171,7 @@ function btnClick(source, btn, index) {
     } else if (source === 'load-images') {
         //For this to work button must be enclosed in a div element.
         //@TODO : btn gets loading animation, source + index gets loaded data
-        var btnText = $(btn).html().trim();
+        btnText = $(btn).html().trim();
 
         //Button Animation Code
 
@@ -186,7 +188,7 @@ function btnClick(source, btn, index) {
 }
 
 function arrowAnimation(){
-    $('#options').slideToggle('fast');
+    $('#footer').slideToggle('fast');
     $('#arrow').attr('id', 'arrow-clicked');
     $('#arrow-clicked').toggleClass('glyphicon-chevron-down');
     $('#arrow-clicked').toggleClass('glyphicon-chevron-up');
@@ -194,6 +196,10 @@ function arrowAnimation(){
 
 window.onload = function () {
 	'use strict';
+    var innerY = window.innerHeight;
+    console.log(innerY);
+    //document.getElementById('footer').style.height = innerY + "px";
+    $('#footer').css("height", innerY-50 + "px");
 	$("#menu-pages").load("html/about.html", null, null);
     performAction(null, 'update-reach', null);
 };
@@ -201,30 +207,21 @@ window.onload = function () {
 //GLOBAL VARIABLES
 var slideShow;              // used by about page's 'play' button as an interval
 
-function settings(caller, type, color){
+function settings(caller, type, fgcolor, bgcolor){
     switch(type){
-        case 'color':
-            if(color === 'default'){
-                document.body.style.color = '#333333';
-                $('a').css("color", '#333333');
-                $('.alert-success').css("color", '#333333');
-            } else {
-                document.body.style.color = color;
-                $('a').css("color", color);
-                $('.alert-success').css("color", color);
-            }
-            break;
-        case 'bg-color':
-            if(color === 'default'){
-                document.body.style.backgroundColor = '#333333';
-            } else {
-                document.body.style.backgroundColor = color;
-                //$('.well').css("background-color", color);
-                //$('.div').css("background-color", color);
-                //$('.jumbotron').css("background-color", color);
-                //$('nav').css("background-color", color);
-                //caller.style.backgroundColor = color;
-            }
+        case 'theme':
+            document.body.style.color = fgcolor;
+            document.body.style.backgroundColor = bgcolor;
+
+            $('a').css("color", fgcolor);
+            $('.alert-success').css("color", fgcolor);
+
+            $('nav').css("background-color", bgcolor);
+            //$('.well').css("background-color", color);
+            //$('.div').css("background-color", color);
+            //$('.jumbotron').css("background-color", color);
+            //$('nav').css("background-color", color);
+            //caller.style.backgroundColor = color;
             break;
 
         default: console.log('bad settings');
