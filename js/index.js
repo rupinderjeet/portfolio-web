@@ -197,8 +197,9 @@ function arrowAnimation(){
 window.onload = function () {
 	'use strict';
     var innerY = window.innerHeight;
+    innerY = (innerY > 390) ? innerY : 390;
+
     console.log(innerY);
-    //document.getElementById('footer').style.height = innerY + "px";
     $('#footer').css("height", innerY-50 + "px");
 	$("#menu-pages").load("html/about.html", null, null);
     performAction(null, 'update-reach', null);
