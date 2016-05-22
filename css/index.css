@@ -1,11 +1,23 @@
 /* @theme: color, bgcolor, highlight-color, link-color, div-well color */
 
+
+
+
+
 body{
 	/*color: #f4f1f1;*/
 	background-color: #333333;
 	font-size: 16px;
 	font-family: 'Berlin Sans FB', sans-serif;
 }
+
+/* theme-default start */
+.fg-white{ color: whitesmoke; }
+.bg-555{ background-color: #555555; }
+.border-555{ border-color: #555555; }
+/* theme-default end */
+
+
 
 h1, h2, h3, h4, h5, h6{
 	margin	: 0;
