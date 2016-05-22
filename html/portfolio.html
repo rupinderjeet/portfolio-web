@@ -1,204 +1,177 @@
 <!-- PORTFOLIO SLIDE -->
 <div id="portfolio">
-	<div class="well well-sm">
 
-        <div class="row">
-            <div class="col-md-8"> <h1> PORTFOLIO </h1> </div>
 
-            <div class="col-md-4">
-                <button class="btn btn-sm btn-default no-outline pull-right" data-toggle="modal" data-target="#educational-details-modal">
-                    Educational Details
-                </button>
+    <div class="container-fluid margin-top-30 margin-bottom-15px">
+        <!--<div class="row no-margin no-padding">-->
+            <!--<div class="col-md-4 no-margin no-padding">-->
+                <!--<h4 id="current-task-images-001" class="normal-font whitesmoke no-margin pull-left"> Portfolio </h4>-->
+            <!--</div>-->
+
+            <!--<div class="col-md-8 no-margin no-padding">-->
+                <!--<button id="next-task-images-001" class="btn btn-sm btn-default pull-right no-outline margin-left-5" onclick="alterImageGallery('next', 'task-images-001')"> <span class="glyphicon glyphicon-chevron-right"></span> </button>-->
+                <!--<button id="prev-task-images-001" class="btn btn-sm btn-default pull-right no-outline no-display" onclick="alterImageGallery('prev', 'task-images-001')"> <span class="glyphicon glyphicon-chevron-left"></span> </button>-->
+            <!--</div>-->
+        <!--</div>-->
+
+        <h2 class="bold-500 whitesmoke">
+            Websites
+            <span class="glyphicon glyphicon-chevron-right pointer btn-sm whitesmoke pull-right"></span>
+            <span class="glyphicon glyphicon-chevron-left pointer btn-sm whitesmoke pull-right"></span>
+        </h2>
+        <hr class="margin-2px margin-bottom-10" />
+        <div class="row pad-10px" style="height: 400px;">
+
+            <div class="col-sm-4 pointer">
+                <img class="img-rounded" style="width:100%;" src="imgs/tasks/001/cover.png"
+                     data-toggle="modal" data-target="#task-modal"
+                     onclick="$('#task-modal-body').load('snippets/loadTask.html #task-content-001', null, null);" />
+            </div>   <!-- task001 -->
+
+            <!-- EMPTY ITEM - COMING SOON -->
+            <div class="col-sm-4 pointer">
+                <div class="img-rounded text-center pad-10px" style="background-color: #555555; height: 360px;">
+                    <span class="glyphicon glyphicon-time whitesmoke" style="font-size: 50px; margin-top: 50px; margin-bottom: 50px;"></span>
+                    <h3 class="bold-500 whitesmoke"> Coming Soon </h3>
+                    <hr />
+                    <p class="whitesmoke"> The content of this division will be added soon, keep tuning :D </p>
+                </div>
             </div>
         </div>
 
-		<p>Portfolio Information and I will post links soon, just getting started yet</p>
-	</div>
-
-    <!-- task-000 -->
-    <div id="task-000" class="well well-sm top-border-bar" style="padding: 1% 10%;">
-        <p class="font-size-35 margin-bottom-10"> Tempo-Team Outsourcing Contact Form (<text id="task-000-likes">loading likes</text>)</p>
-
-        <div class="row">
-            <div class="col-md-9">
-                <button class="btn btn-sm"> google-form-ui </button>
-                <button class="btn btn-sm"> javascript </button>
-                <button class="btn btn-sm"> spreadsheets </button>
-                <button class="btn btn-sm"> chrome-browser </button>
-                <button class="btn btn-sm"> email </button>
-            </div>
-
-            <div class="col-md-3">
-                <button class="btn btn-sm btn-default" onclick="performAction(this, 'task-000', 'task-000-likes')"> Like </button>
-                <button class="btn btn-sm btn-default" onclick="showPrintDialog('task-000');"> Print </button>
-                <button class="btn btn-sm btn-default no-outline" onclick="$('#task-000-full').slideToggle('fast'); toggleString(this, 'Expand', 'Collapse');"> Expand </button>
+        <h2 class="bold-500 margin-top-30 whitesmoke"> Software
+            <span class="glyphicon glyphicon-chevron-right pointer btn-sm whitesmoke pull-right"></span>
+            <span class="glyphicon glyphicon-chevron-left pointer btn-sm whitesmoke pull-right"></span>
+        </h2>
+        <hr class="margin-2px margin-bottom-10" />
+        <div class="row pad-10px">
+            <!-- EMPTY ITEM - COMING SOON -->
+            <div class="col-sm-4 pointer">
+                <div class="img-rounded text-center pad-10px" style="background-color: #555555; height: 360px;">
+                    <span class="glyphicon glyphicon-time whitesmoke" style="font-size: 50px; margin-top: 50px; margin-bottom: 50px;"></span>
+                    <h3 class="bold-500 whitesmoke"> Coming Soon </h3>
+                    <hr />
+                    <p class="whitesmoke"> The content of this division will be added soon, keep tuning :D </p>
+                </div>
             </div>
         </div>
 
-        <div id="task-000-full" class="no-display">
-            <p class="margin-top-15px pad-5px font-size-15 text-justify">
-                A complicated Google Form for tracking and sending Queries / Issues / Suggestions to their respective
-                handling departments based on the selection an End-User makes in the end. And, Submitted forms will
-                send the responses to a predestined e-mail recipient.
-            </p>
-
-            <p>
-                My Client was looking for an easy way to handle and solve the queries of the employees of their company.
-                They didn't wanted to face every individual employee, ask his problem and provide the solution.
-                <br><br>
-                So, he requested for a Form that can be filled by anyone to contact them.
-                This form was used to collect information from the employee about his query and his contact details.
-                After filling out the form correctly, the data gets stored in a Google Spreadsheets.
-                <br><br>
-                According to selection made by the End-User, the form data gets sent to respective department.
-                For e.g. if a person selects a question regarding salary, the form data gets mailed to HR mailbox and
-                if the person selects a question regarding invoices, the form data gets mailed to the Business department.
-                <br><br>
-                In this way, they were notified as soon as a new enquiry was registered.
-                <br><br>
-                Later on, I added more support for sending Suggestions through forms.
-
-                <br><br>
-                <i>
-                    <p class="no-margin"> Freelancer Project ID : 8246811 </p>
-                    <p class="no-margin"> Client : zyszy86 (Amersfoort, Netherlands) </p>
-                    <p class="no-margin"> Earned : &euro;24 </p>
-                    <p class="no-margin"> Status : Finished, 2 days </p>
-                </i>
-            </p>
-
-            <blockquote class="btn-sm">
-                <p class="font-size-20"> Client Feedback <text class="f-crimson pull-right"> &starf;&starf;&starf;&starf;&starf; </text> </p>
-                <p>
-                    Superb freelancer. Fun to work with, cooperative and open minded. True professional. We keep in touch for sure :)
-                </p>
-            </blockquote>
-
-            <a class="btn btn-sm btn-default no-outline" href="https://www.freelancer.com/jobs/project-8246811/" target="_blank"> Project Link </a>
-            <a class="btn btn-sm btn-default no-outline" href="https://www.freelancer.com/u/zyszy86.html" target="_blank"> Client Link </a>
-            <!--<a class="btn btn-sm btn-default no-outline" href="#" target="_blank"> Form Demo (coming soon!) </a>-->
-        </div>
-    </div>
-
-    <!-- task-001 -->
-    <div id="task-001" class="well well-sm top-border-bar" style="padding: 1% 10%;">
-
-        <p class="font-size-35 margin-bottom-10">
-            Pharmacy Stock Management System (<text id="task-001-likes">loading likes</text>)
-        </p>
-
-        <div class="row">
-            <div class="col-md-9">
-                <button class="btn btn-sm"> java-server-pages </button>
-                <button class="btn btn-sm"> servlets </button>
-                <button class="btn btn-sm"> html </button>
-                <button class="btn btn-sm"> css </button>
-                <button class="btn btn-sm"> javascript </button>
-                <button class="btn btn-sm"> ajax </button>
-                <button class="btn btn-sm"> netbeans-ide </button>
-                <button class="btn btn-sm"> chrome-browser </button>
-            </div>
-
-            <div class="col-md-3">
-                <button class="btn btn-sm btn-default" onclick="performAction(this, 'task-001', 'task-001-likes')"> Like </button>
-                <button class="btn btn-sm btn-default" onclick="showPrintDialog('task-001');"> Print </button>
-                <button class="btn btn-sm btn-default no-outline" onclick="$('#task-001-full').slideToggle('fast'); toggleString(this, 'Expand', 'Collapse');"> Expand </button>
+        <h2 class="bold-500 margin-top-30 whitesmoke"> Apps/Games
+            <span class="glyphicon glyphicon-chevron-right pointer btn-sm whitesmoke pull-right"></span>
+            <span class="glyphicon glyphicon-chevron-left pointer btn-sm whitesmoke pull-right"></span>
+        </h2>
+        <hr class="margin-2px margin-bottom-10" />
+        <div class="row pad-10px">
+            <!-- EMPTY ITEM - COMING SOON -->
+            <div class="col-sm-4 pointer">
+                <div class="img-rounded text-center pad-10px" style="background-color: #555555; height: 360px;">
+                    <span class="glyphicon glyphicon-time whitesmoke" style="font-size: 50px; margin-top: 50px; margin-bottom: 50px;"></span>
+                    <h3 class="bold-500 whitesmoke"> Coming Soon </h3>
+                    <hr />
+                    <p class="whitesmoke"> The content of this division will be added soon, keep tuning :D </p>
+                </div>
             </div>
         </div>
 
-        <div id="task-001-full" class="no-display">
-            <p class="margin-top-15px pad-5px font-size-15 text-justify">
-                To develop an online Pharmacy Stock Management System
-                where the company officials can Sell, Buy, Manage Stocks and Create printable Bills/Invoices.
-            </p>
+        <h2 class="bold-500 margin-top-30 whitesmoke"> Others
+            <span class="glyphicon glyphicon-chevron-right pointer btn-sm whitesmoke pull-right"></span>
+            <span class="glyphicon glyphicon-chevron-left pointer btn-sm whitesmoke pull-right"></span>
+        </h2>
+        <hr class="margin-2px margin-bottom-10" />
+        <div class="row pad-10px">
+            <div class="col-sm-4 pointer"> <img class="img-rounded" style="width:100%;" src="imgs/tasks/000/cover.png" /> </div>   <!-- task001 -->
 
-            <p>
-                @coming soon!
-                <!--also there should be admin level user who has all access,-->
-                <!--manager level user who can manage the stocks &-->
-                <!--a cashier who can sell stocks and able only to view the available stocks.-->
-                <!--The admin should be able to create & manage users as well.-->
-            </p>
+            <!-- EMPTY ITEM - COMING SOON -->
+            <div class="col-sm-4 pointer">
+                <div class="img-rounded text-center pad-10px" style="background-color: #555555; height: 360px;">
+                    <span class="glyphicon glyphicon-time whitesmoke" style="font-size: 50px; margin-top: 50px; margin-bottom: 50px;"></span>
+                    <h3 class="bold-500 whitesmoke"> Coming Soon </h3>
+                    <hr />
+                    <p class="whitesmoke"> The content of this division will be added soon, keep tuning :D </p>
+                </div>
+            </div>
+        </div>
 
-            <!-- Image Container -->
-            <div>
-                <button class="btn btn-sm btn-default no-outline" onclick="btnClick('load-images', this, 'task-001');"> Load Screen Shots </button>
+        <h2 class="bold-500 margin-top-30 whitesmoke"> And.. </h2>
+        <div class="well well-sm pad-10px">
+            <div class="">
+                <p class="margin-bottom pad-2px font-size-25"> School/College Education </p>
+
+                <table class="table">
+                    <th class="bold-500"> Class </th>
+                    <th class="bold-500 hidden-xs"> Stream </th>
+                    <th class="bold-500"> Session </th>
+                    <th class="bold-500 hidden-xs"> University/Org. </th>
+                    <th class="bold-500"> Marks </th>
+
+                    <tr>
+                        <td> Bachelor Of Technology </td>
+                        <td class="hidden-xs"> Computer Science Engineering </td>
+                        <td> 2011-2015 </td>
+                        <td class="hidden-xs"> Punjab Technical University(PTU), Distt. Jalandhar </td>
+                        <td> 78.3 </td>
+                    </tr>
+
+                    <tr>
+                        <td> Senior Secondary Education </td>
+                        <td class="hidden-xs"> Non-Medical (12th) </td>
+                        <td> 2010-2011 </td>
+                        <td class="hidden-xs"> Punjab School Education Board(PSEB), Mohali </td>
+                        <td> 66% </td>
+                    </tr>
+
+                    <tr>
+                        <td> Matriculation Education </td>
+                        <td class="hidden-xs"> General, with Punjabi (10th) </td>
+                        <td> 2008-2009 </td>
+                        <td class="hidden-xs"> Punjab School Education Board(PSEB), Mohali </td>
+                        <td> 71.7% </td>
+                    </tr>
+                </table>
             </div>
 
-            <p>
-                <br><br>
-                <i>
-                    <p class="no-margin"> Freelancer Project ID : 8209379 </p>
-                    <p class="no-margin"> Client : arvindasudan (Colombo, Sri Lanka) </p>
-                    <p class="no-margin"> Earned : &dollar;25 </p>
-                    <p class="no-margin"> Status : Finished, 7 days </p>
-                </i>
-            </p>
+            <!-- Trainings Details -->
+            <div style="margin-top: 30px;">
+                <p class="margin-bottom pad-2px font-size-25"> Trainings </p>
 
-            <blockquote class="btn-sm">
-                <p class="font-size-20"> Client Feedback <text class="f-crimson pull-right"> &starf;&starf;&starf;&starf;&starf; </text> </p>
-                <p>
-                    Very excellent and supportive developer... hope to hire again
-                </p>
-            </blockquote>
+                <table class="table">
+                    <th class="bold-500"> Subject </th>
+                    <th class="bold-500 hidden-xs"> Type </th>
+                    <th class="bold-500"> Year </th>
+                    <th class="bold-500"> Duration </th>
+                    <th class="bold-500 hidden-xs"> Place </th>
 
-            <a class="btn btn-sm btn-default no-outline" href="https://www.freelancer.com/jobs/project-8209379/" target="_blank"> Project Link </a>
-            <a class="btn btn-sm btn-default no-outline" href="https://www.freelancer.com/u/arvindasudan.html" target="_blank"> Client Link </a>
-            <!--<a class="btn btn-sm btn-default no-outline" href="#" target="_blank"> Project Demo </a> (donate me a web-hosting and you get a dynamic demo ^^)-->
+                    <tr> <!-- #1 -->
+                        <td> JSP & Servlets (Glassfish Server) </td>
+                        <td class="hidden-xs"> Certification </td>
+                        <td> 2015 </td>
+                        <td> 26 Weeks (6 Months) </td>
+                        <td class="hidden-xs"> InfoWiz - A Software Solution Company </td>
+                    </tr>
+                    <tr> <!-- #2 -->
+                        <td> PHP & JUnit Basics </td>
+                        <td class="hidden-xs"> Tutorials </td>
+                        <td> 2014 </td>
+                        <td> 8 Weeks </td>
+                        <td class="hidden-xs"> Own Residence </td>
+                    </tr>
+                    <tr> <!-- #3 -->
+                        <td> Core Java </td>
+                        <td class="hidden-xs"> Certification </td>
+                        <td> 2013 </td>
+                        <td> 6 Weeks </td>
+                        <td class="hidden-xs"> Netmax Technologies Ltd. </td>
+                    </tr>
+                    <tr> <!-- #4 -->
+                        <td> C++ (Non-Graphical) </td>
+                        <td class="hidden-xs"> Inhouse Training </td>
+                        <td> 2012 </td>
+                        <td> 6 Weeks </td>
+                        <td class="hidden-xs"> Ludhiana Group Of Colleges(LGC) </td>
+                    </tr>
+                </table>
+            </div>
         </div>
     </div>
 
-    <div class="well well-sm margin-top-15px margin-bottom"> Ongoing / Paused / Pending(have to write in here yet) Projects </div>
-
-    <!-- 002 -->
-    <div id="task-002" class="well well-sm top-border-bar opacity-07" style="padding: 1% 10%;">
-        <p class="font-size-35 margin-bottom-10"> Student-Teacher File-Handling System </p>
-    </div>
-
-    <!-- 003 -->
-    <div id="task-003" class="well well-sm top-border-bar opacity-07" style="padding: 1% 10%;">
-        <p class="font-size-35 margin-bottom-10"> Tic-Tac-Toe Game </p>
-    </div>
-
-    <!-- 004 -->
-    <div id="task-004" class="well well-sm top-border-bar opacity-07" style="padding: 1% 10%;">
-        <p class="font-size-35 margin-bottom-10"> Advanced Calculator </p>
-    </div>
-
-    <!-- 005 -->
-    <div id="task-005" class="well well-sm top-border-bar opacity-07" style="padding: 1% 10%;">
-        <p class="font-size-35 margin-bottom-10"> Paint/Graphics Application<small class="font-size-20"> similar to Microsoft Paint </small> </p>
-    </div>
-
-    <!-- 006 -->
-    <div id="task-006" class="well well-sm top-border-bar opacity-07" style="padding: 1% 10%;">
-        <p class="font-size-35 margin-bottom-10"> 'Unnamed' Android / Desktop / iOS 2D Platform Game </p>
-    </div>
-
-    <!-- 007 -->
-    <div id="task-007" class="well well-sm top-border-bar opacity-07" style="padding: 1% 10%;">
-        <p class="font-size-35 margin-bottom-10"> 'Unnamed' Anime Torrents Website </p>
-    </div>
-
-    <!-- 008 -->
-    <div id="task-008" class="well well-sm top-border-bar opacity-07" style="padding: 1% 10%;">
-        <p class="font-size-35 margin-bottom-10"> 'Unnamed' Question-Answer based Website </p>
-    </div>
-
-    <!-- 009 -->
-    <div id="task-009" class="well well-sm top-border-bar opacity-07" style="padding: 1% 10%;">
-        <p class="font-size-35 margin-bottom-10"> Image Editing, Redrawing, Size Enlarging </p>
-        <div class="no-display">
-            <p>Start Date : Mar 23, 2016</p>
-            <p>End Date : Working Yet</p>
-            <p>Goal : From 100 x 100 pixels To 3000 x 3000 pixels</p>
-            <p>Source Image for Project : </p> <img width="100" height="100" src="#" alt="Source Image #1001" />
-        </div>
-    </div>
-
-    <!-- 010 -->
-    <div id="task-010" class="well well-sm top-border-bar opacity-07" style="padding: 1% 10%;">
-        <p class="font-size-35 margin-bottom-10"> rupinderjeet.com </p>
-        <p>This website itself is a part of my portfolio too</p>
-    </div>
 </div>
