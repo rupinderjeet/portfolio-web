@@ -14,7 +14,11 @@ body{
 /* theme-default start */
 .fg-white{ color: whitesmoke; }
 .bg-555{ background-color: #555555; }
+.bg-444{ background-color: #444444; }
+.bg-333{ background-color: #333333; }
 .border-555{ border-color: #555555; }
+.btn-custom:hover{ background-color: #444; }
+.btn-custom:focus{ background-color: #333; }
 /* theme-default end */
 
 
@@ -204,6 +208,9 @@ a { font-size: 100%; }
 
 .pointer{
 	cursor: pointer;
+}
+.no-pointer{
+	cursor: default;
 }
 
 .pad-2px{
