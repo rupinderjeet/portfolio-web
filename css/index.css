@@ -13,10 +13,10 @@ body{
 
 /* theme-default start */
 .fg-white{ color: whitesmoke; }
-.bg-555{ background-color: #555555; }
-.bg-444{ background-color: #444444; }
-.bg-333{ background-color: #333333; }
-.border-555{ border-color: #555555; }
+.bg-555{ background-color: #555; }
+.bg-444{ background-color: #444; }
+.bg-333{ background-color: #333; }
+.border-555{ border-color: #555; }
 .btn-custom:hover{ background-color: #444; }
 .btn-custom:focus{ background-color: #333; }
 /* theme-default end */
@@ -42,7 +42,7 @@ h5{ font-size: 125%; }
 h6{ font-size: 110%; }
 p { font-size: 100%; }
 a { font-size: 100%; }
-
+button{ font-size: 100%; }
 
 
 /* don't include links in print design */
