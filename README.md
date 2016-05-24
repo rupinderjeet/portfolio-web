@@ -9,8 +9,6 @@
 
 **Development started on Mar 13, 2016 (Sunday)**
 
-[GitHub URL](https://github.com/rupinderjeet/portfolio)
+[GitHub URL](https://rupinderjeet.github.io/MVX92CKPHZ)
 
-###### Last Mass Update : May 01, 2016
-
-...
+###### Last Mass Update : May 22, 2016
