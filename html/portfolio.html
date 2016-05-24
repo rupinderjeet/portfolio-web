@@ -1,7 +1,6 @@
 <!-- PORTFOLIO SLIDE -->
 <div id="portfolio">
 
-
     <div class="container-fluid margin-top-30 margin-bottom-15px">
 
         <h2 class="bold-500 whitesmoke">
@@ -62,7 +61,9 @@
         <hr class="margin-2px margin-bottom-10" />
         <div class="row">
             <div class="col-sm-3 col-xs-6 pointer">
-                <img class="img-rounded" style="width:100%;" src="imgs/tasks/000/cover.png" />
+                <img style="width: 100%; max-width: 240px;" class="img-rounded pointer" src="imgs/tasks/000/cover.png"
+                     data-toggle="modal" data-target="#task-modal"
+                     onclick="$('#task-modal-body').load('snippets/loadTask.html #task-content-000', null, null);" />
             </div>   <!-- task000 -->
 
             <div class="col-sm-3 col-xs-6 pointer">
