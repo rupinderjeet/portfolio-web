@@ -73,13 +73,13 @@ function alterImageGallery(movement, target) {
                 $(next_image).removeClass('no-display');
 
                 new_index = (parseInt(i, 10) + 1);
-                $(current_image_index).html('Screens(' + (new_index+1) + '/' + imageCount + ')');
+                $(current_image_index).html('Images(' + (new_index+1) + '/' + imageCount + ')');
             } else if (movement === "prev") {
                 $(prev_image).addClass('display');
                 $(prev_image).removeClass('no-display');
 
                 new_index = (parseInt(i, 10) - 1);
-                $(current_image_index).html('Screens(' + (new_index+1) + '/' + imageCount + ')');
+                $(current_image_index).html('Images(' + (new_index+1) + '/' + imageCount + ')');
             }
 
             if( new_index >= (parseInt(imageCount, 10) - 1) ){      //new_index >= (n-1)
@@ -175,8 +175,7 @@ function btnClick(source, btn, index) {
 
         //Button Animation Code
 
-        var targetContainer = $(btn).parent();
-        $(targetContainer).hide();
+        var targetContainer = '#imageset-' + index;
         $(targetContainer).addClass('text-center');
 
         $(targetContainer).load('snippets/loadImages.html #set-' + index, function () {
