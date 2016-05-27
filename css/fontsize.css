@@ -1,0 +1,165 @@
+/* for max-screen of 1500px,  */
+
+body{
+	font-size: 4em;
+	font-family: sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, p, a{
+	margin  : 0;
+	padding : 0;
+}
+
+h1{ font-size: 170%; }      /*  27.2px  */
+h2{ font-size: 160%; }      /*  25.6px  */
+h3{ font-size: 150%; }      /*  24.0px  */
+h4{ font-size: 140%; }      /*  22.4px  */
+h5{ font-size: 130%; }      /*  20.8px  */
+h6{ font-size: 120%; }      /*  19.2px  */
+p { font-size: 100%; }      /*  16.0px  */
+a { font-size: 100%; }      /*  16.0px  */
+
+
+@media screen and (min-width: 200px) and (max-width: 300px){
+	/* 500% */
+	h1{ font-size: 65%;  }
+	h2{ font-size: 55%;  }
+	h3{ font-size: 46%;  }
+	h4{ font-size: 38%;  }
+	h5{ font-size: 31%;  }
+	h6{ font-size: 25%;  }
+	p { font-size: 20%;  }
+	a { font-size: 20%;  }
+}
+@media screen and (min-width: 300px) and (max-width: 400px){
+	/* 400% */
+	h1{ font-size: 80%;  }
+	h2{ font-size: 68%;  }
+	h3{ font-size: 57%;  }
+	h4{ font-size: 47%;  }
+	h5{ font-size: 38%;  }
+	h6{ font-size: 31%;  }
+	p { font-size: 25%;  }
+	a { font-size: 25%;  }
+}
+@media screen and (min-width: 400px) and (max-width: 500px){
+	/* 300% */
+	h1{ font-size: 96%;  }
+	h2{ font-size: 83%;  }
+	h3{ font-size: 71%;  }
+	h4{ font-size: 60%;  }
+	h5{ font-size: 50%;  }
+	h6{ font-size: 41%;  }
+	p { font-size: 33%;  }
+	a { font-size: 33%;  }
+}
+@media screen and (min-width: 500px) and (max-width: 600px){
+	/* 250% */
+	h1{ font-size: 115%;  }
+	h2{ font-size: 100%;  }
+	h3{ font-size: 86%;  }
+	h4{ font-size: 73%;  }
+	h5{ font-size: 61%;  }
+	h6{ font-size: 50%;  }
+	p { font-size: 40%;  }
+	a { font-size: 40%;  }
+}
+@media screen and (min-width: 600px) and (max-width: 700px){
+	/* 200% */
+	h1{ font-size: 145%;  }
+	h2{ font-size: 120%;  }
+	h3{ font-size: 104%;  }
+	h4{ font-size: 89%;  }
+	h5{ font-size: 75%;  }
+	h6{ font-size: 62%;  }
+	p { font-size: 50%;  }
+	a { font-size: 50%;  }
+}
+@media screen and (min-width: 700px) and (max-width: 900px){
+	/* 175% */
+	h1{ font-size: 170%;  }
+	h2{ font-size: 143%;  }
+	h3{ font-size: 124%;  }
+	h4{ font-size: 106%;  }
+	h5{ font-size: 89%;  }
+	h6{ font-size: 73%;  }
+	p { font-size: 58%;  }
+	a { font-size: 58%;  }
+}
+@media screen and (min-width: 900px) and (max-width: 1000px){
+	/* 150% */
+	h1{ font-size: 200%;  }
+	h2{ font-size: 167%;  }
+	h3{ font-size: 145%;  }
+	h4{ font-size: 124%;  }
+	h5{ font-size: 104%;  }
+	h6{ font-size: 85%;  }
+	p { font-size: 67%;  }
+	a { font-size: 67%;  }
+}
+@media screen and (min-width: 1000px) and (max-width: 1200px){
+	/* 125% */
+	h1{ font-size: 240%;  }
+	h2{ font-size: 203%;  }
+	h3{ font-size: 177%;  }
+	h4{ font-size: 152%;  }
+	h5{ font-size: 128%;  }
+	h6{ font-size: 105%;  }
+	p { font-size: 83%;  }
+	a { font-size: 83%;  }
+}
+@media screen and (min-width: 1200px) and (max-width: 1300px){
+	/* 110% */
+	h1{ font-size: 270%;  }
+	h2{ font-size: 233%;  }
+	h3{ font-size: 203%;  }
+	h4{ font-size: 174%;  }
+	h5{ font-size: 146%;  }
+	h6{ font-size: 119%;  }
+	p { font-size: 93%;  }
+	a { font-size: 93%;  }
+}
+@media screen and (min-width: 1300px) and (max-width: 1500px){
+	/* 100% */
+	h1{ font-size: 308%;  }
+	h2{ font-size: 277%;  }
+	h3{ font-size: 240%;  }
+	h4{ font-size: 204%;  }
+	h5{ font-size: 169%;  }
+	h6{ font-size: 135%;  }
+	p { font-size: 102%;  }
+	a { font-size: 102%;  }
+}
+@media screen and (min-width: 1500px) and (max-width: 1700px){
+	/* 90% */
+	p { font-size: 113%;  }
+	a { font-size: 113%;  }
+}
+@media screen and (min-width: 1700px) and (max-width: 1900px){
+	/* 75% */
+	p { font-size: 136%;  }
+	a { font-size: 136%;  }
+}
+@media screen and (min-width: 1900px) and (max-width: 2200px){
+	/* 67% */
+	p { font-size: 153%;  }
+	a { font-size: 153%;  }
+}
+@media screen and (min-width: 2200px) and (max-width: 2800px){
+	/* 50% */
+	p { font-size: 205%;  }
+	a { font-size: 205%;  }
+}
+@media screen and (min-width: 2800px) and (max-width: 4500px){
+	/* 33% */
+	p { font-size: 309%;  }
+	a { font-size: 309%;  }
+}
+@media screen and (min-width: 4500px) and (max-width: 7000px){
+	/* 25% */
+	h4{ font-size: 440%   }
+	h5{ font-size: 460%   }
+	h6{ font-size: 440%   }
+	p { font-size: 413%;  }
+	a { font-size: 413%;  }
+}
