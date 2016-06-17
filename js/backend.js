@@ -440,7 +440,7 @@ function performAction(caller, type, target){
                 }
 
 
-                $(caller).html('Liked').addClass('btn-success').prop('onclick', '');
+                $(caller).html('Liked').prop('onclick', '');
                 $('#' + target).html(count + " likes");
             }
         }, function(errorObject){

@@ -16,9 +16,11 @@ body{
 .bg-555{ background-color: #555; }
 .bg-444{ background-color: #444; }
 .bg-333{ background-color: #333; }
+.border-333{ border-color: #333; }
 .border-555{ border-color: #555; }
 .btn-custom:hover{ background-color: #444; }
 .btn-custom:focus{ background-color: #333; }
+a.fg-white:hover{ color: whitesmoke; }
 /* theme-default end */
 
 
