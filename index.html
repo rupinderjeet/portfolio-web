@@ -1,114 +1,115 @@
 <!DOCTYPE html>
 <html>
 	<head>
-	<meta name="keywords" content="rupinderjeet, rupinderjeet.com, rupinderjeet47, rupinderjeet47@gmail.com, ">
-	<meta name="description" content="a website showing information of its author">
-	<meta name="robots" content="all">
-	<meta name="author" content="Rupinderjeet Singh Hans, rupinderjeet47(at)gmail(dot)com">
+        <meta name="keywords" content="rupinderjeet, rupinderjeet.com, rupinderjeet47, rupinderjeet47@gmail.com, ">
+        <meta name="description" content="a website showing information of its author">
+        <meta name="robots" content="all">
+        <meta name="author" content="Rupinderjeet Singh Hans, rupinderjeet47(at)gmail(dot)com">
 
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
         <meta name="copyright" content="(c) 2015-2016 Rupinderjeet Singh Hans">
-	<link rel="shortcut icon" href="#" type="image/x-icon">
-	<title> Rupinderjeet : Software & Website Developer </title>
+        <link rel="shortcut icon" href="#" type="image/x-icon">
+        <title> Rupinderjeet : Freelance Programmer </title>
 
-	<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
+        <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
         <link type="text/css" rel="stylesheet" href="css/index.css">
         <link type="text/css" rel="stylesheet" href="css/animations.css">
-	</head>
+    </head>
+
 	<body>
 
-	<!-- PayPal Donate Form-->
-	<form id="paypal-donate-form" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-		<input type="hidden" name="cmd" value="_s-xclick">
-		<input type="hidden" name="hosted_button_id" value="RBSJUBQ58RNAU">
-		<input type="submit" name="submit" id="submit-paypal-form" class="hidden" value="Donate with PayPal"/>
-	</form>
+        <!-- PayPal Donate Form-->
+        <form id="paypal-donate-form" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+            <input type="hidden" name="cmd" value="_s-xclick">
+            <input type="hidden" name="hosted_button_id" value="RBSJUBQ58RNAU">
+            <input type="submit" name="submit" id="submit-paypal-form" class="hidden" value="Donate with PayPal"/>
+        </form>
 
         <!-- hidden footer(header) bar ============================================================================================ -->
         <div id="footer" class="jumbotron no-border no-margin no-display" style="padding-top: 0; padding-bottom: 0; background-color: whitesmoke;">
 
-            <div class="container" style="padding: 20px;">
+                <div class="container" style="padding: 20px;">
 
-                <div class="row">
-                    <div class="col-sm-4" style="padding: 5%;">
-                        <p class="font-size-25 no-margin"> Options(testing) </p>
-                        <hr class="margin-2px">
+                    <div class="row">
+                        <div class="col-sm-4" style="padding: 5%;">
+                            <p class="font-size-25 no-margin"> Options(testing) </p>
+                            <hr class="margin-2px">
 
-                        <div class="dropdown margin-left-7">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                                Color Schemes <span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li> <a class="pointer" onclick="settings(this, 'theme', 'yellow', 'blue')">    Yellow-Blue    </a> </li>
-                                <li> <a class="pointer" onclick="settings(this, 'theme', 'brown', 'skyblue')">  Brown-Skyblue  </a> </li>
-                                <li> <a class="pointer" onclick="settings(this, 'theme', 'black', 'green')">    Black-Green    </a> </li>
-                                <li> <a class="pointer" onclick="settings(this, 'theme', 'white', 'crimson')">  White-Crimson  </a> </li>
-                                <li> <a class="pointer" onclick="settings(this, 'theme', 'orangered', 'pink')"> Blue-OrangeRed </a> </li>
-                            </ul>
+                            <div class="dropdown margin-left-7">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                    Color Schemes <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li> <a class="pointer" onclick="settings(this, 'theme', 'yellow', 'blue')">    Yellow-Blue    </a> </li>
+                                    <li> <a class="pointer" onclick="settings(this, 'theme', 'brown', 'skyblue')">  Brown-Skyblue  </a> </li>
+                                    <li> <a class="pointer" onclick="settings(this, 'theme', 'black', 'green')">    Black-Green    </a> </li>
+                                    <li> <a class="pointer" onclick="settings(this, 'theme', 'white', 'crimson')">  White-Crimson  </a> </li>
+                                    <li> <a class="pointer" onclick="settings(this, 'theme', 'orangered', 'pink')"> Blue-OrangeRed </a> </li>
+                                </ul>
+                            </div>
+
+                            <a id="report-issue-btn" class="pointer font-16 no-margin margin-left-7" data-toggle="modal" data-target="#report-issue-modal">
+                                Report an Issue? </a>
                         </div>
 
-                        <a id="report-issue-btn" class="pointer font-16 no-margin margin-left-7" data-toggle="modal" data-target="#report-issue-modal">
-                            Report an Issue? </a>
+                        <div class="col-sm-4" style="padding: 5%;">
+                            <p class="font-size-25 no-margin"> Sub Domains </p>
+                            <hr class="margin-2px">
+
+                            <a href="http://camera.rupinderjeet.com" class="font-16 no-margin margin-left-7">  My Camera Roll    </a> <br />
+                            <a href="http://people.rupinderjeet.com" class="font-16 no-margin margin-left-7">  people.rupinderjeet.com  </a> <br />
+                            <a href="http://music.rupinderjeet.com" class="font-16 no-margin margin-left-7">   music.rupinderjeet.com   </a> <br />
+                            <a href="http://movies.rupinderjeet.com" class="font-16 no-margin margin-left-7">  movies.rupinderjeet.com  </a> <br />
+                            <a href="http://dpstorm.rupinderjeet.com" class="font-16 no-margin margin-left-7"> dpstorm.rupinderjeet.com </a> <br />
+                            <a href="http://connect.rupinderjeet.com" class="font-16 no-margin margin-left-7"> connect.rupinderjeet.com </a> <br />
+                            <a href="http://resume.rupinderjeet.com" class="font-16 no-margin margin-left-7">  resume.rupinderjeet.com  </a> <br />
+                            <p class="font-16 no-margin margin-left-7"> -life has been removed </p>
+
+                        </div>
+                        <div class="col-sm-4" style="padding: 5%;">
+                            <p class="font-size-25 no-margin"> Support </p>
+                            <hr class="margin-2px">
+
+                            <a> <label for="submit-paypal-form" class="normal-font font-16 pointer no-margin margin-left-7">
+                                Donate with PayPal </label> </a> (<a href="#" onclick="comingSoon()">help</a>)
+
+                        </div>
                     </div>
 
-                    <div class="col-sm-4" style="padding: 5%;">
-                        <p class="font-size-25 no-margin"> Sub Domains </p>
-                        <hr class="margin-2px">
+                    <p class="text-center"> Copyright&copy; Rupinderjeet Singh Hans, rupinderjeet.com </p>
 
-                        <a href="http://camera.rupinderjeet.com" class="font-16 no-margin margin-left-7">  My Camera Roll    </a> <br />
-                        <a href="http://people.rupinderjeet.com" class="font-16 no-margin margin-left-7">  people.rupinderjeet.com  </a> <br />
-                        <a href="http://music.rupinderjeet.com" class="font-16 no-margin margin-left-7">   music.rupinderjeet.com   </a> <br />
-                        <a href="http://movies.rupinderjeet.com" class="font-16 no-margin margin-left-7">  movies.rupinderjeet.com  </a> <br />
-                        <a href="http://dpstorm.rupinderjeet.com" class="font-16 no-margin margin-left-7"> dpstorm.rupinderjeet.com </a> <br />
-                        <a href="http://connect.rupinderjeet.com" class="font-16 no-margin margin-left-7"> connect.rupinderjeet.com </a> <br />
-                        <a href="http://resume.rupinderjeet.com" class="font-16 no-margin margin-left-7">  resume.rupinderjeet.com  </a> <br />
-                        <p class="font-16 no-margin margin-left-7"> -life has been removed </p>
-
-                    </div>
-                    <div class="col-sm-4" style="padding: 5%;">
-                        <p class="font-size-25 no-margin"> Support </p>
-                        <hr class="margin-2px">
-
-                        <a> <label for="submit-paypal-form" class="normal-font font-16 pointer no-margin margin-left-7">
-                            Donate with PayPal </label> </a> (<a href="#" onclick="comingSoon()">help</a>)
-
-                    </div>
                 </div>
-
-                <p class="text-center"> Copyright&copy; Rupinderjeet Singh Hans, rupinderjeet.com </p>
-
             </div>
-        </div>
 
         <!-- BOOTSTRAP MENU BAR : MOBILE FRIENDLY ===================================== -->
         <nav id="menu" class="navbar navbar-default no-border b-333" style="-webkit-border-radius: 0;-moz-border-radius: 0;border-radius: 0;">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="nav-toggle-btn no-border navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
+                            <div class="container">
+                                <div class="navbar-header">
+                                    <button type="button" class="nav-toggle-btn no-border navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                                        <span class="sr-only">Toggle navigation</span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                    </button>
 
-                    <a id="navbar-brand" class="navbar-brand whitesmoke" href="http://www.rupinderjeet.com">rupinderjeet.com</a>
-                </div>
-                <div id="navbar" class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li class="active-nav">          <a class="btn-bar pointer" onclick="btnClick('bar', this)">about      </a> </li>
-                        <li class="nav-item">            <a class="btn-bar pointer" onclick="btnClick('bar', this)">portfolio  </a> </li>
-                        <li class="nav-item">            <a class="btn-bar pointer" onclick="btnClick('bar', this)">blog       </a> </li>
-                        <li class="nav-item">            <a class="btn-bar pointer" onclick="btnClick('bar', this)">services   </a> </li>
-                        <li class="nav-item">            <a class="btn-bar pointer" onclick="btnClick('bar', this)">contact    </a> </li>
-                        <li class="nav-item">            <a class="btn-bar pointer" onclick="btnClick('bar', this)">statistics </a> </li>
-                        <li class="nav-item hidden-xs">  <a id="arrow-div" class="btn-bar pointer" onclick="arrowAnimation()">
-                                                             <span id="arrow" class="glyphicon glyphicon-chevron-down"></span>
-                                                         </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+                                    <a id="navbar-brand" class="navbar-brand whitesmoke" href="http://www.rupinderjeet.com">rupinderjeet.com</a>
+                                </div>
+                                <div id="navbar" class="navbar-collapse collapse">
+                                    <ul class="nav navbar-nav navbar-right">
+                                        <li class="active-nav">          <a class="btn-bar pointer" onclick="btnClick('bar', this)">about      </a> </li>
+                                        <li class="nav-item">            <a class="btn-bar pointer" onclick="btnClick('bar', this)">portfolio  </a> </li>
+                                        <li class="nav-item">            <a class="btn-bar pointer" onclick="btnClick('bar', this)">blog       </a> </li>
+                                        <li class="nav-item">            <a class="btn-bar pointer" onclick="btnClick('bar', this)">services   </a> </li>
+                                        <li class="nav-item">            <a class="btn-bar pointer" onclick="btnClick('bar', this)">contact    </a> </li>
+                                        <li class="nav-item">            <a class="btn-bar pointer" onclick="btnClick('bar', this)">statistics </a> </li>
+                                        <li class="nav-item hidden-xs">  <a id="arrow-div" class="btn-bar pointer" onclick="arrowAnimation()">
+                                                                             <span id="arrow" class="glyphicon glyphicon-chevron-down"></span>
+                                                                         </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </nav>
 
         <!-- all pages load in here =================================================================================== -->
         <div id="menu-pages" class="container">
@@ -118,6 +119,7 @@
             </div>
 
         </div>
+
 
 		<!-- Modal : Report an Issue : to be called from different pages =========================================== -->
 		<div id="report-issue-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="reportAnIssue">
