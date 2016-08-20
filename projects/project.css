@@ -1,0 +1,65 @@
+html{font-size:120%;}
+@media(min-width:60em){
+	html{
+		font-size: 80%
+	}
+}
+
+body{
+	background-color: #f5f5f5;
+	font-family: "Noto Sans", sans-serif;
+	font-size: 18px;
+}
+
+.content{
+	margin-left: 10%;
+	margin-right: 10%;
+	margin-bottom: 10%;
+	padding: 5%;
+	background-color: #ffffff;
+	color: #555;
+	border: 1px solid #e7e7e7;
+	border-radius: 10px;
+}
+.top{
+	border-top: none;
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+	color: black;
+	padding-top: 4%;
+	margin-bottom: 2%;
+}
+
+p{
+	padding-left: 2%;
+	padding-right: 2%;
+	line-height: 1.2;
+	text-align: justify;
+}
+
+h1, h2, h3, h4, h5, h6{
+	margin-top: 2%;
+	margin-bottom: 2%;
+}
+
+.title{
+	font-family: "Poiret One", sans-serif;
+	font-size: 7vw;
+	font-weight: bold;
+	text-align: center;
+}
+
+.google-play-link-img{
+	width: 20vw;
+}
+
+ul{ line-height: 150%; }
+
+.mild-bold{
+	font-weight: 200;
+}
+
+.showcase-link{
+	background-color: white;
+	padding: 2%;
+}

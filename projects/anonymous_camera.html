@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+
+    <!--
+        Welcome to anonymous camera's source code :)
+
+        This page describes the features and usage guide for my android app known as Anonymous Camera. It is still in
+        beta development.
+
+        I'm currently looking for a job. You can see my portfolio website at https://rupinderjeet.com
+        If you are interested in hiring me, feel free to send me an email at rupinderjeet@yandex.com
+
+        To find more about me on internet, search for following keywords on Google:
+            rupinderjeet
+            rupinderjeet47
+            rupinderjeet singh hans
+            kiminowara
+
+        I have a pretty rare name that allowed me to pop up on google searches.
+    -->
+
+    <head lang="en">
+        <meta charset="UTF-8">
+        <meta name=viewport content="width=device-width, initial-scale=1">
+        <meta name="description" content="Information about Anonymous Camera project">
+
+        <title>Anonymous Camera</title>
+
+        <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans:400,400italic,700|Raleway:300|Poiret+One">
+        <link rel="stylesheet" type="text/css" href="project.css" />
+    </head>
+
+    <body>
+
+    <div class="content top">
+        <h1 class="title">Anonymous Camera</h1>
+    </div>
+
+    <div class="content">
+
+        <a href='https://play.google.com/store/apps/details?id=com.rupinderjeet.anonymouscamera&pcampaignid=
+                    MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'>
+            <img class="google-play-link-img" alt='Get it on Google Play'
+                 src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png'/>
+        </a> <i> - this app is in beta development yet, expect lots of bugs.</i>
+
+        <br /><br />
+        <h2>Introduction</h2>
+        <p> Anonymous Camera is an app that makes it easy to take pictures secretly without opening the system camera on
+            the device screen. It offers some most user-friendly shortcuts that let you take pictures even if your
+            device is locked or screen is off. It runs in background, allowing you to use any other app (e.g. browser)
+            while still being able to capture pictures in background. </p>
+        <p>Video Features will come soon!</p>
+
+        <br />
+        <h2>Features</h2>
+        <ul>
+            <li> Simple, easy to understand and small application</li>
+            <li> Uses Back Camera only without preview</li>
+            <li> Multiple modes to take pictures</li>
+            <li> Battery friendly</li>
+            <li> Optional Auto Focus Mode</li>
+            <li> Show/hide pictures in Gallery</li>
+            <li> Take upto 500 pictures automatically one-by-one</li>
+            <li> Eight app background colors</li>
+            <li> In-app help and contact information</li>
+            <li> Works while calling, voice-recording and music listening</li>
+        </ul>
+
+        <br />
+        <h2>Instructions</h2>
+        <ul>
+            <li>
+                Do not use this application when using any other camera app on your device. System Camera can only be used
+                by one app at a time. To use another camera app, you need to stop Anonymous Camera service first so that it
+                doesn't cause any conflict.
+            </li>
+            <li>
+                On Android Marshmallow and above, please allow all the requested permissions. Even if you deny one
+                permission, this app will be useless. You can see description of each requested permission at the bottom of
+                this article.
+            </li>
+            <li>
+                In most of cases, you need to be still while taking a picture. If you move your phone a lot while taking
+                picture, you will get blurry and stretched pictures.
+            </li>
+            <li>
+                Our response to your comments goes to your Gmail account. To view these emails, you have to open "Updates"
+                section of your gmail rather than Primary Inbox, blame Google. So, please check emails from Google play in
+                Updates section.
+            </li>
+            <li> Sometimes if app does not work as it should, please update "Google Play Services" app on your device. </li>
+        </ul>
+
+        <br />
+        <h2>Trigger Modes</h2>
+        <p> There are four modes / shortcuts to trigger the app and take a picture:</p>
+        <p> In Floating Button mode, an icon is displayed on screen to take a picture. The size of this icon can be adjusted
+            in Settings. On some devices, this icon will be visible on Lock Screen too. </p>
+        <p> In Volume Button mode, press Volume Button to take a picture. This mode will work only when device screen is
+            locked or when Anonymous Camera app is open. This mode is experimental and unstable, but most useful. Use this
+            mode with Vibrate Confirmation to know that picture has been taken(described later in this article). </p>
+        <p> In Notification mode, a sticky notification is displayed in the notification bar. Tap it to take a picture. You
+            can close notification by expanding it. Like Volume Button mode, this mode is experimental and unstable.</p>
+        <p> In Continuous mode, app will continuously take specified number of pictures. You can change number of required
+            pictures in Settings (Max. limit is 500). Continuous mode takes same amount of time to take pictures whether you
+            use it in Normal mode or Turbo mode (efficiency modes discussed in next paragraph).</p>
+
+        <br />
+        <h2>Efficiency Modes</h2>
+        <p> <i class="mild-bold">Normal Mode:</i> This is default picture taking mode. Battery consumption will be very
+            minimal. The camera will take about 2-3 seconds to take one picture without auto focus. </p>
+        <p> <i class="mild-bold">Turbo Mode:</i> If you enabled this option, Anonymous Camera will take pictures a
+            little faster. But, it will consume battery power too if you leave the app service ON for a long time. The
+            camera will take about 1-2 seconds to take one picture without auto focus. </p>
+        <p> <i class="mild-bold">Optional Auto Focus mode:</i> This mode makes the camera take focused pictures. In
+            normal mode, the camera will take about 3-4 seconds with auto focus. In turbo mode, the camera will take
+            about 2-3 seconds with auto focus. </p>
+        <p> <i> All the time measurements will vary with the different devices. I tested these durations on a Samsung
+            Galaxy S2 GT-i9100 running Android Jellybean 4.1.2 </i> </p>
+
+        <br />
+        <h2>Settings</h2>
+        <p> Confirmation Mode informs you that a picture has been taken. You can choose between Showing a small message on
+            screen, Shutter Sound or a Small Vibration. Check your device volume level if shutter sound was not listenable.
+            No confirmation will be displayed if you choose None. </p>
+        <p> You can change app background colors too. There are eight different colors available for you to choose from. </p>
+        <p> You can change Icon size of Floating Icon mode. </p>
+        <p> You can specify how many number of pictures you want to take in Continuous mode. </p>
+        <p> You can Show or Hide taken pictures from Gallery. Showing or hiding pictures takes few seconds for them to
+            appear or disappear in Gallery. This may, also, fail on some devices (you can contact me through app so that we
+            can fix it). Restart your device if changes don't get effected in five minutes. </p>
+        <p> You can enable this app to start when your device starts(boots-up). For e.g. If you had the camera service
+            running when you device turned off, it will auto start the service when you turn ON your phone again. </p>
+
+        <br />
+        <h2>Other Information</h2>
+        <p> All taken pictures are saved in the <i>"sdcard > DCIM > AnonymousCamera"</i> folder. It is your device's primary
+            external storage(not a storage card). </p>
+        <p> Currently, I support only English language. As soon as someone helps me in translation of this app, I will
+            publish it for other languages too. </p>
+
+        <br />
+        <h2>Warning</h2>
+        <p> This app was made to have fun with friends and other known beings. If your country's law doesn't allow taking
+            pictures this way, please stop using it. I would want you to contact me and specifically, tell me about it so
+            that I can ban this app from your country. I will not be responsible for anything that you do. Just don't use it
+            to harass or blackmail someone. Please. I just developed this app because I had an idea. I had no bad
+            intentions. </p>
+
+        <hr />
+        <p> If you like my app, please take a minute to rate it on Google Play Store. Otherwise, you can always contact me
+            and say "Hi". I will try my best to improve this product day by day. Please feel free to contact me at
+            <a href="mailto:rupinderjeet@yandex.com">rupinderjeet@yandex.com</a> </p>
+        <p> Help me to test or translate this app into your language by filling out
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSeGNO-cgkm4XF7NRcMeszjoxRwpyMoEJpxh7wOUaz2C5aGS9Q/viewform">
+                this form
+            </a>
+        </p>
+
+        <br />
+        <h2> Next Features </h2>
+        <ul>
+            <li> Introducing "duration delay" choice in continuous mode. </li>
+            <li> Video Features </li>
+            <li> Widget to take pictures </li>
+        </ul>
+        <p> <i> depends upon user requests, I don't have any more ideas. </i> </p>
+
+    </div></body>
+
+</html>
