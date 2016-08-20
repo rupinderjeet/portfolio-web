@@ -63,3 +63,8 @@ ul{ line-height: 150%; }
 	background-color: white;
 	padding: 2%;
 }
+
+.img{
+	width: 20vw;
+	height: 50vh;
+}
