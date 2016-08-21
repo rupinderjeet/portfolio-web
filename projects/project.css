@@ -1,36 +1,15 @@
-html{font-size:120%;}
-@media(min-width:60em){
-	html{
-		font-size: 80%
-	}
-}
-
 body{
 	background-color: white;
 	font-family: "Noto Sans", sans-serif;
-	font-size: 18px;
 	margin: 0;
 	padding: 0;
 }
 
 .content{
-	margin: 1%;
-	padding: 5% 10% 10%;
 	color: #333;
-}
-.top{
-	background-color: lightcoral;
-	border: none;
-	border-radius: 0;
-	color: white;
-	padding: 3%;
-}
-
-p{
-	padding-left: 2%;
-	padding-right: 2%;
-	line-height: 1.2;
-	text-align: justify;
+	margin: 1%;
+	min-width: 400pt !important;
+	padding: 5% 10% 10%;
 }
 
 .title{
@@ -45,19 +24,17 @@ p{
 	padding: 5%;
 }
 
-.google-play-link-img{
-	width: 20vw;
+/*ul{ line-height: 150%; }*/
+ul {
+	display: block;
+	list-style-type: disc;
+	margin: 1em 0;
+	padding-left: 40px;
 }
 
-ul{ line-height: 150%; }
 
 .mild-bold{
 	font-weight: 200;
-}
-
-.showcase-link{
-	background-color: white;
-	padding: 2%;
 }
 
 .img{
@@ -72,15 +49,41 @@ ul{ line-height: 150%; }
 
 
 /* menu */
-.menu{
-	background-color: rgba(0, 0, 0, 0.1);
-}
-.tabs > .tab > a, .footer-copyright > .container > a{
+.tabs > .tab > a {
 	text-decoration: none;
 }
 .fix-it {
 	position: fixed;
 	top: 0;
-	/*height: 70px;*/
 	z-index: 1;
+}
+
+/* footer */
+.footer{
+	padding: 5% 10% 5% 10%;
+}
+
+/* footer buttons */
+.footer > a, .footer > button{
+	margin-left: 6pt;
+	margin-bottom: 6pt;
+}
+	@media screen and (max-width:600px) {
+
+		/* full width buttons on mobile devices */
+		.footer > a, .footer > button{
+			width: 100%;
+		}
+	}
+
+.label-btn {
+	color: white;
+	font-size: 100%;
+	font-weight: normal;
+	cursor: pointer;
+}
+
+.link-btn:hover {
+	color: white;
+	text-decoration: none;
 }
