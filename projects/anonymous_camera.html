@@ -2,10 +2,12 @@
 <html>
 
     <!--
-        Welcome to anonymous camera's source code :)
+        Welcome to anonymous camera's web page :)
 
         This page describes the features and usage guide for my android app known as Anonymous Camera. It is still in
-        beta development.
+        beta development. You can find the release at
+
+        https://play.google.com/store/apps/details?id=com.rupinderjeet.anonymouscamera
 
         I'm currently looking for a job. You can see my portfolio website at https://rupinderjeet.com
         If you are interested in hiring me, feel free to send me an email at rupinderjeet@yandex.com
@@ -34,8 +36,8 @@
 
     <body>
 
-        <h1 id="menu_header" class="title pink lighten-1">Anonymous Camera</h1>
-        <nav id="menu" class="nav-extended pink">
+        <h1 id="menu_header" class="title blue lighten-1">Anonymous Camera</h1>
+        <nav id="menu" class="nav-extended blue">
 
             <div class="nav-wrapper">
                 <ul class="tabs tabs-transparent">
@@ -50,71 +52,85 @@
 
         <div id="about" class="content">
 
+            <a href='https://play.google.com/store/apps/details?id=com.rupinderjeet.anonymouscamera&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'>
+                <img alt='Get it on Google Play' class="google-logo"
+                     src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png'/>
+            </a>
+
             <p class="flow-text text-justify"> Anonymous Camera is an app that makes it easy to take pictures secretly
                 without opening the system camera on the device screen. It offers some most user-friendly shortcuts that
                 let you take pictures even if your device is locked or screen is off. It runs in background, allowing
                 you to use any other app (e.g. browser) while still being able to capture pictures in background.
                 Some of the core features are as below :- </p>
 
-            <ul class="flow-text" style="padding: 5%;">
-                <li> Simple, easy to understand and small application</li>
-                <li> Uses Back Camera only without preview</li>
-                <li> Multiple modes to take pictures</li>
-                <li> Battery friendly</li>
-                <li> Optional Auto Focus Mode</li>
-                <li> Show/hide pictures in Gallery</li>
-                <li> Take up to 500 pictures automatically one-by-one</li>
-                <li> Eight app background colors</li>
-                <li> In-app help and contact information</li>
-                <li> Works while calling, voice-recording and music listening</li>
-            </ul>
+            <div class="row pad-t-5">
 
-            <p>Video Features will come soon!</p>
+                <div class="col-md-7">
+                    <h4>Features</h4>
+                    <hr />
+                    <ul class="flow-text">
+                        <li> &bull; Small and easy to understand app.</li>
+                        <li> &bull; Uses Back Camera without preview.</li>
+                        <li> &bull; Multiple modes to take pictures.</li>
+                        <li> &bull; Battery friendly.</li>
+                        <li> &bull; Optional Auto Focus Mode.</li>
+                        <li> &bull; Show/hide pictures in Gallery.</li>
+                        <li> &bull; Take pictures automatically.</li>
+                        <li> &bull; Eight app background colors.</li>
+                        <li> &bull; In-app help and contact information.</li>
+                        <li> &bull; Works while calling, voice-recording.</li>
+                    </ul>
+                </div>
 
+                <div class="col-md-5">
+                    <img class="img-responsive img-rounded hidden-sm hidden-xs" src="project-files/anon_cam.png" />
+                </div>
+            </div>
         </div>
 
         <div id="guide" class="content">
 
             <h2>Instructions</h2>
-            <ul>
-                <li>
-                    Do not use this application when using any other camera app on your device. System Camera can only be used
-                    by one app at a time. To use another camera app, you need to stop Anonymous Camera service first so that it
-                    doesn't cause any conflict.
-                </li>
-                <li>
-                    On Android Marshmallow and above, please allow all the requested permissions. Even if you deny one
-                    permission, this app will be useless. You can see description of each requested permission at the bottom of
-                    this article.
-                </li>
-                <li>
-                    In most of cases, you need to be still while taking a picture. If you move your phone a lot while taking
-                    picture, you will get blurry and stretched pictures.
-                </li>
-                <li>
-                    Our response to your comments goes to your Gmail account. To view these emails, you have to open "Updates"
-                    section of your gmail rather than Primary Inbox, blame Google. So, please check emails from Google play in
-                    Updates section.
-                </li>
-                <li> Sometimes if app does not work as it should, please update "Google Play Services" app on your device. </li>
-            </ul>
+            <hr />
+            <p class="flow-text text-justify">
+                Do not use this application when using any other camera app on your device. System Camera can only be
+                used by one app at a time. To use another camera app, you need to stop Anonymous Camera service first so
+                that it doesn't cause any conflict. <br />
+
+                On Android Marshmallow and above, please allow all the requested permissions. Even if you deny one
+                permission, this app will be useless. You can see description of each requested permission at the bottom
+                of this article. <br />
+
+                In most of cases, you need to be still while taking a picture. If you move your phone a lot while taking
+                picture, you will get blurry and stretched pictures. <br />
+
+                Our response to your comments goes to your Gmail account. To view these emails, you have to open
+                "Updates" section of your Gmail rather than Primary Inbox, blame Google. So, please check emails from
+                Google play in Updates section. <br />
+
+                Sometimes if app does not work as it should, please update "Google Play Services" app on your device.
+            </p>
 
             <br />
-            <h2>Trigger Modes</h2>
+            <h4>Trigger Modes</h4>
+            <hr />
             <p> There are four modes / shortcuts to trigger the app and take a picture:</p>
-            <p> In Floating Button mode, an icon is displayed on screen to take a picture. The size of this icon can be adjusted
-                in Settings. On some devices, this icon will be visible on Lock Screen too. </p>
-            <p> In Volume Button mode, press Volume Button to take a picture. This mode will work only when device screen is
-                locked or when Anonymous Camera app is open. This mode is experimental and unstable, but most useful. Use this
-                mode with Vibrate Confirmation to know that picture has been taken(described later in this article). </p>
-            <p> In Notification mode, a sticky notification is displayed in the notification bar. Tap it to take a picture. You
-                can close notification by expanding it. Like Volume Button mode, this mode is experimental and unstable.</p>
-            <p> In Continuous mode, app will continuously take specified number of pictures. You can change number of required
-                pictures in Settings (Max. limit is 500). Continuous mode takes same amount of time to take pictures whether you
-                use it in Normal mode or Turbo mode (efficiency modes discussed in next paragraph).</p>
+            <p> In Floating Button mode, an icon is displayed on screen to take a picture. The size of this icon can be
+                adjusted in Settings. On some devices, this icon will be visible on Lock Screen too. </p>
+            <p> In Volume Button mode, press Volume Button to take a picture. This mode will work only when device
+                screen is locked or when Anonymous Camera app is open. This mode is experimental and unstable, but most
+                useful. Use this mode with Vibrate Confirmation to know that picture has been taken(described later in
+                this article). </p>
+            <p> In Notification mode, a sticky notification is displayed in the notification bar. Tap it to take a
+                picture. You can close notification by expanding it. Like Volume Button mode, this mode is experimental
+                and unstable.</p>
+            <p> In Continuous mode, app will continuously take specified number of pictures. You can change number of
+                required pictures in Settings (Max. limit is 500). Continuous mode takes same amount of time to take
+                pictures whether you use it in Normal mode or Turbo mode (efficiency modes discussed in next paragraph).</p>
 
             <br />
-            <h2>Efficiency Modes</h2>
+            <h4>Efficiency Modes</h4>
+            <hr />
             <p> <i class="mild-bold">Normal Mode:</i> This is default picture taking mode. Battery consumption will be very
                 minimal. The camera will take about 2-3 seconds to take one picture without auto focus. </p>
             <p> <i class="mild-bold">Turbo Mode:</i> If you enabled this option, Anonymous Camera will take pictures a
@@ -175,15 +191,15 @@
 
         </div>
 
-        <footer class="footer pink center">
-            <a class="btn-large waves-effect waves-light pink lighten-1 link-btn" target="_blank"
+        <footer class="footer blue center">
+            <a class="btn-large waves-effect waves-light blue lighten-1 link-btn" target="_blank"
                href="https://play.google.com/store/apps/details?id=com.rupinderjeet.anonymouscamera&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1">
                 Google Play
             </a>
 
-            <a class="btn-large waves-effect waves-light pink lighten-1 link-btn" href="http://www.rupinderjeet.com"> Website </a>
-            <button class="btn-large waves-effect waves-light pink lighten-1"> Contact </button>
-            <button class="btn-large waves-effect waves-light pink lighten-1">
+            <a class="btn-large waves-effect waves-light blue lighten-1 link-btn" href="http://www.rupinderjeet.com"> Website </a>
+            <button class="btn-large waves-effect waves-light blue lighten-1"> Contact </button>
+            <button class="btn-large waves-effect waves-light blue lighten-1">
                 <label for="submit-paypal-form" id="donate-btn" class="label-btn"> Donate </label> </button>
         </footer>
 
@@ -191,7 +207,7 @@
         <form id="paypal-donate-form" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
             <input type="hidden" name="cmd" value="_s-xclick">
             <input type="hidden" name="hosted_button_id" value="RBSJUBQ58RNAU">
-            <input type="submit" name="submit" id="submit-paypal-form" class="hide" value="Donate with PayPal"/>
+            <input type="submit" name="submit" id="submit-paypal-form" class="hidden" value="Donate with PayPal"/>
         </form>
 
         <script type="application/javascript" src="../js/jquery.min.js" ></script>
