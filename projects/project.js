@@ -8,9 +8,7 @@
 $(document).ready(function(){
 
     $(window).bind('scroll', function() {
-        var navHeight = $("#menu_header").innerHeight() ;
-
-        console.log($(window).scrollTop() + " - " + navHeight);
+        var navHeight = $("#menu_header").innerHeight();
 
         if ($(window).scrollTop() > navHeight) {
             $('nav').addClass('fix-it');
