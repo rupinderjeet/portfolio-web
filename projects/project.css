@@ -23,14 +23,12 @@ body{
 	text-align: center;
 	margin: 0;
 	padding: 5%;
+	width: 100%;
 }
 
 /*ul{ line-height: 150%; }*/
 ul {
-	display: block;
-	list-style-type: disc;
-	margin: 1em 0;
-	padding-left: 40px;
+	width: 100%;
 }
 
 
@@ -65,6 +63,7 @@ ul {
 
 /* footer */
 .footer{
+	width: 100%;
 	padding: 5% 10% 5% 10%;
 }
 
