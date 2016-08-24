@@ -8,13 +8,20 @@
 $(document).ready(function(){
 
     $(window).bind('scroll', function() {
-        var navHeight = $("#menu_header").innerHeight();
+        var nav = $('#menu');
+        var navHeader = $("#top");
 
-        if ($(window).scrollTop() > navHeight) {
-            $('nav').addClass('fix-it');
+        console.log($(window).scrollTop() + " - " + navHeader.innerHeight());
+
+        if ($(window).scrollTop() > navHeader.innerHeight()) {
+            nav.addClass('fix-it');
+            navHeader.css("margin-bottom", "5%");
         } else {
-            $('nav').removeClass('fix-it');
+            nav.removeClass('fix-it');
+            navHeader.css("margin-bottom", "0");
         }
     });
+
+    $('.carousel').carousel();
 
 });
