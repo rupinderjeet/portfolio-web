@@ -1,16 +1,25 @@
 body{
 	background-color: white;
 	font-family: "Noto Sans", sans-serif;
-	font-size: 18px;
 	margin: 0;
 	padding: 0;
+	width: 100%;
 }
+
+body { font-size: 18px; }
+h1,h2,h3,h4,h5,h6,p { line-height: 1.45; }
+h1 { font-size: 4em; }
+h2 { font-size: 3em; }
+h3 { font-size: 2.2em; }
+h4 { font-size: 1.7em; }
+h5 { font-size: 1.3em; }
+h6 { font-size: 1em; }
+p, a, ul, li, button { font-size: 1em; }
 
 .content{
 	color: #333;
 	margin: 1%;
-	min-width: 400pt !important;
-	padding: 5% 10% 10%;
+	padding: 5% 10%;
 }
 
 .title{
@@ -18,44 +27,45 @@ body{
 	border-radius: 0;
 	color: white;
 	font-family: "Poiret One", "Consolas", sans-serif;
-	font-size: 7vw;
+	font-size: 5vw;
 	font-weight: bold;
-	text-align: center;
 	margin: 0;
-	padding: 5%;
-	width: 100%;
+	padding: 3%;
+	text-align: center;
 }
 
-/*ul{ line-height: 150%; }*/
-ul {
-	width: 100%;
+@media screen and (max-width: 640px) {
+	.title{
+		font-size: 200%;
+		padding: 5%;
+	}
 }
 
+ul{ line-height: 150%; }
 
 .mild-bold{
 	font-weight: 200;
 }
 
-.img{
-	background-color: #373773;
-	display: inline;
-	alignment: center;
-	width: 80%;
-	/*height: 100%;*/
-	/*height: 100vmax;*/
-}
-
 .google-logo{
-	width: 250px;
-	height: 100px;
-	margin: 2%;
+	width: 200px;
+	height: 75px;
 }
 
 /* menu */
+.tabs {
+	width: auto !important;
+	max-width: 500px;
+	/*background-color: #00897b !important;*/
+}
+.tabs > li{
+	width: 25%;
+}
 .tabs > .tab > a {
 	text-decoration: none;
 }
 .fix-it {
+	width: 100%;
 	position: fixed;
 	top: 0;
 	z-index: 1;
@@ -63,8 +73,7 @@ ul {
 
 /* footer */
 .footer{
-	width: 100%;
-	padding: 5% 10% 5% 10%;
+	padding: 5% 10%;
 }
 
 /* footer buttons */
@@ -92,6 +101,8 @@ ul {
 	text-decoration: none;
 }
 
+.text-center{ text-align: center; }
+.text-justify{ text-align: justify; }
 
 /* weird extra stuff */
 .pad-0{ padding: 0 !important; }
@@ -121,3 +132,17 @@ ul {
 .mar-3{ margin: 3%; }
 .mar-4{ margin: 4%; }
 .mar-5{ margin: 5%; }
+
+.mar-tb-0{ margin-top: 0 !important; margin-bottom: 0 !important; }
+.mar-tb-1{ margin-top: 1%; margin-bottom: 1%; }
+.mar-tb-2{ margin-top: 2%; margin-bottom: 2%; }
+.mar-tb-3{ margin-top: 3%; margin-bottom: 3%; }
+.mar-tb-4{ margin-top: 4%; margin-bottom: 4%; }
+.mar-tb-5{ margin-top: 5%; margin-bottom: 5%; }
+
+.mar-t-0{ margin-top: 0 !important; }
+.mar-t-1{ margin-top: 1%; }
+.mar-t-2{ margin-top: 2%; }
+.mar-t-3{ margin-top: 3%; }
+.mar-t-4{ margin-top: 4%; }
+.mar-t-5{ margin-top: 5%; }
