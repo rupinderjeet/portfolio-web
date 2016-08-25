@@ -15,6 +15,7 @@ h4 { font-size: 1.7em; }
 h5 { font-size: 1.3em; }
 h6 { font-size: 1em; }
 p, a, ul, li, button { font-size: 1em; }
+.small-text { font-size: 0.8em; }
 
 .content{
 	color: #333;
@@ -50,6 +51,18 @@ ul{ line-height: 150%; }
 .google-logo{
 	width: 200px;
 	height: 75px;
+}
+
+/* horizontal rule */
+hr{
+	border: none;
+	border-top: 1px solid #eeeeee;
+}
+
+/* ul */
+.step{
+	margin-left: 5%;
+	/*margin-right: 5%;*/
 }
 
 /* menu */
@@ -146,3 +159,15 @@ ul{ line-height: 150%; }
 .mar-t-3{ margin-top: 3%; }
 .mar-t-4{ margin-top: 4%; }
 .mar-t-5{ margin-top: 5%; }
+
+.mar-b-0{ margin-bottom: 0 !important; }
+.mar-b-1{ margin-bottom: 1%; }
+.mar-b-2{ margin-bottom: 2%; }
+.mar-b-3{ margin-bottom: 3%; }
+.mar-b-4{ margin-bottom: 4%; }
+.mar-b-5{ margin-bottom: 5%; }
+
+.card-margin{
+	/*margin: 0.5% !important;*/
+	/*width: 32% !important;*/
+}
