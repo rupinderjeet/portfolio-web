@@ -1,0 +1,107 @@
+/* weird stuff */
+/* made by http://www.rupinderjeet.com */
+
+/* padding */
+.pad-0 { padding: 0  !important; }
+.pad-1 { padding: 1% !important; }
+.pad-2 { padding: 2% !important; }
+.pad-3 { padding: 3% !important; }
+.pad-4 { padding: 4% !important; }
+.pad-5 { padding: 5% !important; }
+
+.pad-t-0 { padding-top: 0  !important; }
+.pad-t-1 { padding-top: 1% !important; }
+.pad-t-2 { padding-top: 2% !important; }
+.pad-t-3 { padding-top: 3% !important; }
+.pad-t-4 { padding-top: 4% !important; }
+.pad-t-5 { padding-top: 5% !important; }
+
+.pad-l-0 { padding-left: 0  !important; }
+.pad-l-1 { padding-left: 1% !important; }
+.pad-l-2 { padding-left: 2% !important; }
+.pad-l-3 { padding-left: 3% !important; }
+.pad-l-4 { padding-left: 4% !important; }
+.pad-l-5 { padding-left: 5% !important; }
+
+.pad-r-0 { padding-right: 0  !important; }
+.pad-r-1 { padding-right: 1% !important; }
+.pad-r-2 { padding-right: 2% !important; }
+.pad-r-3 { padding-right: 3% !important; }
+.pad-r-4 { padding-right: 4% !important; }
+.pad-r-5 { padding-right: 5% !important; }
+
+.pad-b-0 { padding-bottom: 0  !important; }
+.pad-b-1 { padding-bottom: 1% !important; }
+.pad-b-2 { padding-bottom: 2% !important; }
+.pad-b-3 { padding-bottom: 3% !important; }
+.pad-b-4 { padding-bottom: 4% !important; }
+.pad-b-5 { padding-bottom: 5% !important; }
+
+.pad-tb-0 { padding-top: 0  !important; padding-bottom: 0  !important; }
+.pad-tb-1 { padding-top: 1% !important; padding-bottom: 1% !important; }
+.pad-tb-2 { padding-top: 2% !important; padding-bottom: 2% !important; }
+.pad-tb-3 { padding-top: 3% !important; padding-bottom: 3% !important; }
+.pad-tb-4 { padding-top: 4% !important; padding-bottom: 4% !important; }
+.pad-tb-5 { padding-top: 5% !important; padding-bottom: 5% !important; }
+
+.pad-lr-0 { padding-left: 0  !important; padding-right: 0  !important; }
+.pad-lr-1 { padding-left: 1% !important; padding-right: 1% !important; }
+.pad-lr-2 { padding-left: 2% !important; padding-right: 2% !important; }
+.pad-lr-3 { padding-left: 3% !important; padding-right: 3% !important; }
+.pad-lr-4 { padding-left: 4% !important; padding-right: 4% !important; }
+.pad-lr-5 { padding-left: 5% !important; padding-right: 5% !important; }
+
+/* margins */
+.mar-0 { margin: 0  !important; }
+.mar-1 { margin: 1% !important; }
+.mar-2 { margin: 2% !important; }
+.mar-3 { margin: 3% !important; }
+.mar-4 { margin: 4% !important; }
+.mar-5 { margin: 5% !important; }
+
+.mar-t-0 { margin-top: 0  !important; }
+.mar-t-1 { margin-top: 1% !important; }
+.mar-t-2 { margin-top: 2% !important; }
+.mar-t-3 { margin-top: 3% !important; }
+.mar-t-4 { margin-top: 4% !important; }
+.mar-t-5 { margin-top: 5% !important; }
+
+.mar-l-0 { margin-left: 0  !important; }
+.mar-l-1 { margin-left: 1% !important; }
+.mar-l-2 { margin-left: 2% !important; }
+.mar-l-3 { margin-left: 3% !important; }
+.mar-l-4 { margin-left: 4% !important; }
+.mar-l-5 { margin-left: 5% !important; }
+
+.mar-r-0 { margin-right: 0  !important; }
+.mar-r-1 { margin-right: 1% !important; }
+.mar-r-2 { margin-right: 2% !important; }
+.mar-r-3 { margin-right: 3% !important; }
+.mar-r-4 { margin-right: 4% !important; }
+.mar-r-5 { margin-right: 5% !important; }
+
+.mar-b-0 { margin-bottom: 0  !important; }
+.mar-b-1 { margin-bottom: 1% !important; }
+.mar-b-2 { margin-bottom: 2% !important; }
+.mar-b-3 { margin-bottom: 3% !important; }
+.mar-b-4 { margin-bottom: 4% !important; }
+.mar-b-5 { margin-bottom: 5% !important; }
+
+.mar-tb-0 { margin-top: 0  !important; margin-bottom: 0  !important; }
+.mar-tb-1 { margin-top: 1% !important; margin-bottom: 1% !important; }
+.mar-tb-2 { margin-top: 2% !important; margin-bottom: 2% !important; }
+.mar-tb-3 { margin-top: 3% !important; margin-bottom: 3% !important; }
+.mar-tb-4 { margin-top: 4% !important; margin-bottom: 4% !important; }
+.mar-tb-5 { margin-top: 5% !important; margin-bottom: 5% !important; }
+
+.mar-lr-0 { margin-left: 0  !important; margin-right: 0  !important; }
+.mar-lr-1 { margin-left: 1% !important; margin-right: 1% !important; }
+.mar-lr-2 { margin-left: 2% !important; margin-right: 2% !important; }
+.mar-lr-3 { margin-left: 3% !important; margin-right: 3% !important; }
+.mar-lr-4 { margin-left: 4% !important; margin-right: 4% !important; }
+.mar-lr-5 { margin-left: 5% !important; margin-right: 5% !important; }
+
+/* extra */
+.mar-b-5p{ margin-bottom: 5px; }
+.mar-4p{ margin: 4px !important; }
+.mar-t-7{ margin-top: 7% !important; }
