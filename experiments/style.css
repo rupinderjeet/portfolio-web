@@ -1,0 +1,92 @@
+body{
+    margin: 0; padding: 0;
+    background-color: rgba(255, 0, 153, 255);
+    color: white;
+    font-family: sans-serif;
+}
+
+.b-yellow{
+    background-color: yellow;
+}
+
+.b-red{
+    background-color: red;
+}
+
+.pad-top-30{
+    padding-top: 30px;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.btn-box{
+    outline: none;
+    margin: 0; padding: 0;
+    width: 40px;
+    height: 40px;
+}
+
+.theme-btn{
+    outline: none !important;
+    width: 80px;
+    height: 60px;
+    margin: 5px;
+    border: 2px solid #000;
+}
+
+.margin-0{
+    margin:0;
+}
+
+.margin-bottom{
+    margin-bottom: 5px;
+}.margin-right{
+    margin-right: 5px;
+}
+
+.menu-btn{
+    width: 170px;
+}
+
+.btn-custom{
+    outline: none !important;
+    color: #444;
+    font-weight: bold;
+    background-color: #e6e4e4;
+    border: 0;
+    border-radius: 3px;
+}.btn-custom:hover{
+    color: #000;
+    background-color: white;
+}
+
+
+.input-custom{
+    font-weight: bold;
+}
+
+.block {
+    text-align: center;
+}
+.block:before {
+    content: '';
+    display: inline-block;
+    height: 100%; 
+    vertical-align: middle;
+}
+.centered {
+    width: 80%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.title-card{
+    padding: 4%;
+}
+
+.content-card{
+    /*background-color: blue;*/
+    padding: 4%;
+}
