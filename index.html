@@ -1,388 +1,292 @@
 <!DOCTYPE html>
 <html>
-	<head>
-        <meta name="keywords" content="rupinderjeet, rupinderjeet.com, rupinderjeet47, rupinderjeet47@gmail.com, ">
-        <meta name="description" content="a website showing information of its author">
+
+    <!--
+        Welcome to rupinderjeet's portfolio website :)
+
+        This page introduces me to you and showcases my projects. You can, also, find more information about my projects.
+        I have included a DONATE button too for rich people. q_q I want you to do something with it.
+
+        I'm currently looking for a job. You can see my portfolio website at this website, available at http://www.rupinderjeet.com
+        If you are interested in hiring me, feel free to send me an email at rupinderjeet@yandex.com
+
+        To find more about me on internet, search for following keywords on Google:
+            rupinderjeet
+            rupinderjeet47
+            rupinderjeet singh hans
+            kiminowara
+
+        I have a pretty rare name that allowed me to pop up on google searches.
+    -->
+
+    <head>
+
+        <meta name="keywords" content="rupinderjeet, rupinderjeet.com, rupinderjeet47, rupinderjeet47@gmail.com">
+        <meta name="description" content="my freelance development portfolio">
         <meta name="robots" content="all">
-        <meta name="author" content="Rupinderjeet Singh Hans, rupinderjeet47(at)gmail(dot)com">
-
+        <meta name="author" content="Rupinderjeet Singh Hans, rupinderjeet(at)yandex(dot)com">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
         <meta name="copyright" content="(c) 2015-2016 Rupinderjeet Singh Hans">
-        <link rel="shortcut icon" href="#" type="image/x-icon">
-        <title> Rupinderjeet : Freelance Programmer </title>
 
-        <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="shortcut icon" href="#" type="image/x-icon">
+        <title> Rupinderjeet Singh Hans : Indie App Developer </title>
+
+        <!-- online -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+
+        <!-- offline -->
+        <!--<link type="text/css" rel="stylesheet" href="css/materialize.min.css" />-->
+
         <link type="text/css" rel="stylesheet" href="css/index.css">
-        <link type="text/css" rel="stylesheet" href="css/animations.css">
+
+        <!-- fonts & icons -->
+        <link rel="stylesheet" href="fonts/google_font.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+        <!-- padding and margin -->
+        <link rel="stylesheet" type="text/css" href="css/padmar.css" />
     </head>
 
-	<body>
+	<body class="green">
+
+        <!-- navigation menu -->
+        <nav id="nav" class="transparent z-depth-0" role="navigation">
+            <div class="container">
+
+                <a class="white-text" href="http://www.rupinderjeet.com">Welcome Traveller!</a>
+                <ul class="right">
+                    <li> <a href="#portfolio">portfolio</a> </li>
+                    <li> <a href="blog/">blog</a> </li>
+                </ul>
+
+            </div>
+        </nav>
+
+        <!-- Who I am? -->
+        <div id="about" class="container center pad-b-5">
+
+            <!-- profile picture -->
+            <div class="prof-pic circle green darken-2 mar-t-3 mar-b-1 waves-effect waves-light z-depth-2"
+                 onclick="$(this).toggleClass('circle');"></div>
+
+            <!-- headings and intro -->
+            <h2 class="header center white-text pad-1"> Hello, I am Rupinderjeet! </h2>
+            <p class="center white-text pad-lr-5">
+                I'm an indie app developer from Punjab, India. I started programming 4 years ago in 2012 and ever since
+                then, I never got tired or bored of programming. My interest in programming led to my carrier as a
+                developer. These days, I try to develop apps and websites while learning more-and-more technologies. If
+                there is anything I can help you with, please feel free to contact me anytime. <br /> <br />
+
+                I'd love to chat about job opportunities, my projects, programming, or anything on your mind.
+            </p>
+
+        </div>
+
+        <!-- What I did? -->
+        <div id="portfolio" class="white pad-tb-4">
+            <h2 class="center black-text pad-b-4"> PORTFOLIO </h2>
+
+            <div class="container pad-b-3">
+
+                <div class="row">
+
+                    <!-- anonymous camera - detective from Monster anime -->
+                    <div class="col s12 m6 l4">
+
+                        <div class="card z-depth-2">
+                            <div class="card-image waves-effect waves-block waves-light">
+                                <img class="activator" src="projects/anoncam/ic_logo.gif">
+                            </div>
+                            <div class="card-content white pointer">
+                                <span class="bold grey-text text-darken-4">
+                                    Anonymous Camera <i class="pointer material-icons right">more_vert</i> </span>
+                            </div>
+                            <div class="card-reveal">
+                                <h6 class="card-title grey-text text-darken-4">
+                                    <i class="pointer material-icons right">close</i> Anonymous Camera
+                                </h6> <hr class="mar-t-5"/>
+
+                                <p> Allows you to take pictures secretly through some easily-accessible shortcuts :) </p>
+                                <p> For more information, visit
+                                    <a href="projects/anoncam/" target="_blank" class="blue-text">website</a>. </p>
+                                <p> <a href="https://play.google.com/store/apps/details?id=com.rupinderjeet.anonymouscamera"
+                                       target="_blank" class="blue-text"> Download Now!</a> for Android </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- the gift of charity - search "anime gift girl hope bow" -->
+                    <div class="col s12 m6 l4">
+
+                        <div class="card z-depth-2">
+                            <div class="card-image waves-effect waves-block waves-light">
+                                <img class="activator" src="projects/tgoc/ic_logo.gif">
+                            </div>
+                            <div class="card-content white pointer">
+                                <span class="bold grey-text text-darken-4">
+                                    The Gift of Charity <i class="pointer material-icons right">more_vert</i> </span>
+                            </div>
+                            <div class="card-reveal">
+                                <h6 class="card-title grey-text text-darken-4">
+                                    <i class="pointer material-icons right">close</i> The Gift of Charity
+                                </h6> <hr class="mar-t-5"/>
+
+                                <p> A gift for the people who want to support my development by purchasing this donation app. </p>
+                                <p> Includes small collection of gifts.</p>
+                                <p>For more information, visit
+                                    <a href="projects/tgoc/" target="_blank" class="blue-text">website</a>. </p>
+                                <p> <a href="https://play.google.com/store/apps/details?id=com.rupinderjeet.tgoc"
+                                       target="_blank" class="blue-text"> Buy Now!</a> for Android </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- crossZero game I made -->
+                    <div class="col s12 m6 l4">
+
+                        <div class="card z-depth-2">
+                            <div class="card-image waves-effect waves-block waves-light">
+                                <img class="activator" src="projects/crosszero/ic_logo.gif">
+                            </div>
+                            <div class="card-content white pointer">
+                                <span class="bold grey-text text-darken-4">
+                                    Cross Zero <i class="pointer material-icons right">more_vert</i> </span>
+                            </div>
+                            <div class="card-reveal">
+                                <h6 class="card-title grey-text text-darken-4">
+                                    <i class="pointer material-icons right">close</i> Cross Zero
+                                </h6> <hr class="mar-t-5"/>
+
+                                <p> I made a cross zero(X-O) game once for fun. You can play it with your friends,
+                                    but not as a multiplayer-online game. </p>
+                                <p> If you want to play, visit this
+                                    <a href="projects/crosszero/" target="_blank" class="blue-text">website</a>. </p>
+                                <!--<p> <a href=""-->
+                                       <!--target="_blank" class="blue-text"> Download Now!</a> for Android </p>-->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- scary old projects -->
+                    <div class="col s12 m6 l4">
+
+                        <div class="card z-depth-2">
+                            <div class="card-image waves-effect waves-block waves-light">
+                                <img class="activator" src="projects/other/ic_logo_1.gif">
+                            </div>
+                            <div class="card-content white pointer">
+                                <span class="bold grey-text text-darken-4">
+                                    Old Boring Projects <i class="pointer material-icons right">more_vert</i> </span>
+                            </div>
+                            <div class="card-reveal">
+                                <h6 class="card-title grey-text text-darken-4">
+                                    <i class="pointer material-icons right">close</i> Old Projects
+                                </h6> <hr class="mar-t-5"/>
+
+                                <p> A list of my past work as a student with description. </p>
+                                <p> Includes java, jsp & servlets and android projects. </p>
+                                <p>For more information, visit
+                                    <a href="projects/other/" target="_blank" class="blue-text">website</a>. </p>
+                                <p> #InDevelopment </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <p class="center"> ~~ Someday, there will be more items in here! ~~ </p>
+
+        </div>
+
+        <!-- footer -->
+        <footer class="page-footer green pad-t-4">
+            <h2 class="center white-text">I NEED FRIENDS!</h2>
+
+            <div class="container pad-b-3 white-text">
+                <h6 class="pad-b-4"></h6>
+
+                <div class="row">
+                    <div class="col s12 m12 l6">
+                        <p class="grey-text text-lighten-4 text-justify">
+                            This is the personal portfolio of indie freelance android developer - <b>Rupinderjeet Singh
+                            Hans</b>, showcasing all my work. </p>
+
+                        <p> Want to work together or just have a chat about life? Feel superfree to contact me using the
+                            mail button, on any of the giant networks listed here. </p>
+
+                        <p> Any images used here as project titles aren't designed by me. They belong to their original
+                            masters of anime community. To find about them, just right click the image and click
+                            "Search Google for image" on Google Chrome. Very simple! </p>
+                    </div>
+
+                    <div class="col s12 m12 l4 offset-l2">
+                        <p> I am available at: </p>
+                        <ul>
+                            <li><a class="white-text" href="https://www.facebook.com/rupinderjeet47">Facebook</a></li>
+                            <li><a class="white-text" href="https://www.twitter.com/rupinderjeet47">Twitter</a></li>
+                            <li><a class="white-text" href="http://stackoverflow.com/users/3682535/rupinderjeet">Stack Overflow</a></li>
+                            <li><a class="white-text" href="https://www.linkedin.com/">Linkedin (soon) </a></li>
+                            <li><a class="white-text" href="https://github.com/">Github (soon) </a></li>
+                            <li><a class="white-text" href="https://plus.google.com/">Google+ (soon) </a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <br />
+                <div class="center">
+                    <a href="#nav" class="btn btn-large waves-effect waves-light white green-text link-btn"> Top </a>
+                    <button class="btn btn-large waves-effect waves-light white green-text">
+                        <label for="submit-paypal-form" id="donate-btn" class="label-btn green-text"> Donate </label> </button>
+
+                    <br /> <p> Sometimes I want rich people to have some mercy on me! </p>
+                </div>
+            </div>
+
+            <div class="footer-copyright green darken-1">
+                <div class="container">
+                    Made with effort using <a class="white-text" href="http://materializecss.com/">MaterializeCSS</a>
+                </div>
+            </div>
+
+        </footer>
+
+        <!-- contact button | maybe :mailto is enough, but someone said 'modal' is better -->
+        <div class="fixed-action-btn" style="bottom: 40px; right: 30px;">
+            <a class="btn-large btn-floating modal-trigger waves-effect waves-light red" target="_blank"
+               href="https://docs.google.com/forms/d/e/1FAIpQLSd295PGkCAzI3SI4Qqb6SRBLQ_h0-nFFV-oUbAKC4abLrFAPA/viewform">
+                <i class="material-icons white-text text-darken-1">mail</i>
+            </a>
+        </div>
 
         <!-- PayPal Donate Form-->
         <form id="paypal-donate-form" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
             <input type="hidden" name="cmd" value="_s-xclick">
             <input type="hidden" name="hosted_button_id" value="RBSJUBQ58RNAU">
-            <input type="submit" name="submit" id="submit-paypal-form" class="hidden" value="Donate with PayPal"/>
+            <input type="submit" name="submit" id="submit-paypal-form" class="hide"
+                   style="font-size: 100%;" value="Donate with PayPal"/>
         </form>
 
-        <!-- hidden footer(header) bar ============================================================================================ -->
-        <div id="footer" class="jumbotron no-border no-margin no-display" style="padding-top: 0; padding-bottom: 0; background-color: whitesmoke;">
+        <!-- online -->
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
 
-                <div class="container" style="padding: 20px;">
+        <!-- offline for development -->
+        <!--<script type="application/javascript" src="../js/jquery-1.12.4.min.js" ></script>-->
+        <!--<script type="application/javascript" src="../js/materialize.min.js" ></script>-->
 
-                    <div class="row">
-                        <div class="col-sm-4" style="padding: 5%;">
-                            <p class="font-size-25 no-margin"> Options(testing) </p>
-                            <hr class="margin-2px">
-
-                            <div class="dropdown margin-left-7">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                                    Color Schemes <span class="caret"></span></a>
-                                <ul class="dropdown-menu">
-                                    <li> <a class="pointer" onclick="settings(this, 'theme', 'yellow', 'blue')">    Yellow-Blue    </a> </li>
-                                    <li> <a class="pointer" onclick="settings(this, 'theme', 'brown', 'skyblue')">  Brown-Skyblue  </a> </li>
-                                    <li> <a class="pointer" onclick="settings(this, 'theme', 'black', 'green')">    Black-Green    </a> </li>
-                                    <li> <a class="pointer" onclick="settings(this, 'theme', 'white', 'crimson')">  White-Crimson  </a> </li>
-                                    <li> <a class="pointer" onclick="settings(this, 'theme', 'orangered', 'pink')"> Blue-OrangeRed </a> </li>
-                                </ul>
-                            </div>
-
-                            <a id="report-issue-btn" class="pointer font-16 no-margin margin-left-7" data-toggle="modal" data-target="#report-issue-modal">
-                                Report an Issue? </a>
-                        </div>
-
-                        <div class="col-sm-4" style="padding: 5%;">
-                            <p class="font-size-25 no-margin"> Sub Domains </p>
-                            <hr class="margin-2px">
-
-                            <a href="http://camera.rupinderjeet.com" class="font-16 no-margin margin-left-7">  My Camera Roll    </a> <br />
-                            <a href="http://people.rupinderjeet.com" class="font-16 no-margin margin-left-7">  people.rupinderjeet.com  </a> <br />
-                            <a href="http://music.rupinderjeet.com" class="font-16 no-margin margin-left-7">   music.rupinderjeet.com   </a> <br />
-                            <a href="http://movies.rupinderjeet.com" class="font-16 no-margin margin-left-7">  movies.rupinderjeet.com  </a> <br />
-                            <a href="http://dpstorm.rupinderjeet.com" class="font-16 no-margin margin-left-7"> dpstorm.rupinderjeet.com </a> <br />
-                            <a href="http://connect.rupinderjeet.com" class="font-16 no-margin margin-left-7"> connect.rupinderjeet.com </a> <br />
-                            <a href="http://resume.rupinderjeet.com" class="font-16 no-margin margin-left-7">  resume.rupinderjeet.com  </a> <br />
-                            <p class="font-16 no-margin margin-left-7"> -life has been removed </p>
-
-                        </div>
-                        <div class="col-sm-4" style="padding: 5%;">
-                            <p class="font-size-25 no-margin"> Support </p>
-                            <hr class="margin-2px">
-
-                            <a> <label for="submit-paypal-form" class="normal-font font-16 pointer no-margin margin-left-7">
-                                Donate with PayPal </label> </a> (<a href="#" onclick="comingSoon()">help</a>)
-
-                        </div>
-                    </div>
-
-                    <p class="text-center"> Copyright&copy; Rupinderjeet Singh Hans, rupinderjeet.com </p>
-
-                </div>
-            </div>
-
-        <!-- BOOTSTRAP MENU BAR : MOBILE FRIENDLY ===================================== -->
-        <nav id="menu" class="navbar navbar-default no-border b-333" style="-webkit-border-radius: 0;-moz-border-radius: 0;border-radius: 0;">
-                            <div class="container">
-                                <div class="navbar-header">
-                                    <button type="button" class="nav-toggle-btn no-border navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                                        <span class="sr-only">Toggle navigation</span>
-                                        <span class="icon-bar"></span>
-                                        <span class="icon-bar"></span>
-                                        <span class="icon-bar"></span>
-                                    </button>
-
-                                    <a id="navbar-brand" class="navbar-brand whitesmoke" href="http://www.rupinderjeet.com">rupinderjeet.com</a>
-                                </div>
-                                <div id="navbar" class="navbar-collapse collapse">
-                                    <ul class="nav navbar-nav navbar-right">
-                                        <li class="active-nav">          <a class="btn-bar pointer" onclick="btnClick('bar', this)">about      </a> </li>
-                                        <li class="nav-item">            <a class="btn-bar pointer" onclick="btnClick('bar', this)">portfolio  </a> </li>
-                                        <li class="nav-item">            <a class="btn-bar pointer" onclick="btnClick('bar', this)">blog       </a> </li>
-                                        <li class="nav-item">            <a class="btn-bar pointer" onclick="btnClick('bar', this)">services   </a> </li>
-                                        <li class="nav-item">            <a class="btn-bar pointer" onclick="btnClick('bar', this)">contact    </a> </li>
-                                        <li class="nav-item">            <a class="btn-bar pointer" onclick="btnClick('bar', this)">statistics </a> </li>
-                                        <li class="nav-item hidden-xs">  <a id="arrow-div" class="btn-bar pointer" onclick="arrowAnimation()">
-                                                                             <span id="arrow" class="glyphicon glyphicon-chevron-down"></span>
-                                                                         </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </nav>
-
-        <!-- all pages load in here =================================================================================== -->
-        <div id="menu-pages" class="container">
-
-            <div class="" style="padding: 8%;">
-                <div class="spinner spinner-whitesmoke center-spinner"></div>
-            </div>
-
-        </div>
-
-
-		<!-- Modal : Report an Issue : to be called from different pages =========================================== -->
-		<div id="report-issue-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="reportAnIssue">
-			<div class="modal-dialog" role="document">
-				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span> </button>
-						<p class="modal-title font-size-25" id="report-issue-modal-title">Report an Issue</p>
-					</div>
-
-					<div id="report-modal-body" class="modal-body">
-						<div id="report-issue-error" class="alert well-sm alert-danger no-display">
-							1. Your name must be of 2 or more characters. <br>
-							2. Your email must be a valid email address. <br>
-							3. Issue Title must be of 5 or more characters. <br>
-							4. Issue Details must be of 20 or more characters.
-						</div>
-
-						<div id="report-issue-server-error" class="alert well-sm alert-danger no-display">
-							An error occurred due to some of the following reasons: <br>
-							1. You are not connected to Internet anymore. <br>
-							2. The server you are trying to access is Offline. <br>
-							3. This third party service used to report issues is unreachable. <br>
-							4. Some kind of abnormal/illegal activity.
-							<br> <br>
-							<a href="index.html" class="f-crimson underline"> I want to refresh this page! </a>
-						</div>
-
-						<div id="report-issue-thanks" class="alert well-sm alert-info no-display">
-							Thank you for reporting this issue. I will, definitely, look into this matter as soon as possible.
-							Please be active on your email, I may contact you to get more details about this issue. <br> <br>
-
-							You will be able to report only one issue for now.
-							But, if you <a href="index.html" class="f-blue underline"> reload this page now</a>,
-							you will be able to report another issue too. <br> <br>
-
-							Thank you again! Keep visiting!
-						</div>
-
-						<div id="report-issue-input">
-							<input id="reporter-name" class="form-control input-sm margin-bottom" placeholder="Your Name" />
-							<input id="reporter-email" class="form-control input-sm margin-bottom" placeholder="Your Email" />
-							<br>
-							<input id="report-issue-title" class="form-control input-sm margin-bottom" placeholder="Issue Title" />
-							<textarea id="report-issue-description" class="form-control input-sm margin-bottom" placeholder="Issue Details" rows="5"></textarea>
-						</div>
-					</div>
-
-					<div class="modal-footer">
-						<button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Close</button>
-						<button type="button" class="btn btn-sm btn-danger" onclick="reportIssue(this)">Submit</button>
-					</div>
-				</div>
-			</div>
-		</div>
-
-        <!-- Modal : Contact Form : to be called from contact page =========================================== -->
-        <div id="contact-form-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="contactForm">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span> </button>
-                        <p class="modal-title font-size-25" id="contact-form-modal-title"> Contact Me </p>
-                    </div>
-
-                    <div id="contact-modal-body" class="modal-body">
-                        <!-- Hidden Contact Form Error -->
-                        <div id="contact-form-error" class="alert well-sm alert-danger no-display">
-                            <p class="f-crimson"> 1. You must type your name(must be more than one character). </p>
-                            <p class="f-crimson"> 2. You must type your email correctly. </p>
-                            <p class="f-crimson"> 3. You message must be of 10 or more characters, excluding spaces. </p>
-                        </div>
-
-                        <!-- Hidden Contact Form -->
-                        <div id="contact-form">
-                            <input id="user-name" class="form-control input-sm margin-bottom" placeholder="Your Name" />
-                            <input id="user-email" class="form-control input-sm margin-bottom" placeholder="Your Email" />
-                            <input id="user-twitter" class="form-control input-sm margin-bottom" placeholder="Your Twitter (Optional)" />
-                            <input id="user-whatsapp" class="form-control input-sm margin-bottom" placeholder="Your Whatsapp (Optional)" />
-                            <textarea id="user-message" class="form-control input-sm margin-bottom" placeholder="Your Long Message" rows="4"></textarea>
-                            <input id="enq-type" type="hidden" name="_subject" value="Website Enquiry" />
-                            <input id="gotcha" type="text" name="_gotcha" class="no-display" />
-                        </div>
-
-                        <!-- Hidden Contact Form Thanks -->
-                        <div id="contact-form-thanks" class="alert well-sm alert-success no-display">
-                            <h4 class="f-green normal-font"> Thank you for your enquiry, I will get back to you as soon as possible. </h4>
-                        </div>
-                    </div>
-
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-sm btn-danger" onclick="submitContactForm(this)"> Submit </button>
-                        <button type="button" class="btn btn-sm btn-default" data-dismiss="modal"> Close </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Modal : Attendance Form : to be called from statistics page =========================================== -->
-        <div id="attendance-form-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="attendanceForm">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span> </button>
-                        <p class="modal-title font-size-25" id="attendance-form-modal-title"> Mark Your Attendance </p>
-                    </div>
-
-                    <div id="attendance-modal-body" class="modal-body">
-                        <!-- Hidden Attendance Form Error -->
-                        <div id="attendance-form-error" class="alert well-sm alert-danger no-display">
-                            <p class="f-crimson"> 1. You must type your name(must be more than one character). </p>
-                            <p class="f-crimson"> 2. You must type your email correctly. </p>
-                            <p class="f-crimson"> 3. You must choose a visitor type. </p>
-                        </div>
-
-                        <!-- Attendance Form -->
-                        <div id="attendance-form">
-                            <select id="visitor-type" class="form-control input-sm margin-bottom">
-                                <option> Select One </option>
-                                <option> Friend </option>
-                                <option> Guest </option>
-                                <option> Recruiter </option>
-                                <option> Enemy </option>
-                                <option> Rival </option>
-                                <option> Stalker </option>
-                            </select>
-                            <input id="visitor-name" class="form-control input-sm margin-bottom" placeholder="Your Name" />
-                            <input id="visitor-email" class="form-control input-sm margin-bottom" placeholder="Your Email" />
-                            <input id="visitor-twitter" class="form-control input-sm margin-bottom" placeholder="Your Twitter (Optional)" />
-                            <input id="visitor-whatsapp" class="form-control input-sm margin-bottom" placeholder="Your Whatsapp (Optional)" />
-                            <input id="gotcha-attendance" type="text" name="_gotcha" class="no-display" />
-                        </div>
-
-                        <!-- Attendance Form Thanks -->
-                        <div id="attendance-form-thanks" class="alert well-sm alert-success no-display">
-                            <h4 class="f-green normal-font"> Thank you for marking your attendance, I will remember you C: </h4>
-                        </div>
-                    </div>
-
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-sm btn-danger" onclick="submitAttendanceForm(this)"> Submit </button>
-                        <button type="button" class="btn btn-sm btn-default" data-dismiss="modal"> Close </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Modal : Educational Details : to be called from portfolio page ======================================== -->
-        <div id="educational-details-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="educationalDetails">
-            <div class="modal-dialog modal-lg" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span> </button>
-                        <p class="modal-title font-size-25" id="educational-details-modal-title"> Educational Details </p>
-                    </div>
-
-                    <div id="educational-details-modal-body" class="modal-body">
-
-                        <div class="">
-                            <p class="margin-bottom pad-2px font-size-25"> School/College Education </p>
-
-                            <table class="table">
-                                <th class="bold-500"> Class </th>
-                                <th class="bold-500 hidden-xs"> Stream </th>
-                                <th class="bold-500"> Session </th>
-                                <th class="bold-500 hidden-xs"> University/Org. </th>
-                                <th class="bold-500"> Marks </th>
-
-                                <tr>
-                                    <td> Bachelor Of Technology </td>
-                                    <td class="hidden-xs"> Computer Science Engineering </td>
-                                    <td> 2011-2015 </td>
-                                    <td class="hidden-xs"> Punjab Technical University(PTU), Distt. Jalandhar </td>
-                                    <td> 78.3 </td>
-                                </tr>
-
-                                <tr>
-                                    <td> Senior Secondary Education </td>
-                                    <td class="hidden-xs"> Non-Medical (12th) </td>
-                                    <td> 2010-2011 </td>
-                                    <td class="hidden-xs"> Punjab School Education Board(PSEB), Mohali </td>
-                                    <td> 66% </td>
-                                </tr>
-
-                                <tr>
-                                    <td> Matriculation Education </td>
-                                    <td class="hidden-xs"> General, with Punjabi (10th) </td>
-                                    <td> 2008-2009 </td>
-                                    <td class="hidden-xs"> Punjab School Education Board(PSEB), Mohali </td>
-                                    <td> 71.7% </td>
-                                </tr>
-                            </table>
-                        </div>
-
-                        <!-- Trainings Details -->
-                        <div style="margin-top: 30px;">
-                            <p class="margin-bottom pad-2px font-size-25"> Trainings </p>
-
-                            <table class="table">
-                                <th class="bold-500"> Subject </th>
-                                <th class="bold-500 hidden-xs"> Type </th>
-                                <th class="bold-500"> Year </th>
-                                <th class="bold-500"> Duration </th>
-                                <th class="bold-500 hidden-xs"> Place </th>
-
-                                <tr> <!-- #1 -->
-                                    <td> JSP & Servlets (Glassfish Server) </td>
-                                    <td class="hidden-xs"> Certification </td>
-                                    <td> 2015 </td>
-                                    <td> 26 Weeks (6 Months) </td>
-                                    <td class="hidden-xs"> InfoWiz - A Software Solution Company </td>
-                                </tr>
-                                <tr> <!-- #2 -->
-                                    <td> PHP & JUnit Basics </td>
-                                    <td class="hidden-xs"> Tutorials </td>
-                                    <td> 2014 </td>
-                                    <td> 8 Weeks </td>
-                                    <td class="hidden-xs"> Own Residence </td>
-                                </tr>
-                                <tr> <!-- #3 -->
-                                    <td> Core Java </td>
-                                    <td class="hidden-xs"> Certification </td>
-                                    <td> 2013 </td>
-                                    <td> 6 Weeks </td>
-                                    <td class="hidden-xs"> Netmax Technologies Ltd. </td>
-                                </tr>
-                                <tr> <!-- #4 -->
-                                    <td> C++ (Non-Graphical) </td>
-                                    <td class="hidden-xs"> Inhouse Training </td>
-                                    <td> 2012 </td>
-                                    <td> 6 Weeks </td>
-                                    <td class="hidden-xs"> Ludhiana Group Of Colleges(LGC) </td>
-                                </tr>
-                            </table>
-                        </div>
-
-
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Modal : Task Loader : to be called from portfolio page =========================================== -->
-        <div id="task-modal" class="modal fade no-border" tabindex="-1" role="dialog" aria-labelledby="taskModal">
-            <div class="modal-dialog" role="document" style="width: 100%; margin: 0;" >
-                <div class="modal-content no-border">
-
-                    <div id="task-modal-body" class="modal-body fg-white bg-555" style="padding: 5% 10%; ">
-                        <div class="spinner center-spinner"> </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-
-
-        <!-- this 'div' is helping to find if the same user is repeating his actions -->
-        <p id="this-visitor" class="no-display"> logger </p>
-
-        <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
-		<script type="text/javascript" src="js/jquery.min.js"></script>
-		<script type="text/javascript" src="js/bootstrap.min.js"></script>
-        <script type="text/javascript" src="js/backend.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
 	</body>
 </html>
+
+
+<!-- don't look down here -->
+
+
+
+
+
+
+
+
+<!-- numbers_of_hours_wasted++; -->
