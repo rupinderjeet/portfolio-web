@@ -1,59 +1,9 @@
-
-    <div class="well well-sm margin-top-15px margin-bottom"> Ongoing / Paused / Pending(have to write in here yet) Projects </div>
-
-    <!-- 002 -->
-    <div id="task-002" class="well well-sm top-border-bar opacity-07" style="padding: 1% 10%;">
-        <p class="font-size-35 margin-bottom-10"> Student-Teacher File-Handling System </p>
-    </div>
-
-    <!-- 003 -->
-    <div id="task-003" class="well well-sm top-border-bar opacity-07" style="padding: 1% 10%;">
-        <p class="font-size-35 margin-bottom-10"> Tic-Tac-Toe Game </p>
-    </div>
-
-    <!-- 004 -->
-    <div id="task-004" class="well well-sm top-border-bar opacity-07" style="padding: 1% 10%;">
-        <p class="font-size-35 margin-bottom-10"> Advanced Calculator </p>
-    </div>
-
-    <!-- 005 -->
-    <div id="task-005" class="well well-sm top-border-bar opacity-07" style="padding: 1% 10%;">
-        <p class="font-size-35 margin-bottom-10"> Paint/Graphics Application<small class="font-size-20"> similar to Microsoft Paint </small> </p>
-    </div>
-
-    <!-- 006 -->
-    <div id="task-006" class="well well-sm top-border-bar opacity-07" style="padding: 1% 10%;">
-        <p class="font-size-35 margin-bottom-10"> 'Unnamed' Android / Desktop / iOS 2D Platform Game </p>
-    </div>
-
-    <!-- 007 -->
-    <div id="task-007" class="well well-sm top-border-bar opacity-07" style="padding: 1% 10%;">
-        <p class="font-size-35 margin-bottom-10"> 'Unnamed' Anime Torrents Website </p>
-    </div>
-
-    <!-- 008 -->
-    <div id="task-008" class="well well-sm top-border-bar opacity-07" style="padding: 1% 10%;">
-        <p class="font-size-35 margin-bottom-10"> 'Unnamed' Question-Answer based Website </p>
-    </div>
-
-    <!-- 009 -->
-    <div id="task-009" class="well well-sm top-border-bar opacity-07" style="padding: 1% 10%;">
-        <p class="font-size-35 margin-bottom-10"> Image Editing, Redrawing, Size Enlarging </p>
-        <div class="no-display">
-            <p>Start Date : Mar 23, 2016</p>
-            <p>End Date : Working Yet</p>
-            <p>Goal : From 100 x 100 pixels To 3000 x 3000 pixels</p>
-            <p>Source Image for Project : </p> <img width="100" height="100" src="#" alt="Source Image #1001" />
-        </div>
-    </div>
-
-    <!-- 010 -->
-    <div id="task-010" class="well well-sm top-border-bar opacity-07" style="padding: 1% 10%;">
-        <p class="font-size-35 margin-bottom-10"> rupinderjeet.com </p>
-        <p>This website itself is a part of my portfolio too</p>
-    </div>
-
-
-    <button class="btn btn-sm btn-default no-outline pull-right" data-toggle="modal" data-target="#educational-details-modal">
-        Educational Details
-    </button>
+Student-Teacher File-Handling System
+Tic-Tac-Toe Game
+Advanced Calculator
+Paint/Graphics Application similar to Microsoft Paint
+'Unnamed' Android / Desktop / iOS 2D Platform Game
+'Unnamed' Anime Torrents Website
+'Unnamed' Question-Answer based Website
+Image Editing, Redrawing, Size Enlarging
+Educational Details
