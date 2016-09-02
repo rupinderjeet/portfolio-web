@@ -192,21 +192,21 @@
                         Play Store</a>.</li>
                 <li class="step"> &bull; Open it. Allow all permissions if requested (on Android Marshmallow 6.0.0+).
                 <li class="step"> &bull; Tap Start Service button. </li>
-                <li class="step"> &bull; Floating Button mode will start. An eye icon will be displayed on your screen. </li>
-                <li class="step"> &bull; Tap this eye icon to take picture. It takes less than seconds to take a picture. </li>
-                <li class="step"> &bull; Slide app's Camera page to right. You will reach Settings screen. </li>
-                <li class="step"> &bull; Change Floating Icon size (default 90 pixels). Slide back to Camera page. </li>
-                <li class="step"> &bull; Stop the running service. Start it again. The eye icon will get smaller / bigger based on your selection. </li>
+                <li class="step"> &bull; Floating Icon mode will start. An eye icon will be displayed on your screen. </li>
+                <li class="step"> &bull; Tap this eye icon to take picture. It takes 1~4 seconds to take a picture. </li>
+                <li class="step"> &bull; Stop Service. Try other modes, similarly. </li>
+                <li class="step">
+                    &bull; Tap on Settings icon to view settings. Similarly, tap on Question icon to view Help topics in app.
+                </li>
                 <li class="step"> &nbsp; </li>
-                <li class="step"> &bull; There are five pages in app, you can reach them by sliding on screen. </li>
-                <li class="step"> &bull; Stop the running service again. Try other modes. For better description of modes, view next topic. </li>
+                <li class="step"> &bull; For better description of modes, view next topic. </li>
             </ul>
 
             <br />
             <h4>2. Trigger Modes</h4>
             <hr />
             <p> There are four modes / shortcuts to trigger the app and take a picture:</p>
-            <p> In Floating Button mode, an icon is displayed on screen to take a picture. The size of this icon can be
+            <p> In Floating Icon mode, an icon is displayed on screen to take a picture. The size of this icon can be
                 adjusted in Settings. On some devices, this icon will be visible on Lock Screen too. </p>
             <p> In Volume Button mode, press Volume Button to take a picture. This mode will only work when device
                 screen is locked or when Anonymous Camera app is open. This mode is experimental and unstable, but most
@@ -239,7 +239,6 @@
             <p> Confirmation Mode informs you that a picture has been taken. You can choose between Showing a small message on
                 screen, Shutter Sound or a Small Vibration. Check your device volume level if shutter sound was not listenable.
                 No confirmation will be displayed if you choose None. </p>
-            <p> You can change app background colors too. There are eight different colors available for you to choose from. </p>
             <p> You can change Icon size of Floating Icon mode. </p>
             <p> You can specify how many number of pictures you want to take in Continuous mode. </p>
             <p> You can Show or Hide taken pictures from Gallery. Showing or hiding pictures takes few seconds for them to
@@ -247,14 +246,21 @@
                 can fix it). Restart your device if changes don't get effected in five minutes. </p>
             <p> You can enable this app to start when your device starts(boots-up). For e.g. If you had the camera service
                 running when you device turned off, it will auto start the service when you turn ON your phone again. </p>
+            <p> Black Picture Fix : Some devices can take pictures so fast that even camera is not open at the time of
+                taking pictures. Hence, they need to enable this fix if they want to take pictures after camera has
+                opened successfully. </p>
+            <p> Busy Camera Fix : It solves the problem of "Camera Busy." message by force stopping camera. You can use
+                this option if you are stuck with this message.</p>
+            <p> You can change app background colors too. There are eight different colors available for you to choose from. </p>
+            <p> You can send me feedback, write me about an issue or anything by using "Send Feedback" option. </p>
 
             <br />
             <h4>5. Other Information</h4>
             <hr />
-            <p> All taken pictures are saved in the <i>"sdcard > DCIM > AnonymousCamera"</i> folder. It is your device's primary
-                external storage(not a storage card). </p>
-            <p> Currently, I support only English language. As soon as someone helps me in translation of this app, I will
-                publish it for other languages too. </p>
+            <p> All taken pictures are saved in the <b><i>sdcard > DCIM > AnonymousCamera</i></b> folder.
+                It is your device's primary external storage(not a storage card). </p>
+            <p> Currently, I can support only English language. As soon as someone helps me in translation of this app,
+                I will publish it for other languages too. </p>
 
             <br />
             <h4>6. Instructions</h4>
@@ -271,7 +277,7 @@
                 In most of cases, you need to be still while taking a picture. If you move your phone a lot while taking
                 picture, you will get blurry and stretched pictures. <br /> <br />
 
-                Our response to your comments goes to your Gmail account. To view these emails, you have to open
+                Our response to your Rating on GooglePlay goes to your Gmail account. To view these emails, you have to open
                 "Updates" section of your Gmail rather than Primary Inbox, blame Google. So, please check emails from
                 Google play in Updates section. <br /> <br />
 
@@ -290,6 +296,9 @@
 
         <!-- I HATE HOW IMAGES AND TEXT WORK ON THESE DIFFERENT DEVICES, I HATE CSS! -->
         <div id="images" class="content center valign" style="min-height: 500px;">
+
+            <p class="text-center"> These images are from old version of my app, please download the app in real to have
+                a look at them. I will update them soon. </p>
 
             <!-- 3 for png, gif, landscape -->
             <div id="preloader" class="preloader-wrapper big active mar-t-5 hide">
@@ -326,26 +335,56 @@
 
             <h4> Change Log </h4> <hr />
             <ul>
+                <li class="step"> 1.17 :- Stable release with new design. (Jan-21-2017) </li>
+                <li class="step"> 1.16 :- Stable release with ViewPager design. (Jan-14-2017) </li>
                 <li class="step"> 1.1 :- First beta release milestone. (Dec-24-2016) </li>
             </ul>
 
             <br />
             <h4> Issues </h4> <hr />
             <ul>
-                <li class="step"> Can't Hide images from gallery on some <i>kitkat+</i> devices </li>
-                <li class="step"> Blank or black pictures on some devices while autoFocus is ON <i>:fix in process</i> </li>
-                <li class="step"> Requesting permissions again and again after denying </li>
+                <li class="step"> Can't Hide images from gallery on some <i>kitkat+ devices</i> </li>
+                <li class="step"> One-time delay on taking a picture immediately after removing app from History </li>
+                <li class="step">  </li>
+                <li class="step">  </li>
+                <li class="step">  </li>
+                <li class="step"> Oppo Neo 7 A33W : Unable to connect to Camera </li>
+                <li class="step"> Samsung Galaxy Core GT-i8262 : Unable to connect to Camera </li>
+                <li class="step"> Motorola Moto X (2014) : Able to take pictures, random errors, confirmation needed </li>
+                <li class="step"> HTC Nexus 9 : Able to take pictures, random errors, confirmation needed </li>
+                <li class="step"> Samsung Galaxy Note 3 : Able to take pictures, random errors, confirmation needed </li>
+                <li class="step"> Samsung Galaxy S6 : Able to take pictures, random errors, confirmation needed </li>
+                <li class="step"> Samsung Galaxy S7 (SM-G930A 4G,AT&T) : Unknown Error </li>
+
+                <li class="step"> <s>Blank or black pictures on some devices while autoFocus is OFF </s> : Fixed in 1.17 </li>
+                <li class="step"> <s>Requesting permissions again and again after denying </s> : Fixed in 1.16 </li>
             </ul>
 
             <br />
             <h4> Tested Devices </h4> <hr />
             <ul>
+                <li class="step"> Samsung Galaxy J2 </li>
+                <li class="step"> Samsung Galaxy Core Prime </li>
                 <li class="step"> Samsung Galaxy S2 GT-i9100 </li>
                 <li class="step"> Samsung Galaxy S3 Neo </li>
-                <li class="step"> Samsung Galaxy J2 </li>
+                <li class="step"> Samsung Galaxy S4 </li>
                 <li class="step"> Samsung Galaxy S6 </li>
-                <li class="step"> Samsung Galaxy Core Prime </li>
+                <li class="step"> Samsung Galaxy S7 Edge </li>
+                <li class="step"> Samsung Galaxy Note 5 </li>
+                <li class="step"> Samsung Galaxy Note 7 </li>
+                <li class="step"> Samsung Galaxy Tab 2 </li>
+                <li class="step"> Samsung Galaxy Tab Pro </li>
+                <li class="step"> Samsung Galaxy Tab S2 (Both sizes) </li>
+
+                <li class="step"> &nbsp; </li>
+                <li class="step"> Google Pixel </li>
+                <li class="step"> OnePlus 1 </li>
+                <li class="step"> OnePlus 2 </li>
+                <li class="step"> OnePlus 3 (Both versions) </li>
                 <li class="step"> HTC Desire 626 Dual </li>
+                <li class="step"> BQ Aquaris X5 Plus </li>
+                <li class="step"> LG G3 D855 </li>
+
                 <li class="step"> &nbsp; </li>
                 <li class="step"> If you want to help in testing, fill out this
                     <i> <a href="https://docs.google.com/forms/d/e/1FAIpQLSeGNO-cgkm4XF7NRcMeszjoxRwpyMoEJpxh7wOUaz2C5aGS9Q/viewform"
@@ -360,6 +399,8 @@
             <br />
             <h4> TODO </h4> <hr />
             <ul>
+                <li class="step"> &bull; Add Camera2 API capabilities. </li>
+                <li class="step"> &bull; Merge Continuous mode in other modes. </li>
                 <li class="step"> &bull; Make Usage Guide Video. </li>
                 <li class="step"> &bull; Support video features </li>
                 <li class="step"> &bull; Apply settings without stopping service </li>
@@ -367,9 +408,9 @@
                 <li class="step"> &bull; Add widget to take pictures </li>
                 <li class="step"> &bull; Edit images for play store, <i>I need help</i>. </li>
                 <li class="step"> &bull; Fast image capture using preview frames  </li>
-                <li class="step"> &bull; Support Android 4.0 </li>
+                <li class="step"> &bull; Remove support for Android 4.0 </li>
                 <li class="step"> &nbsp; </li>
-                <li class="step"> <i> depends upon user requests, I don't have any more ideas. </i> </li>
+                <li class="step"> <i> Rest are based on user-requests, I don't have any more ideas. </i> </li>
             </ul>
 
         </div>
