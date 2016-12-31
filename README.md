@@ -1,6 +1,6 @@
 # [rupinderjeet.com](http://rupinderjeet.com)
 
-##A website for describing its author
+##This is a portfolio website for freelance developer, Rupinderjeet Singh Hans, showcasing my projects and experience in the field.
 
 **Copyright :** (c)2015-2016 Rupinderjeet Singh Hans
 
@@ -8,7 +8,3 @@
 
 
 **Development started on Mar 13, 2016 (Sunday)**
-
-[GitHub URL](https://rupinderjeet.github.io/MVX92CKPHZ)
-
-###### Last Mass Update : May 22, 2016
