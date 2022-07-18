@@ -1,0 +1,132 @@
+body{
+	background-color: white;
+	font-family: "Noto Sans", sans-serif;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+body { font-size: 18px; }
+h1,h2,h3,h4,h5,h6,p { line-height: 1.45; }
+h1 { font-size: 4em; }
+h2 { font-size: 3em; }
+h3 { font-size: 2.2em; }
+h4 { font-size: 1.7em; }
+h5 { font-size: 1.3em; }
+h6 { font-size: 1em; }
+p, a, ul, li, button { font-size: 1em; }
+.small-text { font-size: 0.8em; }
+
+.content{
+	color: #333;
+	margin: 1%;
+	padding: 5% 10%;
+}
+
+.roboto{ font-family: "Roboto", sans-serif; }
+.noto_sans{ font-family: "Noto Sans", sans-serif }
+.poiret_one{ font-family: "Poiret One", "Consolas", sans-serif; }
+
+.title{
+	border: none;
+	border-radius: 0;
+	color: white;
+	font-family: "Poiret One", "Consolas", sans-serif;
+	font-size: 5vw;
+	font-weight: bold;
+	margin: 0;
+	padding: 3%;
+	text-align: center;
+}
+
+.privacy-title{
+	font-family: "Noto Sans", sans-serif;
+	font-size: 3vw;
+	font-weight: bold;
+	padding: 2%;
+}
+
+@media screen and (max-width: 640px) {
+	.title{
+		font-size: 200%;
+		padding: 5%;
+	}
+}
+
+ul{ line-height: 150%; }
+
+.mild-bold{
+	font-weight: 200;
+}
+
+/* horizontal rule */
+hr{
+	border: none;
+	border-top: 1px solid #eeeeee;
+}
+
+/* ul */
+.step{
+	margin-left: 5%;
+	/*margin-right: 5%;*/
+}
+
+/* menu */
+.tabs {
+	width: auto !important;
+	max-width: 500px;
+	/*background-color: #00897b !important;*/
+}
+.tabs > li{
+	width: 25%;
+}
+.tabs > .tab > a {
+	text-decoration: none;
+}
+
+/* footer */
+.footer{
+	padding: 5% 10%;
+}
+
+/* footer buttons */
+.footer > a, .footer > button{
+	margin-left: 6pt;
+	margin-bottom: 6pt;
+}
+	@media screen and (max-width:600px) {
+
+		/* full width buttons on mobile devices */
+		.footer > a, .footer > button{
+			width: 100%;
+		}
+	}
+
+.label-btn {
+	color: white;
+	font-size: 100%;
+	font-weight: normal;
+	cursor: pointer;
+}
+
+.link-btn:hover {
+	color: white;
+	text-decoration: none;
+}
+
+.text-center{ text-align: center; }
+.text-justify{ text-align: justify; }
+
+.menu-box{
+	width: 20%;
+	height: 100%;
+	position: fixed;
+}
+.content-box{
+	width: 80%;
+	margin-left: 20%;
+	padding: 5%;
+}
+.w-100{
+	width: 100% !important;
+}

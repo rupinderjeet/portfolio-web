@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+    <!--
+        Welcome to the cross zero game :)
+
+        This page lets you play the famous Cross Zero game, also known as TicTacToe.
+
+        I'm currently looking for a job. You can see my portfolio website at https://rupinderjeet.com
+        If you are interested in hiring me, feel free to send me an email at rupinderjeet@yandex.com
+    -->
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title> The Cross Zero </title>
+
+        <!-- online -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+
+        <!-- offline -->
+        <!--<link rel="stylesheet" type="text/css" href="../../css/materialize.min.css" />-->
+
+        <link rel="stylesheet" type="text/css" href="../../css/index.css" />
+        <link rel="stylesheet" type="text/css" href="../../css/padmar.css" />
+
+        <!-- fonts & icons -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="../../fonts/google_font.css" />
+
+        <!-- input[placeholder] color -->
+        <style>
+            ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+                color:    #777;
+            }
+            :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+                color:    #777;
+                opacity:  1;
+            }
+            ::-moz-placeholder { /* Mozilla Firefox 19+ */
+                color:    #777;
+                opacity:  1;
+            }
+            :-ms-input-placeholder { /* Internet Explorer 10-11 */
+                color:    #777;
+            }
+        </style>
+
+    </head>
+    
+    <body class="teal lighten-2 center">
+
+        <h2 class="poiret pad-t-2" style="line-height:0.2;"> Cross Zero </h2>
+        <p class="poiret bold">
+            developed by <a class="white-text" href="http://www.rupinderjeet.com">rupinderjeet.com</a>
+        </p>
+
+        <div id="menu" style="margin-top: 190px;">
+            <input id="player-name-1" class="name-input w-250p" type="text" placeholder="First Player" maxlength="10" />
+
+            <br />
+            <input id="player-name-2" class="name-input w-250p" type="text" placeholder="Second Player" maxlength="10" />
+
+            <br /> <br />
+            <button class="btn btn-large waves-effect waves-light" onclick="setPlayerNames()"> Play </button>
+
+            <br/>
+            <p id="name-error" class="red-text"></p>
+        </div>
+
+        <div id="game-board" class="center hide">
+
+            <br />
+            <h6 id="versus-label"> {username} vs {username} </h6>
+            <h6 id="turn-label" class="mar-b-5"> Turn: {username}{symbol} </h6>
+
+            <button id="xo-1" class="btn xo-btn waves-effect waves-light poiret z-depth-0" onclick="playPos(1)"></button>
+            <button id="xo-2" class="btn xo-btn waves-effect waves-light poiret z-depth-0" onclick="playPos(2)"></button>
+            <button id="xo-3" class="btn xo-btn waves-effect waves-light poiret z-depth-0" onclick="playPos(3)"></button> <br />
+            <button id="xo-4" class="btn xo-btn waves-effect waves-light poiret z-depth-0" onclick="playPos(4)"></button>
+            <button id="xo-5" class="btn xo-btn waves-effect waves-light poiret z-depth-0" onclick="playPos(5)"></button>
+            <button id="xo-6" class="btn xo-btn waves-effect waves-light poiret z-depth-0" onclick="playPos(6)"></button> <br />
+            <button id="xo-7" class="btn xo-btn waves-effect waves-light poiret z-depth-0" onclick="playPos(7)"></button>
+            <button id="xo-8" class="btn xo-btn waves-effect waves-light poiret z-depth-0" onclick="playPos(8)"></button>
+            <button id="xo-9" class="btn xo-btn waves-effect waves-light poiret z-depth-0" onclick="playPos(9)"></button> <br />
+
+            <button id="quit-btn" class="material-icons btn waves-effect waves-light xo-btn" style="top: 100px;"
+                    onclick="showMenu()">chevron_left</button>
+            <button id="restart-btn" class="material-icons btn waves-effect waves-light xo-btn" style="top: 100px;"
+                    onclick="restart()">refresh</button>
+
+        </div>
+
+        <!-- online -->
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+
+        <!-- offline-->
+        <!--<script type="text/javascript" src="../../js/jquery-1.12.4.min.js"></script>-->
+        <!--<script type="text/javascript" src="../../js/materialize.min.js"></script>-->
+
+        <script type="text/javascript" src="script.js"></script>
+
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-86168295-1', 'auto');
+            ga('send', 'pageview');
+        </script>
+
+    </body>
+    
+</html>
